@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# next.js / build output
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# generated app data (rebuilt at build time via scripts/prepare-app-data.cjs)
+public/data/
+
+# env / local
+.env*
+.DS_Store
+*.log
+
+# ---- excluded: copyrighted source material (not redistributed) ----
+# Dion Training "ISC2 CISSP (Study Guide)" PDF and its extracted text/markdown.
+02_source_files/*.pdf
+scripts/_work/
+content/

@@ -1,0 +1,5085 @@
+{
+  "meta": {
+    "domain_number": 6,
+    "domain": "Security Assessment and Testing",
+    "weight_percent": 12,
+    "total_questions": 120,
+    "generated_by": "scripts/d6/build.cjs",
+    "schema": "04_schemas/question_schema.md",
+    "sources": [
+      "/content/cissp-syllabus.md",
+      "/content/cissp-syllabus-structured.json",
+      "/questions/domain-weighting.json"
+    ],
+    "id_range": "CISSP-D06-Q0001..CISSP-D06-Q0120",
+    "difficulty_distribution": {
+      "easy": 26,
+      "medium": 60,
+      "hard": 34
+    },
+    "question_type_distribution": {
+      "single_best_answer": 88,
+      "scenario_based": 18,
+      "sequence_ordering": 2,
+      "multiple_correct_answers": 10,
+      "matching": 2
+    },
+    "note": "Original CISSP-style practice questions. matching questions carry a prompts[] (left items numbered 1..n) and options[] (right items A..n); correct_answer encodes the pairing. sequence_ordering correct_answer lists option labels in correct order."
+  },
+  "questions": [
+    {
+      "id": "CISSP-D06-Q0001",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Assessment Strategy",
+      "subtopic": "Test vs assessment vs audit",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which statement BEST distinguishes a security audit from a security test?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A test is performed only by external regulators"
+        },
+        {
+          "label": "B",
+          "text": "A test always checks compliance while an audit attacks the system"
+        },
+        {
+          "label": "C",
+          "text": "An audit focuses on verifying compliance with governance/regulations and reporting on posture; a test exercises a control to see if it works"
+        },
+        {
+          "label": "D",
+          "text": "An audit and a test are identical activities"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A security audit evaluates compliance with governance, regulations, and overall security posture (reporting status and risk impact); a test exercises specific controls to verify they function.",
+        "why_others_are_wrong": {
+          "B": "This reverses the roles—audits emphasize compliance verification.",
+          "D": "Audits and tests serve different purposes.",
+          "A": "Tests can be performed internally or by hired testers, not only regulators."
+        }
+      },
+      "exam_reasoning": "Distinguishes compliance-focused audits from control-exercising tests.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Security Test and Assessment Overview",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0002",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Security Audits",
+      "subtopic": "Internal audit",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "An internal security audit is characterized by being:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Performed by an outside firm and reported to regulators only"
+        },
+        {
+          "label": "B",
+          "text": "Prohibited before an external audit"
+        },
+        {
+          "label": "C",
+          "text": "Performed by internal personnel and reported to senior management"
+        },
+        {
+          "label": "D",
+          "text": "Always more objective than an external audit"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Internal audits are conducted by internal staff and reported to senior management, often as a self-audit before an external audit.",
+        "why_others_are_wrong": {
+          "A": "That describes an external/third-party audit.",
+          "D": "Internal audits are generally LESS objective than independent external audits.",
+          "B": "Internal self-audits are commonly performed before external audits."
+        }
+      },
+      "exam_reasoning": "Recall of the internal audit definition.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Types of Security Audits",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0003",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Security Audits",
+      "subtopic": "External vs third-party",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A business partner hires an outside firm to audit a vendor and have the results reported back to the partner (not the vendor) for an acquisition decision. This is BEST described as a:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Internal audit"
+        },
+        {
+          "label": "B",
+          "text": "Penetration test"
+        },
+        {
+          "label": "C",
+          "text": "Third-party audit"
+        },
+        {
+          "label": "D",
+          "text": "Self-assessment"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A third-party audit is performed by an outside team on behalf of another organization, with results reported to that organization—common for compliance or acquisition due diligence.",
+        "why_others_are_wrong": {
+          "A": "Internal audits are run by the audited org's own staff and report to its management.",
+          "D": "A self-assessment is performed by the org on itself.",
+          "B": "A penetration test simulates attacks, not a compliance audit reported to a third party."
+        }
+      },
+      "exam_reasoning": "Maps an outside-org-directed audit to a third-party audit.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Types of Security Audits",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0004",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Security Audits",
+      "subtopic": "External audit value",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The PRIMARY value of an external audit (conducted by an outside specialist firm) is that it:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Is always cheaper than an internal audit"
+        },
+        {
+          "label": "B",
+          "text": "Requires no scope definition"
+        },
+        {
+          "label": "C",
+          "text": "Provides an unbiased, independent perspective"
+        },
+        {
+          "label": "D",
+          "text": "Eliminates the need for any internal controls"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "External audits provide an independent, unbiased perspective, reporting to executive officers.",
+        "why_others_are_wrong": {
+          "A": "External audits are often more costly, not cheaper.",
+          "B": "Scope must still be defined for any audit.",
+          "D": "Audits assess controls; they do not remove the need for them."
+        }
+      },
+      "exam_reasoning": "Tests the independence value of external audits.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Types of Security Audits",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0005",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Performance Indicators",
+      "subtopic": "KRI",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "A Key Risk Indicator (KRI) differs from a Key Performance Indicator (KPI) in that a KRI:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Measures only past financial profit"
+        },
+        {
+          "label": "B",
+          "text": "Measures potential failure or ineffectiveness in security controls (forward-looking risk)"
+        },
+        {
+          "label": "C",
+          "text": "Can only be expressed as a color code"
+        },
+        {
+          "label": "D",
+          "text": "Is identical to a KPI in every way"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A KRI measures the potential for failure/ineffectiveness of controls—signaling rising risk—whereas a KPI measures performance against objectives.",
+        "why_others_are_wrong": {
+          "A": "KRIs concern security-control risk, not just financial profit.",
+          "D": "KRIs and KPIs measure different things (risk vs performance).",
+          "C": "KRIs are not limited to color codes."
+        }
+      },
+      "exam_reasoning": "Distinguishes KRIs (risk) from KPIs (performance).",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Key Risk Indicators (KRIs)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0006",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Performance Indicators",
+      "subtopic": "KPI",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A Key Performance Indicator (KPI) in security assessment is BEST used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Define the office floor plan"
+        },
+        {
+          "label": "B",
+          "text": "Predict the exact date of the next breach"
+        },
+        {
+          "label": "C",
+          "text": "Measure how well security activities are meeting defined objectives/targets"
+        },
+        {
+          "label": "D",
+          "text": "Replace all logging and monitoring"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "KPIs measure performance against goals/targets (e.g., percentage of systems patched on time), helping gauge program effectiveness.",
+        "why_others_are_wrong": {
+          "B": "KPIs measure performance, not predict exact breach dates.",
+          "D": "KPIs complement, not replace, monitoring.",
+          "A": "Floor plans are unrelated to KPIs."
+        }
+      },
+      "exam_reasoning": "Tests the performance-measurement role of KPIs.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Performance and Risk Indicators",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0007",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Measurement Standards",
+      "subtopic": "NIST 800-55 / ISO 27004",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which pair of standards provides guidance on security measurement and metrics?",
+      "options": [
+        {
+          "label": "A",
+          "text": "PCI DSS and HIPAA"
+        },
+        {
+          "label": "B",
+          "text": "NIST SP 800-88 and ISO 11889"
+        },
+        {
+          "label": "C",
+          "text": "WPA2 and WPA3"
+        },
+        {
+          "label": "D",
+          "text": "NIST SP 800-55 and ISO 27004"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "NIST SP 800-55 and ISO 27004 both address security measurement, metrics, and evaluation.",
+        "why_others_are_wrong": {
+          "B": "NIST SP 800-88 is media sanitization; ISO 11889 is TPM.",
+          "A": "PCI DSS/HIPAA are compliance regulations, not measurement guides.",
+          "C": "WPA2/WPA3 are wireless encryption protocols."
+        }
+      },
+      "exam_reasoning": "Maps security metrics guidance to NIST 800-55/ISO 27004.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Measurement Standards and Guides",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0008",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Data Collection",
+      "subtopic": "Triple constraint",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A team must collect assessment data but has limited time and budget. The guide frames this trade-off using the triple constraint of:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Confidentiality, integrity, and availability"
+        },
+        {
+          "label": "B",
+          "text": "Red, blue, and purple teams"
+        },
+        {
+          "label": "C",
+          "text": "People, process, and technology"
+        },
+        {
+          "label": "D",
+          "text": "Scope, time, and cost (which together affect data quality)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The triple constraint of scope, time, and cost governs the quality of collected assessment data—expanding one usually pressures the others.",
+        "why_others_are_wrong": {
+          "C": "People/process/technology is a different model, not the triple constraint here.",
+          "A": "CIA is the security triad, not the project triple constraint.",
+          "B": "Red/blue/purple are testing teams, not constraints."
+        }
+      },
+      "exam_reasoning": "Maps the scope/time/cost trade-off to the triple constraint.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Collecting Security Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0009",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Data Collection",
+      "subtopic": "Account management data",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Reviewing account management data during an assessment primarily helps verify that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The data center temperature is correct"
+        },
+        {
+          "label": "B",
+          "text": "The office has enough parking"
+        },
+        {
+          "label": "C",
+          "text": "The wireless encryption is WPA3"
+        },
+        {
+          "label": "D",
+          "text": "Account creation, modification, and removal follow policy (e.g., no orphaned or excessive accounts)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Account management data (identities and authenticators across the account lifecycle) lets assessors verify proper creation, modification, and auditing of accounts—catching orphaned or over-privileged accounts.",
+        "why_others_are_wrong": {
+          "A": "Temperature is an environmental control concern.",
+          "C": "Wireless encryption is a network control, not account data.",
+          "B": "Parking is unrelated to account management."
+        }
+      },
+      "exam_reasoning": "Connects account management data to lifecycle verification.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Account Management Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0010",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Data Collection",
+      "subtopic": "Management approval",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Before conducting security assessment data collection, the team should FIRST obtain:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Management approval and support for the assessment"
+        },
+        {
+          "label": "B",
+          "text": "A new set of office furniture"
+        },
+        {
+          "label": "C",
+          "text": "A larger UPS battery"
+        },
+        {
+          "label": "D",
+          "text": "Permission from external attackers"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Assessments require management approval and support to authorize scope, access, and resources.",
+        "why_others_are_wrong": {
+          "B": "Furniture is irrelevant to assessment authorization.",
+          "D": "Attackers do not authorize assessments.",
+          "C": "A UPS is a power device, not assessment authorization."
+        }
+      },
+      "exam_reasoning": "Tests the need for management authorization of assessments.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Collecting Security Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0011",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "DR Testing",
+      "subtopic": "Test types order",
+      "difficulty": "medium",
+      "question_type": "sequence_ordering",
+      "question": "Order the disaster recovery test types from LEAST disruptive/intensive to MOST disruptive. (Provide the option labels in order.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Checklist (read-through) test"
+        },
+        {
+          "label": "B",
+          "text": "Parallel test"
+        },
+        {
+          "label": "C",
+          "text": "Structured walkthrough (tabletop)"
+        },
+        {
+          "label": "D",
+          "text": "Full interruption test"
+        },
+        {
+          "label": "E",
+          "text": "Simulation test"
+        }
+      ],
+      "correct_answer": "A,C,E,B,D",
+      "explanation": {
+        "why_correct": "DR tests escalate from a checklist review, to a tabletop walkthrough, to a simulation, to a parallel test (no impact to live ops), to a full interruption test (production is impacted).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests the order of DR test intensity.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Disaster Recovery Test Types and Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0012",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "DR Testing",
+      "subtopic": "Parallel test",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A company wants to validate that its recovery site can run production workloads WITHOUT taking the live production environment offline. Which DR test fits BEST?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Checklist (read-through) test"
+        },
+        {
+          "label": "B",
+          "text": "Structured walkthrough (tabletop)"
+        },
+        {
+          "label": "C",
+          "text": "Parallel test"
+        },
+        {
+          "label": "D",
+          "text": "Full interruption test"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A parallel test runs recovery procedures/site in parallel without impacting live operations—validating recovery capability with low risk.",
+        "why_others_are_wrong": {
+          "D": "A full interruption test deliberately impacts production, which the requirement forbids.",
+          "A": "A checklist test only reviews documents, not actual recovery operations.",
+          "B": "A tabletop exercise discusses the plan but does not run the recovery site."
+        }
+      },
+      "exam_reasoning": "Maps no-impact recovery validation to a parallel test.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Disaster Recovery Test Types and Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0013",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "DR Testing",
+      "subtopic": "Full interruption test",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Which DR test is the MOST thorough but also the RISKIEST, because production operations are actually moved to the backup site?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Checklist test"
+        },
+        {
+          "label": "B",
+          "text": "Full interruption test"
+        },
+        {
+          "label": "C",
+          "text": "Parallel test"
+        },
+        {
+          "label": "D",
+          "text": "Simulation test"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A full interruption test moves production to the backup site, impacting live operations—most realistic and thorough but highest risk.",
+        "why_others_are_wrong": {
+          "C": "A parallel test does not impact live operations.",
+          "D": "A simulation walks through a scenario without full production cutover.",
+          "A": "A checklist test only reviews documentation."
+        }
+      },
+      "exam_reasoning": "Maps highest-risk production cutover to the full interruption test.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Disaster Recovery Test Types and Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0014",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "DR Testing",
+      "subtopic": "Tabletop exercise",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A structured walkthrough (tabletop) DR test consists of:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Team members reviewing the DR plan together in a meeting to identify issues"
+        },
+        {
+          "label": "B",
+          "text": "Sending invalid data to an application to find bugs"
+        },
+        {
+          "label": "C",
+          "text": "Scanning the network for open ports"
+        },
+        {
+          "label": "D",
+          "text": "Actually failing over production to a cloud site"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "A structured walkthrough/tabletop exercise gathers the team to review the DR plan and identify gaps—discussion-based, no live failover.",
+        "why_others_are_wrong": {
+          "D": "Failing over production is a full interruption test.",
+          "B": "Sending invalid data is fuzz testing.",
+          "C": "Port scanning is a vulnerability-scanning activity."
+        }
+      },
+      "exam_reasoning": "Recall of the tabletop/structured walkthrough test.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Disaster Recovery Test Types and Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0015",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Backups",
+      "subtopic": "Differential backup",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "A differential backup copies:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The entire system every time"
+        },
+        {
+          "label": "B",
+          "text": "Nothing; it only verifies existing backups"
+        },
+        {
+          "label": "C",
+          "text": "Only data modified since the last full OR incremental backup"
+        },
+        {
+          "label": "D",
+          "text": "All data modified since the last FULL backup"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "A differential backup copies everything changed since the last full backup (so differentials grow until the next full backup).",
+        "why_others_are_wrong": {
+          "C": "Copying changes since the last full OR incremental describes an incremental backup.",
+          "A": "Backing up everything each time describes a full backup.",
+          "B": "A differential backup copies changed data; it is not merely a verification."
+        }
+      },
+      "exam_reasoning": "Distinguishes differential (since last full) from incremental.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Backup Types and Testing Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0016",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Backups",
+      "subtopic": "Incremental backup",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "An organization runs a full backup on Sunday and incremental backups each weeknight. To FULLY restore data after a Thursday failure, which sets are needed?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Any single incremental backup"
+        },
+        {
+          "label": "B",
+          "text": "Only Thursday's incremental backup"
+        },
+        {
+          "label": "C",
+          "text": "The Sunday full backup plus every incremental from Monday through Thursday"
+        },
+        {
+          "label": "D",
+          "text": "Only the Sunday full backup"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Incrementals capture only changes since the last full or incremental, so a full restore needs the full backup plus the complete chain of incrementals up to the failure.",
+        "why_others_are_wrong": {
+          "B": "A single incremental lacks all prior changes since the full backup.",
+          "D": "The full backup alone misses changes made during the week.",
+          "A": "One incremental is insufficient; the entire chain is required."
+        }
+      },
+      "exam_reasoning": "Tests incremental restore requiring full + full incremental chain.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Backup Types and Testing Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0017",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Backups",
+      "subtopic": "Full backup",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A full backup is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A scan for open network ports"
+        },
+        {
+          "label": "B",
+          "text": "A copy of only the files changed since yesterday"
+        },
+        {
+          "label": "C",
+          "text": "A complete copy of all system and user data"
+        },
+        {
+          "label": "D",
+          "text": "A read-through review of the backup plan"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A full backup captures a complete copy of all objects and user data, enabling a complete restore from one set.",
+        "why_others_are_wrong": {
+          "B": "Copying only recent changes describes incremental/differential backups.",
+          "D": "A read-through review is a checklist DR test.",
+          "A": "Port scanning is a vulnerability-assessment activity."
+        }
+      },
+      "exam_reasoning": "Recall of the full backup definition.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Backup Types and Testing Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0018",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Backups",
+      "subtopic": "Backup verification",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "During a security assessment, the MOST important thing to verify about backups is that they:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Can actually be restored, and are retained/encrypted/archived per policy"
+        },
+        {
+          "label": "B",
+          "text": "Are never tested to avoid wear"
+        },
+        {
+          "label": "C",
+          "text": "Use the brightest-colored tapes"
+        },
+        {
+          "label": "D",
+          "text": "Are stored on the same server as production data"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Backups must be tested for successful restoration and verified for retention, encryption, and proper archiving—an untested backup is unreliable.",
+        "why_others_are_wrong": {
+          "D": "Storing backups with production defeats their disaster-recovery purpose.",
+          "B": "Backups must be tested; untested backups may fail when needed.",
+          "C": "Tape color is irrelevant to backup integrity."
+        }
+      },
+      "exam_reasoning": "Emphasizes restore-testing and proper backup handling.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Backup Data Testing and Verification",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0019",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Data Collection",
+      "subtopic": "Training verification",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Collecting security training and awareness data during an assessment helps the organization:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Eliminate the need for any technical controls"
+        },
+        {
+          "label": "B",
+          "text": "Guarantee no employee will ever click a phishing link"
+        },
+        {
+          "label": "C",
+          "text": "Replace the disaster recovery plan"
+        },
+        {
+          "label": "D",
+          "text": "Track compliance with training requirements and identify gaps for emerging risks"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Training/awareness data verifies who has completed required training, tracks compliance, and reveals gaps relative to emerging risks.",
+        "why_others_are_wrong": {
+          "A": "Training complements, not replaces, technical controls.",
+          "B": "Training reduces but cannot guarantee zero risky behavior.",
+          "C": "Training data does not replace DR planning."
+        }
+      },
+      "exam_reasoning": "Connects training data to compliance tracking and gap analysis.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Verifying Training and Awareness",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0020",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "DR Testing",
+      "subtopic": "Checklist test",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A checklist (read-through) DR test involves:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Distributing the DR checklist to team members to review and provide feedback"
+        },
+        {
+          "label": "B",
+          "text": "Exploiting vulnerabilities with Metasploit"
+        },
+        {
+          "label": "C",
+          "text": "Cutting over production to the backup site"
+        },
+        {
+          "label": "D",
+          "text": "Encrypting all backup tapes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "A checklist/read-through test distributes the DR plan/checklist for review and feedback—the least disruptive DR test.",
+        "why_others_are_wrong": {
+          "C": "Production cutover is a full interruption test.",
+          "B": "Exploitation with Metasploit is a penetration-testing activity.",
+          "D": "Encrypting tapes is a backup-handling control, not a DR test type."
+        }
+      },
+      "exam_reasoning": "Recall of the checklist DR test.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Disaster Recovery Test Types and Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0021",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Data Collection",
+      "subtopic": "Sources of data",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are valid sources of measurement data for a security assessment? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "The CEO's favorite color"
+        },
+        {
+          "label": "B",
+          "text": "Risk assessment/analysis results"
+        },
+        {
+          "label": "C",
+          "text": "The cafeteria menu"
+        },
+        {
+          "label": "D",
+          "text": "Vulnerability assessment outcomes categorized by severity"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Risk assessment results and severity-categorized vulnerability outcomes (plus incident/recovery timelines) are valid measurement-data sources.",
+        "why_others_are_wrong": {
+          "A": "Personal color preference is not assessment data.",
+          "C": "The cafeteria menu is irrelevant."
+        }
+      },
+      "exam_reasoning": "Identifies legitimate measurement-data sources.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Sources of Measurement Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0022",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Security Audits",
+      "subtopic": "Audit report content",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A security audit report typically includes:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Only the source code of every application"
+        },
+        {
+          "label": "B",
+          "text": "The office Wi-Fi password"
+        },
+        {
+          "label": "C",
+          "text": "Compliance status and the perceived risk impact"
+        },
+        {
+          "label": "D",
+          "text": "A list of employee salaries"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Audit reports communicate compliance status against governance/regulations and the perceived risk impact of findings.",
+        "why_others_are_wrong": {
+          "A": "Audits report on controls/compliance, not full source code.",
+          "D": "Salaries are not audit-report content.",
+          "B": "Publishing the Wi-Fi password would be a security risk, not audit content."
+        }
+      },
+      "exam_reasoning": "Tests typical audit-report content.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Security Audit",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0023",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Assessment Strategy",
+      "subtopic": "Define scope",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A critical FIRST step when building a security test and assessment strategy is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Delete all existing logs"
+        },
+        {
+          "label": "B",
+          "text": "Immediately exploit production systems"
+        },
+        {
+          "label": "C",
+          "text": "Disable monitoring to reduce noise"
+        },
+        {
+          "label": "D",
+          "text": "Define the scope of what will be assessed"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Defining the scope establishes what systems, controls, and objectives the assessment covers, guiding all subsequent activities.",
+        "why_others_are_wrong": {
+          "B": "Exploiting production without scope/authorization is reckless and unauthorized.",
+          "A": "Deleting logs destroys evidence and accountability.",
+          "C": "Disabling monitoring reduces visibility during assessment."
+        }
+      },
+      "exam_reasoning": "Tests scoping as a foundational assessment step.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Security Test and Assessment Strategy",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0024",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "DR Testing",
+      "subtopic": "Simulation test",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A simulation DR test is BEST described as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A scan of all open TCP ports"
+        },
+        {
+          "label": "B",
+          "text": "A structured walkthrough applied to a specific disaster scenario, evaluating results and corrective actions"
+        },
+        {
+          "label": "C",
+          "text": "A static analysis of application source code"
+        },
+        {
+          "label": "D",
+          "text": "A complete production cutover to the cloud"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A simulation test applies a structured walkthrough to a specific scenario (e.g., natural or man-made disaster), then evaluates results and corrective actions—without full production impact.",
+        "why_others_are_wrong": {
+          "D": "Full production cutover is a full interruption test.",
+          "C": "Static source-code analysis is SAST, not a DR test.",
+          "A": "Port scanning is a vulnerability-assessment activity."
+        }
+      },
+      "exam_reasoning": "Recall of the simulation DR test.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Disaster Recovery Test Types and Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0025",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Data Collection",
+      "subtopic": "Account lifecycle audit",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "During an assessment, an auditor finds several active accounts belonging to employees who left months ago. This finding MOST directly indicates a weakness in:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The account deprovisioning/auditing part of the account management lifecycle"
+        },
+        {
+          "label": "B",
+          "text": "The data center cooling system"
+        },
+        {
+          "label": "C",
+          "text": "The fire suppression system"
+        },
+        {
+          "label": "D",
+          "text": "The wireless encryption protocol"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Lingering accounts for departed staff indicate failures in account auditing/deprovisioning within the account management lifecycle—an access risk.",
+        "why_others_are_wrong": {
+          "B": "Cooling is an environmental control, unrelated to orphaned accounts.",
+          "D": "Wireless encryption does not govern account removal.",
+          "C": "Fire suppression is a physical safety control."
+        }
+      },
+      "exam_reasoning": "Maps orphaned accounts to account-lifecycle/deprovisioning weakness.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Security Test and Assessment > Account Management Lifecycle",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0026",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Assessment",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The PRIMARY purpose of a vulnerability assessment is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Identify and categorize weaknesses so they can be prioritized and remediated"
+        },
+        {
+          "label": "B",
+          "text": "Exploit weaknesses to gain full control of systems"
+        },
+        {
+          "label": "C",
+          "text": "Encrypt all data on the network"
+        },
+        {
+          "label": "D",
+          "text": "Permanently eliminate all risk"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "A vulnerability assessment identifies and categorizes weaknesses (often by severity) to reduce risk exposure—it does not exploit them (that is penetration testing).",
+        "why_others_are_wrong": {
+          "B": "Exploiting weaknesses is penetration testing, not a vulnerability assessment.",
+          "D": "No assessment eliminates all risk.",
+          "C": "Assessment finds weaknesses; it does not perform encryption."
+        }
+      },
+      "exam_reasoning": "Distinguishes vulnerability assessment (find/categorize) from pen testing (exploit).",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Vulnerability Assessments",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0027",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Assessment",
+      "subtopic": "Assessment vs pen test",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "Management wants to know which weaknesses exist on its servers but does NOT want testers to actually break in or disrupt operations. Which activity fits BEST?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A breach and attack simulation against production"
+        },
+        {
+          "label": "B",
+          "text": "A full interruption DR test"
+        },
+        {
+          "label": "C",
+          "text": "A vulnerability assessment/scan"
+        },
+        {
+          "label": "D",
+          "text": "A full-scope penetration test with exploitation"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A vulnerability assessment/scan identifies and reports weaknesses without exploiting them, matching the requirement to avoid intrusion/disruption.",
+        "why_others_are_wrong": {
+          "D": "A penetration test actively exploits weaknesses, which management excluded.",
+          "B": "A full interruption test disrupts production—out of scope here.",
+          "A": "BAS exercises attack techniques, which may be more intrusive than wanted."
+        }
+      },
+      "exam_reasoning": "Maps non-intrusive weakness identification to a vulnerability assessment.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Vulnerability Assessments",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0028",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Sources",
+      "subtopic": "CVE/NVD",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The MITRE CVE list and the National Vulnerability Database (NVD) primarily provide:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Standardized identifiers and details for publicly known vulnerabilities"
+        },
+        {
+          "label": "B",
+          "text": "Physical access badges for the data center"
+        },
+        {
+          "label": "C",
+          "text": "Encryption keys for production systems"
+        },
+        {
+          "label": "D",
+          "text": "A backup power supply for scanners"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "CVE provides unique identifiers for publicly known vulnerabilities, and the NVD enriches them with details/scoring—both are key vulnerability information sources.",
+        "why_others_are_wrong": {
+          "D": "Backup power is a UPS/generator function.",
+          "C": "CVE/NVD do not provide encryption keys.",
+          "B": "Badges are physical access controls."
+        }
+      },
+      "exam_reasoning": "Maps known-vulnerability identifiers to CVE/NVD.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Sources for Vulnerability Information",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0029",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "SCAP",
+      "subtopic": "Purpose",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Security Content Automation Protocol (SCAP), created by NIST, primarily exists to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Provide backup power to scanners"
+        },
+        {
+          "label": "B",
+          "text": "Replace the need for any vulnerability scanning"
+        },
+        {
+          "label": "C",
+          "text": "Encrypt wireless traffic"
+        },
+        {
+          "label": "D",
+          "text": "Standardize how vulnerability and configuration information is expressed and reported"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "SCAP standardizes the format/exchange of security content (vulnerabilities, configuration checks, scoring) so tools interoperate and reporting is consistent.",
+        "why_others_are_wrong": {
+          "A": "Backup power is unrelated to SCAP.",
+          "B": "SCAP standardizes scanning content; it does not replace scanning.",
+          "C": "Wireless encryption is WPA2/WPA3, not SCAP."
+        }
+      },
+      "exam_reasoning": "Tests the standardization purpose of SCAP.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Security Content Automation Protocol (SCAP)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0030",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "SCAP",
+      "subtopic": "CVSS",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Within SCAP, the Common Vulnerability Scoring System (CVSS) is used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Uniquely name a hardware/software platform"
+        },
+        {
+          "label": "B",
+          "text": "Assign a severity score to a vulnerability to help prioritize remediation"
+        },
+        {
+          "label": "C",
+          "text": "List the open ports on a host"
+        },
+        {
+          "label": "D",
+          "text": "Encrypt the scan results"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "CVSS provides a numeric severity score (e.g., 0–10) for vulnerabilities, helping teams prioritize which to fix first.",
+        "why_others_are_wrong": {
+          "A": "Naming a platform is the role of CPE (Common Platform Enumeration).",
+          "C": "Listing open ports is a function of a port scan, not CVSS.",
+          "D": "CVSS scores severity; it does not encrypt results."
+        }
+      },
+      "exam_reasoning": "Maps vulnerability severity scoring to CVSS.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > SCAP Identification Schemes",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0031",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "SCAP",
+      "subtopic": "CPE",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Common Platform Enumeration (CPE) within SCAP is used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Provide standardized names for hardware, operating systems, and applications"
+        },
+        {
+          "label": "B",
+          "text": "Score the severity of a vulnerability"
+        },
+        {
+          "label": "C",
+          "text": "Map a network's physical cabling"
+        },
+        {
+          "label": "D",
+          "text": "Define interactive checklist questions"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "CPE is a standardized naming scheme for platforms (hardware, OS, applications), enabling consistent identification across tools.",
+        "why_others_are_wrong": {
+          "B": "Severity scoring is CVSS.",
+          "D": "Interactive checklist questions are OCIL.",
+          "C": "CPE does not map physical cabling."
+        }
+      },
+      "exam_reasoning": "Maps platform naming to CPE.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > SCAP Identification Schemes",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0032",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "SCAP",
+      "subtopic": "Components",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO of the following are SCAP components? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "SYN flood"
+        },
+        {
+          "label": "B",
+          "text": "XCCDF"
+        },
+        {
+          "label": "C",
+          "text": "WPA3"
+        },
+        {
+          "label": "D",
+          "text": "OVAL"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "XCCDF (configuration checklists) and OVAL (vulnerability/assessment language) are SCAP components, along with OCIL, CPE, CVE, and CVSS.",
+        "why_others_are_wrong": {
+          "C": "WPA3 is a wireless encryption protocol.",
+          "A": "A SYN flood is a DoS attack technique."
+        }
+      },
+      "exam_reasoning": "Identifies SCAP components.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Key SCAP Components",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0033",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Credentialed vs non-credentialed",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A team needs to verify exact patch levels and detailed configurations on servers. Which scan type provides this deeper insight, and what does it require?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A credentialed (authenticated) scan, which requires privileged login access"
+        },
+        {
+          "label": "B",
+          "text": "A non-credentialed scan, which needs no access at all"
+        },
+        {
+          "label": "C",
+          "text": "A SYN scan, which only checks port state"
+        },
+        {
+          "label": "D",
+          "text": "A discovery scan, which only finds live hosts"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "A credentialed/authenticated scan logs in with privileged access to reveal patch levels and detailed configurations—deeper than a non-credentialed scan.",
+        "why_others_are_wrong": {
+          "B": "A non-credentialed scan only checks general settings/communications with limited depth.",
+          "D": "A discovery scan finds active hosts, not detailed patch levels.",
+          "C": "A SYN scan determines port status, not configuration/patch detail."
+        }
+      },
+      "exam_reasoning": "Maps deep patch/config insight to credentialed scans.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Scans",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0034",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Non-credentialed scan",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A non-credentialed vulnerability scan is characterized by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Logging in as root to read every configuration file"
+        },
+        {
+          "label": "B",
+          "text": "Checking general settings/communications with read-only access and limited depth"
+        },
+        {
+          "label": "C",
+          "text": "Requiring physical access to each server"
+        },
+        {
+          "label": "D",
+          "text": "Always taking longer than a credentialed scan"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A non-credentialed scan inspects externally visible settings/communications with read-only access—faster but shallower than a credentialed scan.",
+        "why_others_are_wrong": {
+          "A": "Root login for deep config reading describes a credentialed scan.",
+          "D": "Non-credentialed scans are typically faster, not slower.",
+          "C": "Scans are network-based; they do not require physical access."
+        }
+      },
+      "exam_reasoning": "Tests the read-only, limited-depth nature of non-credentialed scans.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Scans",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0035",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Discovery scan",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A discovery scan is primarily used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Encrypt host communications"
+        },
+        {
+          "label": "B",
+          "text": "Score vulnerabilities with CVSS"
+        },
+        {
+          "label": "C",
+          "text": "Exploit a vulnerability to gain shell access"
+        },
+        {
+          "label": "D",
+          "text": "Detect active hosts across an IP range/subnet to maintain an inventory"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "A discovery scan targets an IP address/range/subnet to find live hosts, useful for maintaining an accurate host inventory.",
+        "why_others_are_wrong": {
+          "C": "Exploiting for shell access is penetration testing.",
+          "B": "CVSS scoring is a separate severity step.",
+          "A": "Discovery scans identify hosts; they do not encrypt communications."
+        }
+      },
+      "exam_reasoning": "Maps host inventory discovery to the discovery scan.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Discovery Scan",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0036",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Port status",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In scan results, a port reported as \"filtered\" generally means:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The port is definitely open and accepting connections"
+        },
+        {
+          "label": "B",
+          "text": "A firewall or filter is blocking the scanner from determining the port's true state"
+        },
+        {
+          "label": "C",
+          "text": "The port is physically disconnected"
+        },
+        {
+          "label": "D",
+          "text": "The host does not exist"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A filtered (unknown/filtered) result indicates a firewall/filter is preventing the scanner from confirming whether the port is open or closed.",
+        "why_others_are_wrong": {
+          "A": "An open port would be reported as \"open,\" not filtered.",
+          "C": "Filtering is a logical block, not a physical disconnection.",
+          "D": "A non-existent host would not return port results at all."
+        }
+      },
+      "exam_reasoning": "Tests interpretation of a filtered port result.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Port Status Results in Discovery Scans",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0037",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Packet Scans",
+      "subtopic": "XMAS scan",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "An XMAS scan sends packets with which characteristic to probe a target's response?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A completed three-way handshake on every port"
+        },
+        {
+          "label": "B",
+          "text": "Multiple TCP flags set (e.g., FIN, PSH, URG) \"lighting up\" the packet"
+        },
+        {
+          "label": "C",
+          "text": "No flags and an empty payload only"
+        },
+        {
+          "label": "D",
+          "text": "Only the SYN flag set"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "An XMAS scan sets several TCP flags (commonly FIN, PSH, URG) at once—\"lit up like a Christmas tree\"—to elicit responses that reveal port state while sometimes evading basic logging.",
+        "why_others_are_wrong": {
+          "A": "A completed handshake on every port describes a TCP Connect scan.",
+          "D": "Only the SYN flag set describes a SYN scan.",
+          "C": "A no-flags packet describes a NULL scan, not XMAS."
+        }
+      },
+      "exam_reasoning": "Identifies the multi-flag XMAS scan.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Packet Scans in Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0038",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Packet Scans",
+      "subtopic": "SYN scan",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "A SYN (half-open) scan is often preferred over a full TCP Connect scan because it:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Always completes the full handshake and logs every connection"
+        },
+        {
+          "label": "B",
+          "text": "Does not complete the three-way handshake, making it stealthier and faster"
+        },
+        {
+          "label": "C",
+          "text": "Encrypts the scan traffic end to end"
+        },
+        {
+          "label": "D",
+          "text": "Requires privileged credentials on the target"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A SYN scan sends SYN and interprets the response without completing the handshake (sending RST instead of ACK), making it faster and less likely to be fully logged than a TCP Connect scan.",
+        "why_others_are_wrong": {
+          "A": "Completing the handshake/logging describes a TCP Connect scan.",
+          "D": "A SYN scan does not require target credentials.",
+          "C": "A SYN scan does not encrypt its traffic."
+        }
+      },
+      "exam_reasoning": "Tests why SYN (half-open) scans are stealthier than TCP Connect scans.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Packet Scans in Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0039",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Packet Scans",
+      "subtopic": "TCP Connect scan",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "A TCP Connect scan differs from a SYN scan in that it:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Requires the XMAS flag combination"
+        },
+        {
+          "label": "B",
+          "text": "Never receives any response from the target"
+        },
+        {
+          "label": "C",
+          "text": "Can only scan UDP services"
+        },
+        {
+          "label": "D",
+          "text": "Completes the full three-way handshake, which is more easily logged"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "A TCP Connect scan fully establishes the connection (completes the handshake), which is reliable but more likely to be logged than a half-open SYN scan.",
+        "why_others_are_wrong": {
+          "B": "It does receive handshake responses; that is how it confirms open ports.",
+          "C": "TCP Connect scans target TCP services, not only UDP.",
+          "A": "XMAS is a different scan technique."
+        }
+      },
+      "exam_reasoning": "Distinguishes the full-handshake TCP Connect scan from SYN.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Packet Scans in Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0040",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Best practices",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A vulnerability scanning best practice is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Run scans once at install and never again"
+        },
+        {
+          "label": "B",
+          "text": "Keep scanners updated with the latest signatures/plugins and schedule scans appropriately"
+        },
+        {
+          "label": "C",
+          "text": "Use an outdated scanner to avoid false positives"
+        },
+        {
+          "label": "D",
+          "text": "Disable scanning during business hours permanently"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Scanners must be kept updated (new signatures/plugins) and scans planned/scheduled (e.g., incremental scanning) to remain effective against current threats.",
+        "why_others_are_wrong": {
+          "A": "One-time scanning misses newly disclosed vulnerabilities.",
+          "D": "Scans should be scheduled thoughtfully, not permanently disabled.",
+          "C": "Outdated scanners miss new vulnerabilities; updates are essential."
+        }
+      },
+      "exam_reasoning": "Tests vulnerability-scanning best practices.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Best Practices for Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0041",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Signature-based",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A signature-based vulnerability scanner detects issues by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Comparing system characteristics against a database of known vulnerability signatures"
+        },
+        {
+          "label": "B",
+          "text": "Encrypting files to test resilience"
+        },
+        {
+          "label": "C",
+          "text": "Randomly guessing passwords until one works"
+        },
+        {
+          "label": "D",
+          "text": "Physically inspecting cabling"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Signature-based scanners match observed system attributes against a database of known vulnerability signatures—so the signature database must stay current.",
+        "why_others_are_wrong": {
+          "C": "Password guessing is a brute-force attack, not signature scanning.",
+          "B": "Encrypting files is not how scanners detect vulnerabilities.",
+          "D": "Cabling inspection is a physical activity, not a scan."
+        }
+      },
+      "exam_reasoning": "Tests how signature-based scanning works.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Vulnerability Scanning Process",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0042",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Scan scope risk",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A vulnerability scan against a fragile legacy system causes it to crash. Which practice would BEST reduce this risk in the future?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Plan/schedule scans and test scan intensity in a non-production environment first"
+        },
+        {
+          "label": "B",
+          "text": "Remove all logging so crashes are not recorded"
+        },
+        {
+          "label": "C",
+          "text": "Always run the most aggressive scan settings on production"
+        },
+        {
+          "label": "D",
+          "text": "Stop scanning the environment entirely"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Careful planning/scheduling and validating scan intensity against test/non-production systems reduces the chance of crashing fragile production hosts.",
+        "why_others_are_wrong": {
+          "C": "Aggressive settings on production increase crash risk.",
+          "D": "Stopping all scanning leaves the environment unassessed.",
+          "B": "Removing logging hides problems and harms accountability."
+        }
+      },
+      "exam_reasoning": "Tests safe scanning practices for fragile systems.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Best Practices for Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0043",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Assessment",
+      "subtopic": "Vulnerability management process",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "After a scan identifies vulnerabilities, the NEXT logical step in a vulnerability management process is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Delete the scanner"
+        },
+        {
+          "label": "B",
+          "text": "Immediately ignore all findings"
+        },
+        {
+          "label": "C",
+          "text": "Prioritize the findings (e.g., by severity) and remediate or mitigate them"
+        },
+        {
+          "label": "D",
+          "text": "Publish all findings publicly with full exploit details"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Vulnerability management continues by prioritizing findings (often by severity/CVSS) and remediating or mitigating them, then re-scanning to verify.",
+        "why_others_are_wrong": {
+          "B": "Ignoring findings leaves the organization exposed.",
+          "A": "Deleting the scanner removes a needed capability.",
+          "D": "Publicly releasing exploit details before remediation is reckless and unethical."
+        }
+      },
+      "exam_reasoning": "Tests the prioritize-and-remediate step of vulnerability management.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Vulnerability Assessments",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0044",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Packet Scans",
+      "subtopic": "UDP scan",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "UDP scans are often slower and less reliable than TCP scans because UDP:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Always completes a three-way handshake"
+        },
+        {
+          "label": "B",
+          "text": "Encrypts every packet by default"
+        },
+        {
+          "label": "C",
+          "text": "Is connectionless, so the absence of a reply is ambiguous (open or filtered)"
+        },
+        {
+          "label": "D",
+          "text": "Cannot be scanned at all"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "UDP is connectionless—no handshake—so a lack of response is ambiguous (open|filtered), making UDP scans slower and harder to interpret.",
+        "why_others_are_wrong": {
+          "A": "UDP has no handshake (that is TCP).",
+          "B": "UDP does not encrypt by default.",
+          "D": "UDP can be scanned, just less reliably."
+        }
+      },
+      "exam_reasoning": "Explains why UDP scanning is ambiguous/slower.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Packet Scans in Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0045",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "SCAP",
+      "subtopic": "OVAL",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Within SCAP, OVAL (Open Vulnerability and Assessment Language) is primarily used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Carry voice traffic over IP"
+        },
+        {
+          "label": "B",
+          "text": "Score the severity of a vulnerability numerically"
+        },
+        {
+          "label": "C",
+          "text": "Provide a standardized platform name"
+        },
+        {
+          "label": "D",
+          "text": "Express system states/tests to assess for vulnerabilities and configuration issues"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "OVAL provides a standardized language to describe system states and tests used to assess machines for vulnerabilities and configuration issues.",
+        "why_others_are_wrong": {
+          "B": "Numeric severity scoring is CVSS.",
+          "C": "Standardized platform naming is CPE.",
+          "A": "Voice over IP is VoIP, unrelated to OVAL."
+        }
+      },
+      "exam_reasoning": "Maps assessment-state description to OVAL.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Key SCAP Components",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0046",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Sources",
+      "subtopic": "US-CERT/vendor",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are valid sources of vulnerability information? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "The MITRE CVE database"
+        },
+        {
+          "label": "B",
+          "text": "The company holiday calendar"
+        },
+        {
+          "label": "C",
+          "text": "The office cafeteria menu"
+        },
+        {
+          "label": "D",
+          "text": "Vendor security advisories"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Vendor security advisories and the MITRE CVE database (plus the NVD and US-CERT) are key sources of vulnerability information.",
+        "why_others_are_wrong": {
+          "C": "A cafeteria menu is irrelevant to vulnerabilities.",
+          "B": "A holiday calendar is unrelated."
+        }
+      },
+      "exam_reasoning": "Identifies valid vulnerability-information sources.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Sources for Vulnerability Information",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0047",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Incremental scanning",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Incremental scanning is a best practice that helps by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Scanning the entire enterprise in one pass during peak hours"
+        },
+        {
+          "label": "B",
+          "text": "Scanning only printers and nothing else"
+        },
+        {
+          "label": "C",
+          "text": "Breaking large scans into manageable segments to reduce load and improve coverage over time"
+        },
+        {
+          "label": "D",
+          "text": "Never updating the scanner"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Incremental scanning divides scanning into smaller segments, reducing impact and making thorough coverage more manageable.",
+        "why_others_are_wrong": {
+          "A": "A single massive peak-hours scan risks disruption.",
+          "D": "Scanners must be updated regularly.",
+          "B": "Limiting scans to printers would miss most systems."
+        }
+      },
+      "exam_reasoning": "Tests the purpose of incremental scanning.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Best Practices for Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0048",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "Open port result",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A scan result of \"open\" for a port indicates that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The host is powered off"
+        },
+        {
+          "label": "B",
+          "text": "A service is listening and accepting connections on that port"
+        },
+        {
+          "label": "C",
+          "text": "The port is blocked by a firewall"
+        },
+        {
+          "label": "D",
+          "text": "The cable is unplugged"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "An \"open\" port means a service is actively listening/accepting connections, which may represent an attack surface to evaluate.",
+        "why_others_are_wrong": {
+          "C": "A firewall-blocked port would show as filtered.",
+          "A": "A powered-off host would not return open ports.",
+          "D": "An unplugged cable is a physical-layer issue, not an \"open\" result."
+        }
+      },
+      "exam_reasoning": "Tests interpretation of an open-port result.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Port Status Results in Discovery Scans",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0049",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "SCAP",
+      "subtopic": "OCIL",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "OCIL (Open Checklist Interactive Language) within SCAP is used for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Expressing checks that require human interaction/questionnaire responses"
+        },
+        {
+          "label": "B",
+          "text": "Naming platforms uniquely"
+        },
+        {
+          "label": "C",
+          "text": "Routing packets between subnets"
+        },
+        {
+          "label": "D",
+          "text": "Numerically scoring vulnerability severity"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "OCIL standardizes interactive checks (e.g., questionnaire-style items requiring human input) within SCAP content.",
+        "why_others_are_wrong": {
+          "D": "Severity scoring is CVSS.",
+          "B": "Platform naming is CPE.",
+          "C": "Packet routing is a network function."
+        }
+      },
+      "exam_reasoning": "Maps interactive checklist checks to OCIL.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Key SCAP Components",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0050",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Scanning",
+      "subtopic": "ACK scan",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "An ACK scan is most useful for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Completing a full three-way handshake to log connections"
+        },
+        {
+          "label": "B",
+          "text": "Assigning IP addresses to hosts"
+        },
+        {
+          "label": "C",
+          "text": "Determining whether a firewall is stateful and how it filters (mapping rule sets)"
+        },
+        {
+          "label": "D",
+          "text": "Encrypting traffic to the target"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "An ACK scan sends ACK packets to probe firewall behavior—helping determine whether a firewall is stateful and how ports are filtered—rather than simply finding open services.",
+        "why_others_are_wrong": {
+          "A": "Completing the handshake describes a TCP Connect scan.",
+          "D": "An ACK scan does not encrypt traffic.",
+          "B": "IP assignment is DHCP's function."
+        }
+      },
+      "exam_reasoning": "Tests the firewall-mapping use of ACK scans.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Packet Scans in Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0051",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Assessment",
+      "subtopic": "Assessment cadence",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO practices improve the value of an ongoing vulnerability scanning program? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Scheduling scans to balance coverage and impact"
+        },
+        {
+          "label": "B",
+          "text": "Disabling authentication so scans run faster"
+        },
+        {
+          "label": "C",
+          "text": "Ignoring all medium/low findings forever"
+        },
+        {
+          "label": "D",
+          "text": "Regularly updating scanner signatures"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Keeping signatures current and scheduling scans to balance coverage with operational impact strengthen a scanning program.",
+        "why_others_are_wrong": {
+          "B": "Disabling authentication reduces depth and harms security; credentialed scans are valuable.",
+          "C": "Permanently ignoring lower-severity findings lets risk accumulate."
+        }
+      },
+      "exam_reasoning": "Identifies sound vulnerability-scanning practices.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Best Practices for Vulnerability Scanning",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0052",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "SCAP",
+      "subtopic": "Tool interoperability",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A key benefit of using SCAP-compatible tools is that they:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Eliminate the need for any patching"
+        },
+        {
+          "label": "B",
+          "text": "Guarantee zero false positives"
+        },
+        {
+          "label": "C",
+          "text": "Provide physical security for the data center"
+        },
+        {
+          "label": "D",
+          "text": "Can exchange and consume standardized security content consistently"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "SCAP compatibility lets tools share standardized content (CVE, CPE, CVSS, OVAL, etc.), improving consistency and interoperability across the security toolchain.",
+        "why_others_are_wrong": {
+          "A": "SCAP supports identifying issues; patching is still required.",
+          "B": "No tool guarantees zero false positives.",
+          "C": "SCAP is about content standards, not physical security."
+        }
+      },
+      "exam_reasoning": "Tests the interoperability benefit of SCAP.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > SCAP Identification Schemes",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0053",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Vulnerability Assessment",
+      "subtopic": "Severity prioritization",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A scan returns hundreds of findings. With limited remediation capacity, which approach is BEST?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fix findings in alphabetical order by hostname"
+        },
+        {
+          "label": "B",
+          "text": "Do nothing until every finding can be fixed at once"
+        },
+        {
+          "label": "C",
+          "text": "Patch only the lowest-severity issues first"
+        },
+        {
+          "label": "D",
+          "text": "Prioritize remediation by severity and exposure (e.g., critical, internet-facing first)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "With limited capacity, prioritize by severity (e.g., CVSS) and exposure—remediating critical, internet-facing vulnerabilities first to reduce the greatest risk.",
+        "why_others_are_wrong": {
+          "A": "Alphabetical order ignores risk.",
+          "C": "Fixing low-severity first leaves critical risks open.",
+          "B": "Waiting to fix everything at once leaves critical risks unaddressed indefinitely."
+        }
+      },
+      "exam_reasoning": "Tests risk-based remediation prioritization.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Vulnerability Assessments",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0054",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "How does a penetration test differ from a vulnerability assessment?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A penetration test never requires authorization"
+        },
+        {
+          "label": "B",
+          "text": "A penetration test actively exploits vulnerabilities to demonstrate real risk"
+        },
+        {
+          "label": "C",
+          "text": "A penetration test only reviews documentation"
+        },
+        {
+          "label": "D",
+          "text": "A penetration test only lists weaknesses without testing them"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A penetration test simulates an attack and exploits vulnerabilities to demonstrate actual, achievable risk—going beyond merely identifying weaknesses.",
+        "why_others_are_wrong": {
+          "D": "Listing weaknesses without exploiting is a vulnerability assessment.",
+          "A": "Pen tests require authorization (rules of engagement).",
+          "C": "Document review is an audit/checklist activity, not exploitation."
+        }
+      },
+      "exam_reasoning": "Distinguishes exploitation (pen test) from identification (vuln assessment).",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0055",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Rules of engagement",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "Before any penetration test begins, the single MOST important document to establish is the:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Rules of engagement (defining scope, methods, objectives, and authorization)"
+        },
+        {
+          "label": "B",
+          "text": "Office seating chart"
+        },
+        {
+          "label": "C",
+          "text": "Marketing brochure"
+        },
+        {
+          "label": "D",
+          "text": "Employee cafeteria schedule"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "The rules of engagement define scope, methods, and objectives and—critically—provide legal authorization, ensuring the test is performed ethically and lawfully.",
+        "why_others_are_wrong": {
+          "D": "A cafeteria schedule is irrelevant to a pen test.",
+          "C": "A marketing brochure has no bearing on test authorization.",
+          "B": "A seating chart does not authorize or scope a test."
+        }
+      },
+      "exam_reasoning": "Tests the centrality of rules of engagement (scope + legal authorization).",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Rules of Engagement",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0056",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Knowledge types",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In a BLACK box penetration test, the testers:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Are employees of the target with admin access"
+        },
+        {
+          "label": "B",
+          "text": "Are given partial information about the system"
+        },
+        {
+          "label": "C",
+          "text": "Have full knowledge of all system details"
+        },
+        {
+          "label": "D",
+          "text": "Have no prior knowledge of the target, increasing discovery effort and cost"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Black box testers start with no internal knowledge, requiring more discovery effort and typically costing more, while simulating an external attacker.",
+        "why_others_are_wrong": {
+          "C": "Full knowledge describes white box testing.",
+          "B": "Partial information describes grey box testing.",
+          "A": "Insider admin access is not the black-box premise."
+        }
+      },
+      "exam_reasoning": "Maps no-knowledge testing to black box.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Penetration Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0057",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Knowledge types",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A WHITE box penetration test is typically more cost-effective than black box because testers:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Must discover everything from scratch"
+        },
+        {
+          "label": "B",
+          "text": "Cannot use any tools"
+        },
+        {
+          "label": "C",
+          "text": "Have full system knowledge, reducing time spent on discovery"
+        },
+        {
+          "label": "D",
+          "text": "Are forbidden from seeing any documentation"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "White box testers receive full system details, so they spend less time on discovery—often making the engagement more efficient/cost-effective.",
+        "why_others_are_wrong": {
+          "A": "Discovering everything from scratch describes black box testing.",
+          "D": "White box testers are given documentation, not denied it.",
+          "B": "Testers may use tools in any test type."
+        }
+      },
+      "exam_reasoning": "Maps full-knowledge efficiency to white box testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Penetration Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0058",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Grey box",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A grey box penetration test provides testers with:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Partial knowledge of the system (a mix of white and black box)"
+        },
+        {
+          "label": "B",
+          "text": "Complete administrator credentials to everything"
+        },
+        {
+          "label": "C",
+          "text": "Only the physical building address"
+        },
+        {
+          "label": "D",
+          "text": "No information at all"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Grey box testing gives testers some information while keeping other elements hidden—a blend of white and black box approaches.",
+        "why_others_are_wrong": {
+          "D": "No information describes black box testing.",
+          "B": "Full admin access goes beyond the partial-knowledge grey box premise.",
+          "C": "Only an address would be closer to black box, not grey box."
+        }
+      },
+      "exam_reasoning": "Recall of grey box (partial knowledge).",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Penetration Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0059",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Testing Teams",
+      "subtopic": "Red team",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "In security testing, the RED team plays which role?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Combines attack and defense to improve posture"
+        },
+        {
+          "label": "B",
+          "text": "Simulates the attacker"
+        },
+        {
+          "label": "C",
+          "text": "Writes the financial audit report"
+        },
+        {
+          "label": "D",
+          "text": "Defends against the simulated attack"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "The red team simulates adversaries, attempting to breach defenses; the blue team defends; the purple team integrates both.",
+        "why_others_are_wrong": {
+          "D": "Defending is the blue team's role.",
+          "A": "Combining both is the purple team.",
+          "C": "Financial audit reporting is unrelated to red teaming."
+        }
+      },
+      "exam_reasoning": "Recall of the red team (attacker) role.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Testing Teams",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0060",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Testing Teams",
+      "subtopic": "Blue team",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The BLUE team in a security exercise is responsible for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Writing application source code"
+        },
+        {
+          "label": "B",
+          "text": "Approving the budget"
+        },
+        {
+          "label": "C",
+          "text": "Defending against the simulated attacks"
+        },
+        {
+          "label": "D",
+          "text": "Simulating the attacker"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "The blue team defends systems and responds to the red team's simulated attacks.",
+        "why_others_are_wrong": {
+          "D": "Simulating attacks is the red team's role.",
+          "B": "Budget approval is a management function.",
+          "A": "Writing source code is a development task."
+        }
+      },
+      "exam_reasoning": "Recall of the blue team (defender) role.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Testing Teams",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0061",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Testing Teams",
+      "subtopic": "Purple team",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A PURPLE team primarily exists to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Combine red and blue team efforts to improve overall security posture"
+        },
+        {
+          "label": "B",
+          "text": "Replace both the red and blue teams permanently"
+        },
+        {
+          "label": "C",
+          "text": "Manage the data center HVAC"
+        },
+        {
+          "label": "D",
+          "text": "Conduct only financial audits"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "The purple team integrates red (offense) and blue (defense) so findings translate directly into improved detection and defense.",
+        "why_others_are_wrong": {
+          "B": "Purple teaming complements, not permanently replaces, red/blue functions.",
+          "D": "Financial audits are unrelated to purple teaming.",
+          "C": "HVAC management is a facilities function."
+        }
+      },
+      "exam_reasoning": "Tests the integrative role of the purple team.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Testing Teams",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0062",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Testing Teams",
+      "subtopic": "Team-to-role mapping",
+      "difficulty": "medium",
+      "question_type": "matching",
+      "question": "Match each security testing team (1-3) to its role (A-C).",
+      "options": [
+        {
+          "label": "A",
+          "text": "Simulates the attacker"
+        },
+        {
+          "label": "B",
+          "text": "Defends against simulated attacks"
+        },
+        {
+          "label": "C",
+          "text": "Integrates offense and defense to improve posture"
+        }
+      ],
+      "correct_answer": "1-A,2-B,3-C",
+      "explanation": {
+        "why_correct": "Red → simulates the attacker (B); Blue → defends (A); Purple → integrates offense/defense (C).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests mapping of testing teams to their roles.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Testing Teams",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "Red team",
+        "Blue team",
+        "Purple team"
+      ]
+    },
+    {
+      "id": "CISSP-D06-Q0063",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Breach and Attack Simulation",
+      "subtopic": "BAS",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Breach and Attack Simulation (BAS) tools primarily:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Permanently remove all vulnerabilities"
+        },
+        {
+          "label": "B",
+          "text": "Replace the need for any monitoring"
+        },
+        {
+          "label": "C",
+          "text": "Provide physical access control to facilities"
+        },
+        {
+          "label": "D",
+          "text": "Automatically and continuously test whether security controls detect and respond to threats"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "BAS automates simulated attacks to validate whether controls detect and respond effectively, highlighting gaps for remediation—often continuously.",
+        "why_others_are_wrong": {
+          "A": "BAS validates controls; it does not remove vulnerabilities by itself.",
+          "B": "BAS complements, not replaces, monitoring.",
+          "C": "Physical access control is unrelated to BAS."
+        }
+      },
+      "exam_reasoning": "Tests the automated control-validation purpose of BAS.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Breach and Attack Simulation (BAS)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0064",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Phases order",
+      "difficulty": "hard",
+      "question_type": "sequence_ordering",
+      "question": "Order the penetration testing phases as described in the guide. (Provide the option labels in order.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Exploitation"
+        },
+        {
+          "label": "B",
+          "text": "Discovery (passive reconnaissance)"
+        },
+        {
+          "label": "C",
+          "text": "Post-exploitation"
+        },
+        {
+          "label": "D",
+          "text": "Scanning (active reconnaissance)"
+        },
+        {
+          "label": "E",
+          "text": "Reporting"
+        }
+      ],
+      "correct_answer": "B,D,A,C,E",
+      "explanation": {
+        "why_correct": "Pen testing proceeds: Discovery (passive recon/OSINT), Scanning (active recon), Exploitation, Post-exploitation (lateral movement/persistence/covering tracks), and Reporting.",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests the ordered penetration testing phases.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing Phases",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0065",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Discovery phase",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The discovery (reconnaissance) phase of a penetration test focuses on:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Writing the executive summary"
+        },
+        {
+          "label": "B",
+          "text": "Moving laterally across compromised systems"
+        },
+        {
+          "label": "C",
+          "text": "Exploiting vulnerabilities with Metasploit"
+        },
+        {
+          "label": "D",
+          "text": "Passive information gathering (OSINT/footprinting) without interacting with the target"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The discovery phase uses passive reconnaissance—OSINT and footprinting—to gather information without touching the target.",
+        "why_others_are_wrong": {
+          "C": "Exploitation occurs in a later phase.",
+          "B": "Lateral movement is part of post-exploitation.",
+          "A": "The executive summary belongs to the reporting phase."
+        }
+      },
+      "exam_reasoning": "Maps passive OSINT/footprinting to the discovery phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing Phases",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0066",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Scanning phase",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The scanning phase of a penetration test involves:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Passive OSINT only, with no system interaction"
+        },
+        {
+          "label": "B",
+          "text": "Covering tracks by deleting log files"
+        },
+        {
+          "label": "C",
+          "text": "Negotiating the rules of engagement"
+        },
+        {
+          "label": "D",
+          "text": "Active reconnaissance such as ping sweeps, port scans, and banner grabbing"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The scanning (active reconnaissance) phase interacts with the target—ping sweeps, port scans, banner grabbing, vulnerability scans—to identify weaknesses.",
+        "why_others_are_wrong": {
+          "A": "Passive-only OSINT is the discovery phase.",
+          "B": "Covering tracks occurs in post-exploitation.",
+          "C": "Rules of engagement are agreed before testing begins."
+        }
+      },
+      "exam_reasoning": "Maps active recon (scanning) to the scanning phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing Phases",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0067",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Post-exploitation",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "After gaining a foothold on one server, a tester pivots to other systems, maintains access, and removes evidence of activity. Which phase does this represent?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Post-exploitation"
+        },
+        {
+          "label": "B",
+          "text": "Scanning"
+        },
+        {
+          "label": "C",
+          "text": "Discovery"
+        },
+        {
+          "label": "D",
+          "text": "Reporting"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Post-exploitation uses initial access to move laterally, maintain access/persistence, and cover tracks (evading detection).",
+        "why_others_are_wrong": {
+          "C": "Discovery is passive pre-attack information gathering.",
+          "B": "Scanning is active reconnaissance before exploitation.",
+          "D": "Reporting documents findings after testing."
+        }
+      },
+      "exam_reasoning": "Maps lateral movement/persistence/track-covering to post-exploitation.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing Phases",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0068",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Reporting phase",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The reporting phase of a penetration test should include:",
+      "options": [
+        {
+          "label": "A",
+          "text": "No documentation, to keep results secret from the client"
+        },
+        {
+          "label": "B",
+          "text": "Live exploit code released publicly before remediation"
+        },
+        {
+          "label": "C",
+          "text": "An executive summary and a technical report, mapping findings to the rules of engagement"
+        },
+        {
+          "label": "D",
+          "text": "Only a single CVSS number with no context"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "The reporting phase documents findings, vulnerabilities, and remediation for different audiences (executive summary + technical report), mapping results to the rules of engagement.",
+        "why_others_are_wrong": {
+          "D": "A bare score without context does not help remediation.",
+          "B": "Releasing exploits publicly before fixes is reckless and unethical.",
+          "A": "The client must receive documented findings—that is the deliverable."
+        }
+      },
+      "exam_reasoning": "Tests appropriate pen-test reporting content.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing Phases",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0069",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Post-test cleanup",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "After completing an authorized penetration test, the team should perform post-test cleanup, which means:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Permanently deleting the client's production data"
+        },
+        {
+          "label": "B",
+          "text": "Leaving backdoors in place for future tests"
+        },
+        {
+          "label": "C",
+          "text": "Recovering affected hosts, removing tools/scripts, and restoring systems to their original state"
+        },
+        {
+          "label": "D",
+          "text": "Publishing the client's vulnerabilities online"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Post-test cleanup restores systems to their original state—recovering hosts and removing any tools, scripts, or artifacts introduced during testing.",
+        "why_others_are_wrong": {
+          "B": "Leaving backdoors is unethical and dangerous.",
+          "A": "Deleting production data is destructive and out of scope.",
+          "D": "Publishing client vulnerabilities violates confidentiality and ethics."
+        }
+      },
+      "exam_reasoning": "Tests the restore-to-original-state goal of post-test cleanup.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing Phases",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0070",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Physical scope",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Penetration testing can target which of the following?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Only wireless networks"
+        },
+        {
+          "label": "B",
+          "text": "Only printed documents"
+        },
+        {
+          "label": "C",
+          "text": "Both logical controls (networks/software) and physical controls (locks/cameras)"
+        },
+        {
+          "label": "D",
+          "text": "Only the HVAC system"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Pen tests can assess both logical controls (network/software systems) and physical controls (locks, cameras), depending on scope.",
+        "why_others_are_wrong": {
+          "A": "Pen tests are not limited to wireless.",
+          "B": "They are not limited to printed documents.",
+          "D": "They are not limited to HVAC."
+        }
+      },
+      "exam_reasoning": "Tests the logical-and-physical scope of pen testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0071",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Log Reviews",
+      "subtopic": "NTP clock sync",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "During an incident investigation, logs from different servers show inconsistent timestamps, making it hard to correlate events. Which control would have PREVENTED this problem?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Storing logs only on the compromised host"
+        },
+        {
+          "label": "B",
+          "text": "Disabling logging on half the servers"
+        },
+        {
+          "label": "C",
+          "text": "Synchronizing all systems to a common time source via NTP"
+        },
+        {
+          "label": "D",
+          "text": "Using a different time zone per server with no reference"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Synchronizing clocks via NTP ensures consistent timestamps across systems, which is essential for correlating events during log review and investigations.",
+        "why_others_are_wrong": {
+          "B": "Disabling logging removes the evidence entirely.",
+          "A": "Storing logs only on the compromised host risks tampering and loss.",
+          "D": "Unreferenced per-server time zones worsen correlation problems."
+        }
+      },
+      "exam_reasoning": "Maps timestamp correlation to NTP clock synchronization.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Log Reviews",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0072",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Log Reviews",
+      "subtopic": "Log protection",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "To protect log integrity, a recommended practice is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Keep logs only on the originating host with no copies"
+        },
+        {
+          "label": "B",
+          "text": "Allow all users to edit logs freely"
+        },
+        {
+          "label": "C",
+          "text": "Delete logs daily to save space"
+        },
+        {
+          "label": "D",
+          "text": "Store logs on a remote/centralized server and periodically hash them"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Storing logs on remote/centralized servers (limiting local tampering) and periodically hashing them to verify integrity are sound log-protection practices.",
+        "why_others_are_wrong": {
+          "A": "Local-only logs can be altered or destroyed by an attacker on that host.",
+          "B": "Freely editable logs lose integrity.",
+          "C": "Deleting logs daily can violate retention policy and destroy evidence."
+        }
+      },
+      "exam_reasoning": "Tests remote storage + hashing for log integrity.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Log Protection and Security Best Practices",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0073",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Log Reviews",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The PRIMARY purpose of reviewing system logs is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Track system events and provide an audit trail for detecting/investigating issues"
+        },
+        {
+          "label": "B",
+          "text": "Increase network bandwidth"
+        },
+        {
+          "label": "C",
+          "text": "Provide backup power to servers"
+        },
+        {
+          "label": "D",
+          "text": "Encrypt data at rest automatically"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Logs record system events and form audit trails that support detection, investigation, and accountability.",
+        "why_others_are_wrong": {
+          "B": "Logs do not increase bandwidth.",
+          "D": "Logging is not data-at-rest encryption.",
+          "C": "Backup power is a UPS/generator function."
+        }
+      },
+      "exam_reasoning": "Recall of the audit-trail purpose of logs.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Log Reviews",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0074",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Exploitation phase",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In the exploitation phase, testers attempt to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Synchronize all server clocks"
+        },
+        {
+          "label": "B",
+          "text": "Gather only public OSINT data"
+        },
+        {
+          "label": "C",
+          "text": "Write the final executive summary"
+        },
+        {
+          "label": "D",
+          "text": "Bypass security controls (manually or with tools like Metasploit) to compromise the target"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The exploitation phase actively bypasses security controls—using manual techniques or tools such as Metasploit—to compromise the target while minimizing indicators of compromise.",
+        "why_others_are_wrong": {
+          "B": "Gathering public OSINT is the discovery phase.",
+          "C": "The executive summary belongs to reporting.",
+          "A": "Clock synchronization is a log-review/operations concern."
+        }
+      },
+      "exam_reasoning": "Maps active compromise to the exploitation phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing Phases",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0075",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Breach and Attack Simulation",
+      "subtopic": "BAS vs pen test",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Compared to a periodic manual penetration test, a key advantage of BAS is that it:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Eliminates the need to ever patch systems"
+        },
+        {
+          "label": "B",
+          "text": "Requires no security controls to be present"
+        },
+        {
+          "label": "C",
+          "text": "Provides legal authorization automatically"
+        },
+        {
+          "label": "D",
+          "text": "Can run continuously/automatically to repeatedly validate control effectiveness"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "BAS automates simulated attacks so control effectiveness can be validated continuously, complementing point-in-time manual pen tests.",
+        "why_others_are_wrong": {
+          "B": "BAS validates existing controls; it does not remove the need for them.",
+          "A": "Patching is still required regardless of BAS.",
+          "C": "Authorization still comes from rules of engagement, not BAS itself."
+        }
+      },
+      "exam_reasoning": "Tests the continuous/automated advantage of BAS.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Breach and Attack Simulation (BAS)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0076",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Authorization importance",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Why is documented authorization (in the rules of engagement) essential before testing?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It provides legal cover so testers are not committing unauthorized access"
+        },
+        {
+          "label": "B",
+          "text": "It guarantees no vulnerabilities will be found"
+        },
+        {
+          "label": "C",
+          "text": "It encrypts the network automatically"
+        },
+        {
+          "label": "D",
+          "text": "It makes the test run faster"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Without documented authorization, the same actions a pen tester performs would be illegal unauthorized access; the rules of engagement provide the necessary legal cover.",
+        "why_others_are_wrong": {
+          "D": "Authorization is about legality, not speed.",
+          "C": "It does not encrypt the network.",
+          "B": "It does not affect whether vulnerabilities exist."
+        }
+      },
+      "exam_reasoning": "Tests the legal-authorization purpose of rules of engagement.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Rules of Engagement",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0077",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Testing Teams",
+      "subtopic": "Red vs blue distinction",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO statements about testing teams are correct? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "The red team approves the corporate budget"
+        },
+        {
+          "label": "B",
+          "text": "The blue team writes the marketing plan"
+        },
+        {
+          "label": "C",
+          "text": "The red team emulates real-world attackers"
+        },
+        {
+          "label": "D",
+          "text": "The blue team focuses on detection and defense"
+        }
+      ],
+      "correct_answer": [
+        "C",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "The red team emulates attackers and the blue team handles detection/defense; together (purple) they improve posture.",
+        "why_others_are_wrong": {
+          "A": "Budget approval is a management function, not a red-team task.",
+          "B": "Marketing plans are unrelated to the blue team."
+        }
+      },
+      "exam_reasoning": "Reinforces red (attack) and blue (defend) roles.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Testing Teams",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0078",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Tools",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are Linux distributions commonly used for penetration testing? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Parrot OS"
+        },
+        {
+          "label": "B",
+          "text": "Adobe Photoshop"
+        },
+        {
+          "label": "C",
+          "text": "Kali Linux"
+        },
+        {
+          "label": "D",
+          "text": "Microsoft Excel"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "Kali Linux and Parrot OS (along with BlackArch and BackBox) are distributions bundling penetration-testing tools.",
+        "why_others_are_wrong": {
+          "D": "Excel is a spreadsheet application.",
+          "B": "Photoshop is image-editing software."
+        }
+      },
+      "exam_reasoning": "Identifies pen-testing distributions.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Popular Tools/Distributions for Penetration Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0079",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Log Reviews",
+      "subtopic": "Periodic assessment",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Conducting periodic log assessments helps an organization to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Assign IP addresses to hosts"
+        },
+        {
+          "label": "B",
+          "text": "Increase the CPU clock speed"
+        },
+        {
+          "label": "C",
+          "text": "Replace the disaster recovery plan"
+        },
+        {
+          "label": "D",
+          "text": "Meet policy/compliance requirements and detect issues that automated alerts may miss"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Periodic log reviews verify compliance with policy and can surface anomalies/trends that real-time alerts alone might not catch.",
+        "why_others_are_wrong": {
+          "B": "Log review does not change CPU speed.",
+          "C": "Log review does not replace DR planning.",
+          "A": "IP assignment is DHCP's function."
+        }
+      },
+      "exam_reasoning": "Tests the compliance/detection value of periodic log review.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Log Protection and Security Best Practices",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0080",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Penetration Testing",
+      "subtopic": "Pen test value",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A board asks why a clean vulnerability scan is not sufficient and why a penetration test was also commissioned. The BEST justification is that a pen test:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Guarantees the network can never be breached"
+        },
+        {
+          "label": "B",
+          "text": "Is cheaper and faster than a scan in every case"
+        },
+        {
+          "label": "C",
+          "text": "Removes the need to ever scan again"
+        },
+        {
+          "label": "D",
+          "text": "Demonstrates whether identified weaknesses are actually exploitable and what real impact they have"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "A scan finds potential weaknesses; a pen test validates which are truly exploitable and demonstrates real business impact, informing prioritization.",
+        "why_others_are_wrong": {
+          "B": "Pen tests are usually more involved/costly than scans, not cheaper in every case.",
+          "C": "Scanning remains a regular, complementary practice.",
+          "A": "No test guarantees an unbreachable network."
+        }
+      },
+      "exam_reasoning": "Tests articulating the exploit-validation value of pen testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Penetration Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0081",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Unit testing",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Unit testing focuses on:",
+      "options": [
+        {
+          "label": "A",
+          "text": "How the entire integrated system meets all requirements"
+        },
+        {
+          "label": "B",
+          "text": "How two or more technologies work together"
+        },
+        {
+          "label": "C",
+          "text": "Individual components, scripts, or features in isolation"
+        },
+        {
+          "label": "D",
+          "text": "Whether a change broke previously working functionality"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Unit testing targets specific applications, scripts, or components in isolation, assessing a feature's security/performance/usability.",
+        "why_others_are_wrong": {
+          "A": "Testing the entire system against requirements is system/acceptance testing.",
+          "B": "Testing how technologies work together is integration testing.",
+          "D": "Checking that changes did not break existing functionality is regression testing."
+        }
+      },
+      "exam_reasoning": "Distinguishes unit testing from system/integration/regression.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0082",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Integration testing",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Integration testing verifies:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The speed of the office network"
+        },
+        {
+          "label": "B",
+          "text": "How two or more components/technologies work together"
+        },
+        {
+          "label": "C",
+          "text": "A single isolated function only"
+        },
+        {
+          "label": "D",
+          "text": "That the entire system meets acceptance criteria"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Integration testing checks that combined components/technologies interact correctly.",
+        "why_others_are_wrong": {
+          "C": "A single isolated function is unit testing.",
+          "D": "Whole-system acceptance is system testing.",
+          "A": "Network speed is unrelated to integration testing."
+        }
+      },
+      "exam_reasoning": "Recall of integration testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0083",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Regression testing",
+      "difficulty": "medium",
+      "question_type": "scenario_based",
+      "question": "After patching a bug, a team re-runs tests to confirm the fix did not break any previously working features. This is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fuzz testing"
+        },
+        {
+          "label": "B",
+          "text": "Unit testing"
+        },
+        {
+          "label": "C",
+          "text": "Regression testing"
+        },
+        {
+          "label": "D",
+          "text": "Smoke testing"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Regression testing ensures recent changes have not adversely affected existing functionality.",
+        "why_others_are_wrong": {
+          "B": "Unit testing checks an isolated component, not the impact of a change on the whole.",
+          "D": "Smoke testing is a quick basic-functionality check after a build.",
+          "A": "Fuzz testing sends invalid input to find flaws."
+        }
+      },
+      "exam_reasoning": "Maps \"did the change break anything\" to regression testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0084",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "System/acceptance testing",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "System testing (also called acceptance testing or a reasonableness check) verifies that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The software meets its functional and security requirements as a whole"
+        },
+        {
+          "label": "B",
+          "text": "Invalid inputs cause crashes"
+        },
+        {
+          "label": "C",
+          "text": "Two modules exchange data"
+        },
+        {
+          "label": "D",
+          "text": "A single function behaves correctly in isolation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "System/acceptance testing validates the complete software against its functional and security requirements.",
+        "why_others_are_wrong": {
+          "D": "Isolated single-function testing is unit testing.",
+          "B": "Driving crashes via invalid input is fuzz testing.",
+          "C": "Module-to-module data exchange is integration testing."
+        }
+      },
+      "exam_reasoning": "Recall of system/acceptance testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0085",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Smoke testing",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Smoke testing is BEST described as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A quick check that the basic functionality works after a new build"
+        },
+        {
+          "label": "B",
+          "text": "A penetration test of the network perimeter"
+        },
+        {
+          "label": "C",
+          "text": "A review of the disaster recovery plan"
+        },
+        {
+          "label": "D",
+          "text": "An exhaustive test of every code path"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Smoke testing quickly verifies that the core functionality of a build works before deeper testing proceeds.",
+        "why_others_are_wrong": {
+          "D": "Exhaustive path testing is coverage-focused, not a quick smoke test.",
+          "B": "A perimeter pen test is unrelated to build smoke testing.",
+          "C": "Reviewing a DR plan is a checklist DR test."
+        }
+      },
+      "exam_reasoning": "Recall of smoke testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0086",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Fuzz testing",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Fuzz testing discovers vulnerabilities by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Synchronizing system clocks"
+        },
+        {
+          "label": "B",
+          "text": "Reviewing source code line by line without running it"
+        },
+        {
+          "label": "C",
+          "text": "Encrypting the application's database"
+        },
+        {
+          "label": "D",
+          "text": "Sending invalid, unexpected, or random data to an application to see how it responds"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Fuzz testing injects invalid/unexpected/random inputs to uncover crashes, vulnerabilities, or performance issues.",
+        "why_others_are_wrong": {
+          "B": "Reviewing code without running it is static testing (SAST).",
+          "C": "Encrypting a database is unrelated to fuzzing.",
+          "A": "Clock synchronization is NTP, not fuzzing."
+        }
+      },
+      "exam_reasoning": "Maps invalid-input testing to fuzzing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0087",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Mutation vs generational fuzzing",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Which statement correctly distinguishes mutation fuzzing from generational fuzzing?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Both are identical and use no input data"
+        },
+        {
+          "label": "B",
+          "text": "Neither produces invalid inputs"
+        },
+        {
+          "label": "C",
+          "text": "Mutation fuzzing builds inputs from a model; generational fuzzing alters valid data"
+        },
+        {
+          "label": "D",
+          "text": "Mutation (dumb) fuzzing alters valid data to create invalid inputs; generational (smart) fuzzing builds inputs from a model"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Mutation (dumb) fuzzing modifies existing valid data into invalid inputs; generational (smart) fuzzing synthesizes inputs using a model of the expected format.",
+        "why_others_are_wrong": {
+          "C": "This reverses the two techniques.",
+          "A": "They differ in how inputs are produced.",
+          "B": "Both produce invalid inputs to probe the target."
+        }
+      },
+      "exam_reasoning": "Distinguishes mutation (dumb) from generational (smart) fuzzing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Mutation Fuzzing (Dumb Fuzzing)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0088",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Code Review",
+      "subtopic": "SAST vs DAST",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A security team wants to find insecure code patterns early by analyzing source code WITHOUT executing the application. Which approach fits BEST?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dynamic Application Security Testing (DAST)"
+        },
+        {
+          "label": "B",
+          "text": "Static Application Security Testing (SAST)"
+        },
+        {
+          "label": "C",
+          "text": "Fuzz testing in production"
+        },
+        {
+          "label": "D",
+          "text": "A full interruption DR test"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "SAST analyzes source code without running it, catching insecure patterns early in development.",
+        "why_others_are_wrong": {
+          "A": "DAST analyzes the application while it runs, not the static source.",
+          "C": "Fuzzing runs the application with malformed input; it is dynamic.",
+          "D": "A full interruption test is a DR exercise, unrelated to code analysis."
+        }
+      },
+      "exam_reasoning": "Maps source-without-execution analysis to SAST.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Static Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0089",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Code Review",
+      "subtopic": "DAST",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Dynamic Application Security Testing (DAST) analyzes an application:",
+      "options": [
+        {
+          "label": "A",
+          "text": "By degaussing the storage media"
+        },
+        {
+          "label": "B",
+          "text": "Only by reading source code in a text editor"
+        },
+        {
+          "label": "C",
+          "text": "While it is running, often when code cannot be taken out of production"
+        },
+        {
+          "label": "D",
+          "text": "By reviewing the disaster recovery plan"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "DAST tests a running application (often in production-like conditions), observing behavior rather than reading static source.",
+        "why_others_are_wrong": {
+          "B": "Reading static source is SAST.",
+          "A": "Degaussing destroys magnetic media.",
+          "D": "DR-plan review is a DR test, not code analysis."
+        }
+      },
+      "exam_reasoning": "Maps running-application analysis to DAST.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Static Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0090",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Code Review",
+      "subtopic": "Fagan inspection",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "In the Fagan inspection process, which phase immediately FOLLOWS the Inspection phase?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Planning"
+        },
+        {
+          "label": "B",
+          "text": "Overview"
+        },
+        {
+          "label": "C",
+          "text": "Follow-up"
+        },
+        {
+          "label": "D",
+          "text": "Rework"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The Fagan inspection order is Planning, Overview, Inspection, Rework, Follow-up—so Rework directly follows Inspection (remediating the flaws found).",
+        "why_others_are_wrong": {
+          "A": "Planning is the first phase, before Overview and Inspection.",
+          "B": "Overview precedes Inspection.",
+          "C": "Follow-up is the final phase, after Rework."
+        }
+      },
+      "exam_reasoning": "Tests the Fagan phase ordering (Rework follows Inspection).",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Fagan Inspection Process (Phased Code Review Process)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0091",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Code Review",
+      "subtopic": "Fagan inspection purpose",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Fagan inspection is BEST described as a:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A disaster recovery test"
+        },
+        {
+          "label": "B",
+          "text": "Automated penetration test"
+        },
+        {
+          "label": "C",
+          "text": "Structured, phased formal code review process to find defects/vulnerabilities"
+        },
+        {
+          "label": "D",
+          "text": "A type of wireless encryption"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A Fagan inspection is a formal, phased code-review process (planning through follow-up) used to identify defects and vulnerabilities.",
+        "why_others_are_wrong": {
+          "B": "It is a manual code review, not an automated pen test.",
+          "D": "It is unrelated to wireless encryption.",
+          "A": "It is not a DR test."
+        }
+      },
+      "exam_reasoning": "Recall of the Fagan inspection as a formal code review.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Fagan Inspection Process (Phased Code Review Process)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0092",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Code Review",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The purpose of a software code review is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Identify flaws, defects, and security vulnerabilities before deployment"
+        },
+        {
+          "label": "B",
+          "text": "Encrypt the production database"
+        },
+        {
+          "label": "C",
+          "text": "Provide backup power to the build server"
+        },
+        {
+          "label": "D",
+          "text": "Increase the application's marketing appeal"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Code reviews analyze developed code to find flaws, defects, and security vulnerabilities before the software is deployed.",
+        "why_others_are_wrong": {
+          "D": "Marketing appeal is not the goal of a code review.",
+          "B": "Database encryption is a separate control.",
+          "C": "Backup power is a UPS/generator function."
+        }
+      },
+      "exam_reasoning": "Recall of the code-review purpose.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Software Code Reviews",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0093",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Misuse Testing",
+      "subtopic": "Definition",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Misuse (abuse case) testing evaluates software by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Simulating improper or malicious use from an attacker's perspective"
+        },
+        {
+          "label": "B",
+          "text": "Measuring the office network bandwidth"
+        },
+        {
+          "label": "C",
+          "text": "Reviewing the data retention schedule"
+        },
+        {
+          "label": "D",
+          "text": "Confirming the software meets only its happy-path requirements"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Misuse/abuse-case testing models how an attacker or careless user might misuse the system, uncovering vulnerabilities the normal use cases miss.",
+        "why_others_are_wrong": {
+          "D": "Testing only the happy path is standard functional testing, not misuse testing.",
+          "B": "Bandwidth measurement is unrelated.",
+          "C": "Retention scheduling is a data-management task."
+        }
+      },
+      "exam_reasoning": "Maps attacker-perspective abuse testing to misuse testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Misuse Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0094",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Misuse Testing",
+      "subtopic": "UML",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "In misuse testing, UML diagrams are used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Score vulnerabilities with CVSS"
+        },
+        {
+          "label": "B",
+          "text": "Encrypt the source code automatically"
+        },
+        {
+          "label": "C",
+          "text": "Synchronize system clocks"
+        },
+        {
+          "label": "D",
+          "text": "Map legitimate user and attacker (misuse) interactions to highlight vulnerabilities"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "UML diagrams in misuse testing visually map both legitimate use and potential misuse by attackers, highlighting vulnerabilities and security requirements.",
+        "why_others_are_wrong": {
+          "B": "UML diagrams do not encrypt code.",
+          "A": "CVSS scoring is a separate severity activity.",
+          "C": "Clock synchronization is NTP, not UML."
+        }
+      },
+      "exam_reasoning": "Maps misuse visualization to UML diagrams.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Misuse Test Visualization - UML Diagram",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0095",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Interface Testing",
+      "subtopic": "Purpose",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Interface testing focuses on:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Only the visual color scheme of the UI"
+        },
+        {
+          "label": "B",
+          "text": "The connections between components/systems and how data is exchanged securely"
+        },
+        {
+          "label": "C",
+          "text": "The financial audit of the company"
+        },
+        {
+          "label": "D",
+          "text": "The physical temperature of the server room"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Interface testing evaluates connections (API, UI, physical interfaces) and validates secure, correct data exchange, including error handling and recovery.",
+        "why_others_are_wrong": {
+          "A": "UI color is a cosmetic detail, not the focus of interface testing.",
+          "D": "Server room temperature is an environmental concern.",
+          "C": "Financial audits are unrelated to interface testing."
+        }
+      },
+      "exam_reasoning": "Tests the data-exchange focus of interface testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Interface Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0096",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Interface Testing",
+      "subtopic": "Key areas",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are key areas evaluated during interface testing? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Secure session management"
+        },
+        {
+          "label": "B",
+          "text": "The CEO's travel itinerary"
+        },
+        {
+          "label": "C",
+          "text": "The cafeteria menu rotation"
+        },
+        {
+          "label": "D",
+          "text": "Error handling for unexpected inputs"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Interface testing examines error handling, security controls, session management, and recovery/resilience of the interface.",
+        "why_others_are_wrong": {
+          "B": "A travel itinerary is unrelated to interface testing.",
+          "C": "The cafeteria menu is irrelevant."
+        }
+      },
+      "exam_reasoning": "Identifies key interface-testing areas.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Key Areas for Interface Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0097",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Interface Testing",
+      "subtopic": "Interface types",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are types of interfaces that interface testing evaluates? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "A parking permit"
+        },
+        {
+          "label": "B",
+          "text": "User Interface (UI)"
+        },
+        {
+          "label": "C",
+          "text": "Application Programming Interface (API)"
+        },
+        {
+          "label": "D",
+          "text": "A fire extinguisher"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "Interface testing covers APIs (software-to-software), user interfaces (UI), and physical interfaces.",
+        "why_others_are_wrong": {
+          "D": "A fire extinguisher is a safety device, not a software interface.",
+          "A": "A parking permit is unrelated."
+        }
+      },
+      "exam_reasoning": "Identifies testable interface types.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Interface Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0098",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Compliance Testing",
+      "subtopic": "SOC reports",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A SaaS provider wants a report attesting to its SECURITY and privacy controls that it can share (under NDA) with prospective customers' auditors. Which SOC report fits BEST?",
+      "options": [
+        {
+          "label": "A",
+          "text": "SOC 1"
+        },
+        {
+          "label": "B",
+          "text": "PCI ROC"
+        },
+        {
+          "label": "C",
+          "text": "SOC 2"
+        },
+        {
+          "label": "D",
+          "text": "SOC 3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "SOC 2 reports on security, availability, processing integrity, confidentiality, and privacy controls—appropriate for detailed sharing with customers/auditors under NDA.",
+        "why_others_are_wrong": {
+          "A": "SOC 1 focuses on controls relevant to financial reporting.",
+          "D": "SOC 3 is a high-level public summary, lacking the detail auditors need.",
+          "B": "A PCI ROC concerns payment-card compliance, not general security-control attestation."
+        }
+      },
+      "exam_reasoning": "Maps security/privacy control attestation to SOC 2.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Compliance Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0099",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Compliance Testing",
+      "subtopic": "SOC report mapping",
+      "difficulty": "hard",
+      "question_type": "matching",
+      "question": "Match each SOC report (1-3) to its focus (A-C).",
+      "options": [
+        {
+          "label": "A",
+          "text": "A high-level summary suitable for public/general use"
+        },
+        {
+          "label": "B",
+          "text": "Controls relevant to financial reporting"
+        },
+        {
+          "label": "C",
+          "text": "Security and privacy controls (detailed, for restricted distribution)"
+        }
+      ],
+      "correct_answer": "1-B,2-C,3-A",
+      "explanation": {
+        "why_correct": "SOC 1 → financial-reporting controls (B); SOC 2 → security/privacy controls (A); SOC 3 → high-level public summary (C).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests mapping of SOC report types to their focus.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Compliance Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "SOC 1",
+        "SOC 2",
+        "SOC 3"
+      ]
+    },
+    {
+      "id": "CISSP-D06-Q0100",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Compliance Testing",
+      "subtopic": "SOC 3",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A SOC 3 report is intended to be:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A penetration test report"
+        },
+        {
+          "label": "B",
+          "text": "A detailed financial-controls report for auditors"
+        },
+        {
+          "label": "C",
+          "text": "A disaster recovery checklist"
+        },
+        {
+          "label": "D",
+          "text": "A high-level summary suitable for public/general distribution"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "SOC 3 provides a high-level, general-use summary that can be shared publicly, unlike the detailed SOC 1/SOC 2 reports.",
+        "why_others_are_wrong": {
+          "B": "Detailed financial-controls reporting is SOC 1.",
+          "A": "A pen test report is a different artifact.",
+          "C": "A DR checklist is a continuity document."
+        }
+      },
+      "exam_reasoning": "Recall of SOC 3 as a public summary.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Compliance Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0101",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Compliance Testing",
+      "subtopic": "CSA STAR",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In the CSA STAR program for cloud security, Level 1 versus Level 2 differ in that Level 1 is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A financial report, while Level 2 is a privacy report"
+        },
+        {
+          "label": "B",
+          "text": "A third-party audit, while Level 2 is a self-assessment"
+        },
+        {
+          "label": "C",
+          "text": "A penetration test, while Level 2 is a vulnerability scan"
+        },
+        {
+          "label": "D",
+          "text": "A self-assessment, while Level 2 involves a third-party audit"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "CSA STAR Level 1 is a self-assessment (suited to lower-risk environments); Level 2 involves an independent third-party audit (for higher-risk environments).",
+        "why_others_are_wrong": {
+          "B": "This reverses the two levels.",
+          "C": "STAR levels are assurance tiers, not pen test vs scan.",
+          "A": "STAR is about cloud security assurance, not financial vs privacy reports."
+        }
+      },
+      "exam_reasoning": "Distinguishes CSA STAR Level 1 (self) from Level 2 (third-party audit).",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Compliance Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0102",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Compliance Testing",
+      "subtopic": "Purpose",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Compliance testing helps an organization demonstrate:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Due care and ongoing due diligence in meeting required standards"
+        },
+        {
+          "label": "B",
+          "text": "That the office Wi-Fi is fast"
+        },
+        {
+          "label": "C",
+          "text": "That it never needs any security controls"
+        },
+        {
+          "label": "D",
+          "text": "That its marketing campaigns are effective"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Compliance testing (via assessments and audits) verifies controls are properly implemented, demonstrating due care and ongoing due diligence.",
+        "why_others_are_wrong": {
+          "C": "Compliance requires controls, not their absence.",
+          "D": "Marketing effectiveness is unrelated.",
+          "B": "Wi-Fi speed is not a compliance outcome."
+        }
+      },
+      "exam_reasoning": "Connects compliance testing to due care/diligence.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Compliance Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0103",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Compliance Testing",
+      "subtopic": "SSAE 18",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "SSAE 18 is the standard under which which type of reports are produced?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fire safety certificates"
+        },
+        {
+          "label": "B",
+          "text": "SOC reports"
+        },
+        {
+          "label": "C",
+          "text": "CVE identifiers"
+        },
+        {
+          "label": "D",
+          "text": "WPA3 certificates"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "SSAE 18 is the attestation standard under which SOC 1/2/3 reports are produced.",
+        "why_others_are_wrong": {
+          "D": "WPA3 is a wireless encryption protocol.",
+          "C": "CVE identifiers come from MITRE.",
+          "A": "Fire safety certificates are physical-safety documents."
+        }
+      },
+      "exam_reasoning": "Maps SSAE 18 to SOC reports.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Compliance Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0104",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Test Coverage",
+      "subtopic": "Branch coverage",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Branch coverage ensures that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Each program function has been called"
+        },
+        {
+          "label": "B",
+          "text": "Every loop has been exercised"
+        },
+        {
+          "label": "C",
+          "text": "Every line of code has been executed at least once"
+        },
+        {
+          "label": "D",
+          "text": "Each decision branch (e.g., both true and false paths) in the code has been tested"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Branch coverage verifies that each decision branch (each outcome of a conditional) has been tested.",
+        "why_others_are_wrong": {
+          "C": "Executing every line is statement coverage.",
+          "A": "Calling each function is function coverage.",
+          "B": "Exercising loops is loop coverage."
+        }
+      },
+      "exam_reasoning": "Distinguishes branch coverage from statement/function/loop coverage.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Branch Coverage",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0105",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Test Coverage",
+      "subtopic": "Statement coverage",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Statement coverage measures whether:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Every loop iteration boundary was tested"
+        },
+        {
+          "label": "B",
+          "text": "Each decision branch outcome was tested"
+        },
+        {
+          "label": "C",
+          "text": "Every interface was fuzzed"
+        },
+        {
+          "label": "D",
+          "text": "Each individual code statement has been executed during testing"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Statement coverage tracks whether each executable statement in the code has been run at least once during testing.",
+        "why_others_are_wrong": {
+          "B": "Testing each branch outcome is branch coverage.",
+          "A": "Loop-boundary testing is loop coverage.",
+          "C": "Fuzzing interfaces is a different activity."
+        }
+      },
+      "exam_reasoning": "Recall of statement coverage.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Statement Coverage",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0106",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Test Coverage",
+      "subtopic": "Coverage calculation",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A test suite exercises 30 of a module's 60 executable statements. The statement coverage and the implied confidence level are:",
+      "options": [
+        {
+          "label": "A",
+          "text": "30% coverage"
+        },
+        {
+          "label": "B",
+          "text": "Cannot be determined from the numbers given"
+        },
+        {
+          "label": "C",
+          "text": "200% coverage"
+        },
+        {
+          "label": "D",
+          "text": "50% coverage (tested items divided by total items)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Coverage = items tested / total items = 30/60 = 50%; higher coverage generally implies greater confidence in testing.",
+        "why_others_are_wrong": {
+          "C": "200% is impossible; coverage cannot exceed 100%.",
+          "A": "30% would require 18 of 60, not 30 of 60.",
+          "B": "The ratio is directly computable from the figures."
+        }
+      },
+      "exam_reasoning": "Tests the coverage = tested/total calculation.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Test Coverage Analysis",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0107",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Test Coverage",
+      "subtopic": "Loop coverage",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Loop coverage is important for security/reliability because it helps prevent:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Service outages caused by improperly terminating (continuous) loops"
+        },
+        {
+          "label": "B",
+          "text": "Physical tailgating into the building"
+        },
+        {
+          "label": "C",
+          "text": "Weak wireless encryption"
+        },
+        {
+          "label": "D",
+          "text": "DNS poisoning"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Loop coverage tests loop behavior (including boundaries), helping catch loops that never terminate and could cause outages.",
+        "why_others_are_wrong": {
+          "C": "Wireless encryption is unrelated to loop coverage.",
+          "B": "Tailgating is a physical-security issue.",
+          "D": "DNS poisoning is a network attack, not a loop defect."
+        }
+      },
+      "exam_reasoning": "Connects loop coverage to preventing runaway-loop outages.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Loop Coverage",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0108",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Test Coverage",
+      "subtopic": "Function coverage",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Function (functional) coverage ensures that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Each program function has been tested/called for verification"
+        },
+        {
+          "label": "B",
+          "text": "Every statement is executed"
+        },
+        {
+          "label": "C",
+          "text": "Each decision branch is tested"
+        },
+        {
+          "label": "D",
+          "text": "Each loop boundary is exercised"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Function coverage verifies that each program function has been exercised during testing.",
+        "why_others_are_wrong": {
+          "D": "Loop boundaries are loop coverage.",
+          "B": "Executing every statement is statement coverage.",
+          "C": "Testing each branch is branch coverage."
+        }
+      },
+      "exam_reasoning": "Recall of function coverage.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Functional Coverage (Function Coverage)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0109",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Reporting",
+      "subtopic": "Executive summary",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The executive summary of a test/assessment report is primarily written for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Attackers, with full exploit code"
+        },
+        {
+          "label": "B",
+          "text": "Developers, with line-by-line code fixes"
+        },
+        {
+          "label": "C",
+          "text": "The facilities team, with HVAC settings"
+        },
+        {
+          "label": "D",
+          "text": "Senior management, focusing on critical findings and business impact"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The executive summary targets senior management, summarizing critical findings, recommendations, and business impacts in non-technical terms.",
+        "why_others_are_wrong": {
+          "B": "Line-by-line fixes belong in the technical report for developers.",
+          "A": "Reports are not written for attackers.",
+          "C": "HVAC settings are unrelated to the executive summary."
+        }
+      },
+      "exam_reasoning": "Tests the audience/purpose of the executive summary.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Executive Summary",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0110",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Reporting",
+      "subtopic": "Assessment vs audit report",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Which statement BEST distinguishes an assessment report from an audit report?",
+      "options": [
+        {
+          "label": "A",
+          "text": "They are identical documents with different titles"
+        },
+        {
+          "label": "B",
+          "text": "An assessment report is only for attackers"
+        },
+        {
+          "label": "C",
+          "text": "An audit report contains no findings at all"
+        },
+        {
+          "label": "D",
+          "text": "An assessment report conveys security findings/recommendations, while an audit report attests to compliance status against criteria"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "An assessment report communicates security findings and recommendations; an audit report formally attests to compliance status against defined criteria.",
+        "why_others_are_wrong": {
+          "B": "Reports are for stakeholders, not attackers.",
+          "C": "Audit reports do contain findings (compliance status/exceptions).",
+          "A": "They serve distinct purposes."
+        }
+      },
+      "exam_reasoning": "Distinguishes assessment reports from audit reports.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Reports",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0111",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Reporting",
+      "subtopic": "Ethical disclosure",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Ethical disclosure of test findings primarily ensures:",
+      "options": [
+        {
+          "label": "A",
+          "text": "That vulnerabilities are sold to the highest bidder"
+        },
+        {
+          "label": "B",
+          "text": "Transparency and adherence to the Code of Ethics when reporting vulnerabilities"
+        },
+        {
+          "label": "C",
+          "text": "That findings are hidden from the affected organization"
+        },
+        {
+          "label": "D",
+          "text": "That exploit code is posted publicly before any fix"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Ethical disclosure reports findings transparently and responsibly, consistent with the Code of Ethics—giving the organization the chance to remediate.",
+        "why_others_are_wrong": {
+          "A": "Selling vulnerabilities is unethical and harmful.",
+          "C": "Hiding findings from the affected org defeats the purpose of testing.",
+          "D": "Public exploit release before a fix is reckless."
+        }
+      },
+      "exam_reasoning": "Tests responsible/ethical disclosure principles.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Ethical Disclosure",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0112",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Reporting",
+      "subtopic": "Report components",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are key components typically included in a security test report? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Identified threats and vulnerabilities"
+        },
+        {
+          "label": "B",
+          "text": "Criticality and likelihood of findings"
+        },
+        {
+          "label": "C",
+          "text": "The office floor cleaning schedule"
+        },
+        {
+          "label": "D",
+          "text": "The CEO's lunch order"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "B"
+      ],
+      "explanation": {
+        "why_correct": "Reports include identified threats/vulnerabilities and their criticality/likelihood (and exposure) to support prioritized remediation.",
+        "why_others_are_wrong": {
+          "D": "A lunch order is irrelevant.",
+          "C": "A cleaning schedule is unrelated to the security report."
+        }
+      },
+      "exam_reasoning": "Identifies legitimate report components.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Key Report Components",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0113",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Reporting",
+      "subtopic": "Remediation recommendations",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Remediation recommendations in a report typically suggest:",
+      "options": [
+        {
+          "label": "A",
+          "text": "That all findings be ignored"
+        },
+        {
+          "label": "B",
+          "text": "Corrective actions such as patches, updates, or additional security controls"
+        },
+        {
+          "label": "C",
+          "text": "That the report be deleted immediately"
+        },
+        {
+          "label": "D",
+          "text": "That the company stop logging events"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Remediation recommendations propose corrective actions (patches, updates, controls) to address findings, sometimes noting exceptions where remediation is deferred.",
+        "why_others_are_wrong": {
+          "A": "Ignoring findings leaves risk unaddressed.",
+          "D": "Stopping logging reduces visibility and accountability.",
+          "C": "Deleting the report destroys the deliverable and audit trail."
+        }
+      },
+      "exam_reasoning": "Tests the purpose of remediation recommendations.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Remediation Recommendations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0114",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Sanity check",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A sanity check in software testing is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A quick validation of a feature's viability early in development"
+        },
+        {
+          "label": "B",
+          "text": "A full penetration test of the network"
+        },
+        {
+          "label": "C",
+          "text": "A complete disaster recovery failover"
+        },
+        {
+          "label": "D",
+          "text": "An exhaustive test of every code branch"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "A sanity check quickly validates whether a feature/idea is viable early on before investing in deeper testing.",
+        "why_others_are_wrong": {
+          "D": "Exhaustive branch testing is coverage-focused, not a quick sanity check.",
+          "B": "A network pen test is unrelated.",
+          "C": "A DR failover is a continuity test."
+        }
+      },
+      "exam_reasoning": "Recall of the sanity check.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0115",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Code Review",
+      "subtopic": "Static vs dynamic",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The KEY difference between static and dynamic testing is that static testing:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Analyzes code WITHOUT executing it, while dynamic testing runs the code"
+        },
+        {
+          "label": "B",
+          "text": "Is only used for hardware"
+        },
+        {
+          "label": "C",
+          "text": "Requires the application to be in production"
+        },
+        {
+          "label": "D",
+          "text": "Runs the code, while dynamic testing only reads it"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Static testing (SAST) examines code without running it; dynamic testing (DAST) analyzes the running application.",
+        "why_others_are_wrong": {
+          "D": "This reverses static and dynamic.",
+          "C": "Static testing examines source and does not require production.",
+          "B": "These methods apply to software, not only hardware."
+        }
+      },
+      "exam_reasoning": "Distinguishes static (no execution) from dynamic (execution) testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Static Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0116",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Software Testing",
+      "subtopic": "Knowledge-based testing",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are recognized software testing approaches based on tester knowledge of the system? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Black box testing"
+        },
+        {
+          "label": "B",
+          "text": "White box testing"
+        },
+        {
+          "label": "C",
+          "text": "Degaussing testing"
+        },
+        {
+          "label": "D",
+          "text": "Fire-drill testing"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "B"
+      ],
+      "explanation": {
+        "why_correct": "White box (full knowledge), black box (no knowledge), and gray box (partial) are knowledge-based testing approaches.",
+        "why_others_are_wrong": {
+          "C": "Degaussing destroys magnetic media; it is not a software testing approach.",
+          "D": "\"Fire-drill testing\" is not a software testing knowledge category."
+        }
+      },
+      "exam_reasoning": "Identifies knowledge-based software testing approaches.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Software Testing Methods",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0117",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Compliance Testing",
+      "subtopic": "SOC 1",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A SOC 1 report focuses on controls relevant to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Financial reporting"
+        },
+        {
+          "label": "B",
+          "text": "Office furniture inventory"
+        },
+        {
+          "label": "C",
+          "text": "Fire suppression systems"
+        },
+        {
+          "label": "D",
+          "text": "Wireless encryption strength"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "SOC 1 addresses controls relevant to a service organization's impact on its customers' financial reporting.",
+        "why_others_are_wrong": {
+          "D": "Wireless encryption is unrelated to SOC 1.",
+          "C": "Fire suppression is a physical control.",
+          "B": "Furniture inventory is unrelated."
+        }
+      },
+      "exam_reasoning": "Maps financial-reporting controls to SOC 1.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Compliance Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0118",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Test Coverage",
+      "subtopic": "Condition coverage",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Condition coverage differs from branch coverage in that condition coverage evaluates:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Only whether each statement executed"
+        },
+        {
+          "label": "B",
+          "text": "Only whether each loop ran once"
+        },
+        {
+          "label": "C",
+          "text": "Only whether each function was called"
+        },
+        {
+          "label": "D",
+          "text": "Each individual boolean sub-condition within a decision"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Condition coverage checks each boolean sub-condition (operand) within a decision, which is finer-grained than branch coverage (which checks decision outcomes).",
+        "why_others_are_wrong": {
+          "C": "Function calls are function coverage.",
+          "A": "Statement execution is statement coverage.",
+          "B": "Loop execution is loop coverage."
+        }
+      },
+      "exam_reasoning": "Distinguishes condition coverage from branch coverage.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Condition Coverage",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0119",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Reporting",
+      "subtopic": "Audience targeting",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Effective test reports tailor content to different audiences by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Writing one identical report for everyone in deep technical jargon"
+        },
+        {
+          "label": "B",
+          "text": "Providing an executive summary for leadership and a detailed technical report for practitioners"
+        },
+        {
+          "label": "C",
+          "text": "Omitting all findings to avoid alarm"
+        },
+        {
+          "label": "D",
+          "text": "Sending only raw scanner output with no analysis"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Reports should serve their audiences: an executive summary (business impact) for leadership and a technical report (detailed findings/remediation) for practitioners.",
+        "why_others_are_wrong": {
+          "A": "Jargon-only reports impair leadership decision-making.",
+          "C": "Omitting findings defeats the report's purpose.",
+          "D": "Raw output without analysis is not actionable."
+        }
+      },
+      "exam_reasoning": "Tests audience-appropriate reporting.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Analyzing Test Results",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D06-Q0120",
+      "domain": "Security Assessment and Testing",
+      "domain_number": 6,
+      "topic": "Misuse Testing",
+      "subtopic": "Combined use",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Misuse testing is often conducted ALONGSIDE which other activities?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Payroll processing and invoicing"
+        },
+        {
+          "label": "B",
+          "text": "HVAC maintenance and landscaping"
+        },
+        {
+          "label": "C",
+          "text": "Risk analysis, threat modeling, and penetration testing"
+        },
+        {
+          "label": "D",
+          "text": "Marketing and sales outreach"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Misuse testing is frequently combined with risk analysis, threat modeling, security assessments, and penetration testing to map possible attack vectors.",
+        "why_others_are_wrong": {
+          "A": "Payroll/invoicing are financial operations.",
+          "B": "HVAC/landscaping are facilities tasks.",
+          "D": "Marketing/sales are unrelated to misuse testing."
+        }
+      },
+      "exam_reasoning": "Connects misuse testing to related security activities.",
+      "source_reference": {
+        "syllabus_section": "Domain 6 > Conduct Security Testing > Application of Misuse Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    }
+  ]
+}

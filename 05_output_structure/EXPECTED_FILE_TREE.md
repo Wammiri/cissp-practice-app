@@ -1,0 +1,67 @@
+# Expected Final File Tree
+
+```text
+/
+  README.md
+  package.json
+  next.config.js
+  tsconfig.json
+  /content
+    cissp-syllabus.md
+    cissp-syllabus-structured.json
+    domain-topic-map.json
+  /questions
+    domain-weighting.json
+    domain-01-security-risk-management.json
+    domain-02-asset-security.json
+    domain-03-security-architecture-engineering.json
+    domain-04-communication-network-security.json
+    domain-05-identity-access-management.json
+    domain-06-security-assessment-testing.json
+    domain-07-security-operations.json
+    domain-08-software-development-security.json
+    cissp-question-bank.json
+    cissp-question-bank.md
+  /tests
+    test-01.json
+    test-02.json
+    test-03.json
+    test-04.json
+    test-05.json
+    test-06.json
+    test-07.json
+    test-08.json
+    test-09.json
+    test-10.json
+    test-manifest.json
+  /src
+    /app
+      page.tsx
+      /tests
+        page.tsx
+        /[testId]
+          page.tsx
+      /results
+        /[testId]
+          page.tsx
+    /components
+      QuestionCard.tsx
+      OptionSelector.tsx
+      TestTimer.tsx
+      QuestionNavigator.tsx
+      ScoreSummary.tsx
+      DomainBreakdown.tsx
+      ReviewPanel.tsx
+    /lib
+      loadQuestions.ts
+      scoreTest.ts
+      domainWeighting.ts
+      localProgress.ts
+      validation.ts
+    /types
+      question.ts
+      test.ts
+  /scripts
+    validate-question-bank.ts
+    validate-tests.ts
+```

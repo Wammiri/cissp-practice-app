@@ -1,0 +1,4261 @@
+{
+  "meta": {
+    "domain_number": 8,
+    "domain": "Software Development Security",
+    "weight_percent": 10,
+    "total_questions": 100,
+    "generated_by": "scripts/d8/build.cjs",
+    "schema": "04_schemas/question_schema.md",
+    "sources": [
+      "/content/cissp-syllabus.md",
+      "/content/cissp-syllabus-structured.json",
+      "/questions/domain-weighting.json"
+    ],
+    "id_range": "CISSP-D08-Q0001..CISSP-D08-Q0100",
+    "difficulty_distribution": {
+      "easy": 20,
+      "medium": 50,
+      "hard": 30
+    },
+    "question_type_distribution": {
+      "single_best_answer": 70,
+      "sequence_ordering": 2,
+      "scenario_based": 17,
+      "multiple_correct_answers": 8,
+      "matching": 3
+    },
+    "note": "Original CISSP-style practice questions. matching questions carry a prompts[] (left items numbered 1..n) and options[] (right items A..n); correct_answer encodes the pairing. sequence_ordering correct_answer lists option labels in correct order."
+  },
+  "questions": [
+    {
+      "id": "CISSP-D08-Q0001",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "SDLC",
+      "subtopic": "Security integration",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A core principle for secure software development is that security and privacy should be:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Left entirely to the end users"
+        },
+        {
+          "label": "B",
+          "text": "Added only after the software is in production"
+        },
+        {
+          "label": "C",
+          "text": "Integrated at every phase of the SDLC, not bolted on at the end"
+        },
+        {
+          "label": "D",
+          "text": "Considered only during the disposal phase"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Security and privacy must be built in at every SDLC phase (requirements through disposal); change control is especially critical during O&M.",
+        "why_others_are_wrong": {
+          "B": "Bolting on security post-production is costly and leaves gaps.",
+          "D": "Security must apply throughout, not only at disposal.",
+          "A": "Security is a shared responsibility led by the development organization."
+        }
+      },
+      "exam_reasoning": "Tests the build-security-in-at-every-phase principle.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Development Lifecycle",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0002",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "SDLC",
+      "subtopic": "Phases order",
+      "difficulty": "hard",
+      "question_type": "sequence_ordering",
+      "question": "Order the following SDLC phases from earliest to latest. (Provide the option labels in order.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Requirements/Initiation"
+        },
+        {
+          "label": "B",
+          "text": "Deployment"
+        },
+        {
+          "label": "C",
+          "text": "Testing"
+        },
+        {
+          "label": "D",
+          "text": "Development"
+        },
+        {
+          "label": "E",
+          "text": "Disposal"
+        },
+        {
+          "label": "F",
+          "text": "Design"
+        },
+        {
+          "label": "G",
+          "text": "Operations and Maintenance"
+        }
+      ],
+      "correct_answer": "A,F,D,C,B,G,E",
+      "explanation": {
+        "why_correct": "The SDLC proceeds from requirements/initiation, to design, development, testing, deployment, operations & maintenance, and finally disposal.",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests the ordered SDLC phases.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Key Phases of SDLC",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0003",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "SDLC",
+      "subtopic": "O&M change control",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "During the Operations and Maintenance (O&M) phase, which control is described as especially critical?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Marketing analysis"
+        },
+        {
+          "label": "B",
+          "text": "Recruitment"
+        },
+        {
+          "label": "C",
+          "text": "Change control"
+        },
+        {
+          "label": "D",
+          "text": "Office space planning"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Change control is critical during O&M to ensure updates/patches do not introduce security weaknesses or instability.",
+        "why_others_are_wrong": {
+          "A": "Marketing analysis is unrelated to O&M security.",
+          "D": "Office planning is a facilities task.",
+          "B": "Recruitment is an HR function."
+        }
+      },
+      "exam_reasoning": "Maps O&M-phase rigor to change control.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Important Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0004",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "Waterfall",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Waterfall model is characterized by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Continuous, overlapping iterations with no defined phases"
+        },
+        {
+          "label": "B",
+          "text": "Delivering working software every two weeks by default"
+        },
+        {
+          "label": "C",
+          "text": "A sequential approach where each phase is completed before the next begins (with limited feedback loops)"
+        },
+        {
+          "label": "D",
+          "text": "No documentation at any stage"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Waterfall is a sequential model: one phase must finish before the next starts, with only limited feedback (e.g., testing back to a prior step). Its rigidity is a noted drawback.",
+        "why_others_are_wrong": {
+          "A": "Continuous overlapping iteration describes Agile, not Waterfall.",
+          "B": "Two-week deliveries describe Agile sprints.",
+          "D": "Waterfall is documentation-heavy, not documentation-free."
+        }
+      },
+      "exam_reasoning": "Tests the sequential nature of Waterfall.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Development Methodologies Part 1",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0005",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "Spiral model",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Spiral model is BEST known for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Forbidding any iteration or feedback"
+        },
+        {
+          "label": "B",
+          "text": "Emphasizing iterative development with repeated risk analysis in each cycle"
+        },
+        {
+          "label": "C",
+          "text": "Being identical to Waterfall"
+        },
+        {
+          "label": "D",
+          "text": "Eliminating the need for requirements"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "The Spiral model combines iterative development with explicit, repeated risk analysis at each loop/cycle, making it well-suited to high-risk projects.",
+        "why_others_are_wrong": {
+          "A": "The Spiral model is inherently iterative.",
+          "D": "Requirements are still essential in the Spiral model.",
+          "C": "It differs from Waterfall by adding iteration and risk focus."
+        }
+      },
+      "exam_reasoning": "Maps repeated risk analysis to the Spiral model.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Increment Build Model",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0006",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "Cleanroom",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "The Cleanroom development model focuses primarily on:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Outsourcing all development overseas"
+        },
+        {
+          "label": "B",
+          "text": "Rapidly prototyping with end users in JAD sessions"
+        },
+        {
+          "label": "C",
+          "text": "Preventing defects through rigorous design/verification rather than relying on after-the-fact testing"
+        },
+        {
+          "label": "D",
+          "text": "Skipping design to start coding immediately"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Cleanroom emphasizes defect prevention and correctness via formal methods and rigorous review, aiming to avoid introducing defects rather than finding them later.",
+        "why_others_are_wrong": {
+          "B": "Rapid prototyping with users describes RAD/JAD.",
+          "D": "Cleanroom is design-rigorous, not design-skipping.",
+          "A": "Outsourcing is unrelated to the Cleanroom approach."
+        }
+      },
+      "exam_reasoning": "Maps defect prevention/correctness to the Cleanroom model.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Development Methodologies Part 2",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0007",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "JAD",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Joint Application Development (JAD) model is characterized by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Never involving the customer"
+        },
+        {
+          "label": "B",
+          "text": "A purely solo developer working in isolation"
+        },
+        {
+          "label": "C",
+          "text": "Eliminating all requirements gathering"
+        },
+        {
+          "label": "D",
+          "text": "Structured collaborative workshops/sessions involving stakeholders to define requirements"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "JAD uses facilitated, collaborative sessions (\"JAD sessions\") with stakeholders to rapidly define and refine requirements together.",
+        "why_others_are_wrong": {
+          "B": "JAD is collaborative, not solo.",
+          "A": "JAD specifically involves stakeholders/customers.",
+          "C": "JAD is a requirements-gathering technique, not its elimination."
+        }
+      },
+      "exam_reasoning": "Maps collaborative requirement workshops to JAD.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Joint Application Development (JAD) Model",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0008",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "RAD",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A team needs to quickly produce a working prototype to validate an idea with users, iterating fast. Which methodology is MOST suited?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cleanroom with formal verification only"
+        },
+        {
+          "label": "B",
+          "text": "No methodology at all"
+        },
+        {
+          "label": "C",
+          "text": "Strict sequential Waterfall"
+        },
+        {
+          "label": "D",
+          "text": "Rapid Application Development (RAD)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "RAD emphasizes rapid prototyping and iteration (often with JAD and CASE tools), ideal for quickly building and validating prototypes.",
+        "why_others_are_wrong": {
+          "C": "Waterfall's rigidity is poorly suited to rapid prototyping.",
+          "A": "Cleanroom prioritizes formal correctness over rapid prototyping.",
+          "B": "Skipping methodology invites disorganized, risky development."
+        }
+      },
+      "exam_reasoning": "Maps rapid prototyping needs to RAD.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Rapid Application Development (RAD) Model",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0009",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "Incremental build",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Incremental Build model develops software by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Delivering the entire system only once at the very end"
+        },
+        {
+          "label": "B",
+          "text": "Prohibiting changes between increments"
+        },
+        {
+          "label": "C",
+          "text": "Avoiding any system engineering"
+        },
+        {
+          "label": "D",
+          "text": "Building it in smaller, manageable increments, learning from each to improve the next"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The Incremental Build model constructs software in increments, allowing learning from prior increments to improve later ones (it resembles Agile but predates it).",
+        "why_others_are_wrong": {
+          "A": "A single end delivery describes Waterfall, not incremental build.",
+          "C": "It enables system engineering during analysis/design.",
+          "B": "Incremental development specifically adapts based on prior increments."
+        }
+      },
+      "exam_reasoning": "Maps incremental, learn-as-you-go development to the Incremental Build model.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Increment Build Model",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0010",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Core values",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which statement reflects a core value of the Agile Manifesto?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Responding to change over following a rigid plan"
+        },
+        {
+          "label": "B",
+          "text": "Comprehensive documentation over working software"
+        },
+        {
+          "label": "C",
+          "text": "Processes and tools over individuals and interactions"
+        },
+        {
+          "label": "D",
+          "text": "Contract negotiation over customer collaboration"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Agile values responding to change over following a plan (and individuals/interactions, working software, and customer collaboration over their counterparts).",
+        "why_others_are_wrong": {
+          "B": "Agile values working software over comprehensive documentation.",
+          "D": "Agile values customer collaboration over contract negotiation.",
+          "C": "Agile values individuals and interactions over processes and tools."
+        }
+      },
+      "exam_reasoning": "Tests an Agile core value.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Agile Development",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0011",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Security in Agile",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A team is adopting Agile and wants to ensure security keeps pace with rapid iterations. The BEST approach is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Define security controls upfront and integrate them (and configuration management) into the Agile process"
+        },
+        {
+          "label": "B",
+          "text": "Let each developer decide security individually with no standards"
+        },
+        {
+          "label": "C",
+          "text": "Defer all security work until a final security phase after release"
+        },
+        {
+          "label": "D",
+          "text": "Skip security because Agile moves too fast for it"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Security should be defined upfront and integrated into each iteration (along with configuration management), rather than deferred—keeping security continuous in Agile.",
+        "why_others_are_wrong": {
+          "C": "Deferring security to a final phase contradicts Agile's iterative delivery and leaves risk.",
+          "D": "Agile and security are compatible; security must be integrated, not skipped.",
+          "B": "Ad-hoc per-developer security yields inconsistent, weak controls."
+        }
+      },
+      "exam_reasoning": "Tests integrating security into Agile iterations.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Security in Agile",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0012",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Scrum roles",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In Scrum, which role is primarily responsible for facilitating the process and removing impediments for the team?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Database Administrator"
+        },
+        {
+          "label": "B",
+          "text": "Chief Financial Officer"
+        },
+        {
+          "label": "C",
+          "text": "Scrum Master"
+        },
+        {
+          "label": "D",
+          "text": "Product Owner"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "The Scrum Master facilitates the Scrum process and removes impediments; the Product Owner manages the backlog/priorities, and the development team builds the product.",
+        "why_others_are_wrong": {
+          "D": "The Product Owner owns the backlog and priorities, not impediment removal/facilitation.",
+          "A": "A DBA is not a defined Scrum role.",
+          "B": "A CFO is not a Scrum role."
+        }
+      },
+      "exam_reasoning": "Maps facilitation/impediment removal to the Scrum Master.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Scrum Methodology in Agile",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0013",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Sprint retrospective",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Sprint Retrospective in Scrum is used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Deploy code to production automatically"
+        },
+        {
+          "label": "B",
+          "text": "Reflect on the completed sprint and identify process improvements for the next one"
+        },
+        {
+          "label": "C",
+          "text": "Demonstrate the product to customers"
+        },
+        {
+          "label": "D",
+          "text": "Write the initial requirements"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "The retrospective is a continuous-improvement ceremony where the team reflects on what went well/poorly and adjusts for the next sprint.",
+        "why_others_are_wrong": {
+          "C": "Demonstrating the product is the sprint review.",
+          "D": "Initial requirements precede sprints (in the backlog).",
+          "A": "Automated deployment is a CI/CD activity, not the retrospective."
+        }
+      },
+      "exam_reasoning": "Tests the improvement purpose of the retrospective.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Sprint Lifecycle and Process",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0014",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "Methodology selection",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A project has stable, well-understood, unchanging requirements and strict documentation needs (e.g., a regulated system). Which methodology is MOST appropriate?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Waterfall (sequential, well-documented)"
+        },
+        {
+          "label": "B",
+          "text": "Ad-hoc development with no plan"
+        },
+        {
+          "label": "C",
+          "text": "RAD with constant requirement churn"
+        },
+        {
+          "label": "D",
+          "text": "Pure Agile with no fixed requirements"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Waterfall suits projects with stable, well-defined requirements and heavy documentation/regulatory needs, where sequential phases work well.",
+        "why_others_are_wrong": {
+          "D": "Agile shines with evolving requirements; here requirements are stable/fixed.",
+          "B": "Ad-hoc development lacks the rigor regulated systems require.",
+          "C": "RAD's rapid churn fits prototyping, not a stable, documentation-heavy effort."
+        }
+      },
+      "exam_reasoning": "Maps stable, documentation-heavy requirements to Waterfall.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Choosing a Development Methodology (Review)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0015",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Agile principles",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are principles of the Agile Manifesto? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Resist any requirement changes after the start"
+        },
+        {
+          "label": "B",
+          "text": "Measure progress only by lines of documentation"
+        },
+        {
+          "label": "C",
+          "text": "Welcome changing requirements, even late in development"
+        },
+        {
+          "label": "D",
+          "text": "Deliver working software frequently"
+        }
+      ],
+      "correct_answer": [
+        "C",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Agile principles include delivering working software frequently and welcoming changing requirements; working software (not documentation volume) measures progress.",
+        "why_others_are_wrong": {
+          "A": "Agile welcomes requirement changes rather than resisting them.",
+          "B": "Working software, not documentation volume, measures progress."
+        }
+      },
+      "exam_reasoning": "Identifies Agile Manifesto principles.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Agile Manifesto - 12 Principles",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0016",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "Methodology mapping",
+      "difficulty": "hard",
+      "question_type": "matching",
+      "question": "Match each development methodology (1-4) to its defining characteristic (A-D).",
+      "options": [
+        {
+          "label": "A",
+          "text": "Rapid prototyping, often with JAD and CASE tools"
+        },
+        {
+          "label": "B",
+          "text": "Sequential phases completed one before the next"
+        },
+        {
+          "label": "C",
+          "text": "Iterative cycles with repeated risk analysis"
+        },
+        {
+          "label": "D",
+          "text": "Defect prevention through rigorous verification"
+        }
+      ],
+      "correct_answer": "1-B,2-C,3-A,4-D",
+      "explanation": {
+        "why_correct": "Waterfall → sequential phases (B); Spiral → iterative with risk analysis (A); RAD → rapid prototyping with JAD/CASE (D); Cleanroom → defect prevention via verification (C).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests mapping of methodologies to their characteristics.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Choosing a Development Methodology (Review)",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "Waterfall",
+        "Spiral",
+        "RAD",
+        "Cleanroom"
+      ]
+    },
+    {
+      "id": "CISSP-D08-Q0017",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Agile core values",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are Agile core values (the preferred side of the comparison)? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Contract negotiation (over customer collaboration)"
+        },
+        {
+          "label": "B",
+          "text": "Working software (over comprehensive documentation)"
+        },
+        {
+          "label": "C",
+          "text": "Individuals and interactions (over processes and tools)"
+        },
+        {
+          "label": "D",
+          "text": "Following a fixed plan (over responding to change)"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "Agile values individuals/interactions and working software (also customer collaboration and responding to change) over their counterparts.",
+        "why_others_are_wrong": {
+          "D": "Agile values responding to change over following a fixed plan.",
+          "A": "Agile values customer collaboration over contract negotiation."
+        }
+      },
+      "exam_reasoning": "Identifies the preferred Agile values.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Agile Development",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0018",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Methodologies",
+      "subtopic": "Waterfall drawback",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A noted drawback of the Waterfall model is that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "It is rigid—changes are difficult and costly once later phases begin"
+        },
+        {
+          "label": "B",
+          "text": "It has no defined phases"
+        },
+        {
+          "label": "C",
+          "text": "It requires no planning"
+        },
+        {
+          "label": "D",
+          "text": "It delivers software too frequently"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Waterfall's sequential rigidity makes accommodating changes late in the project difficult and expensive, a primary drawback.",
+        "why_others_are_wrong": {
+          "D": "Waterfall delivers once at the end, not frequently.",
+          "B": "Waterfall has clearly defined sequential phases.",
+          "C": "Waterfall is planning-heavy, not planning-free."
+        }
+      },
+      "exam_reasoning": "Tests the rigidity drawback of Waterfall.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Development Methodologies Part 1",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0019",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "SDLC",
+      "subtopic": "Disposal phase",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Security activities during the SDLC disposal phase should ensure that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "New features are added before retirement"
+        },
+        {
+          "label": "B",
+          "text": "The system runs indefinitely without review"
+        },
+        {
+          "label": "C",
+          "text": "Source code is published publicly by default"
+        },
+        {
+          "label": "D",
+          "text": "Data is securely sanitized and the system is decommissioned without leaving recoverable sensitive data"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The disposal phase securely sanitizes/destroys data and decommissions the system so no sensitive data remains recoverable.",
+        "why_others_are_wrong": {
+          "A": "Adding features is a development/maintenance activity, not disposal.",
+          "B": "Disposal ends the system's life rather than running it forever.",
+          "C": "Publishing source by default is not a disposal security goal."
+        }
+      },
+      "exam_reasoning": "Tests secure data handling at the disposal phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Development Lifecycle",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0020",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Other Agile methods",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Which of the following is an Agile methodology/variant?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Scrum"
+        },
+        {
+          "label": "B",
+          "text": "Cleanroom"
+        },
+        {
+          "label": "C",
+          "text": "Waterfall"
+        },
+        {
+          "label": "D",
+          "text": "JAD"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Scrum is a widely used Agile framework; Waterfall, Cleanroom, and JAD are non-Agile (or pre-Agile) approaches.",
+        "why_others_are_wrong": {
+          "C": "Waterfall is a sequential, non-Agile model.",
+          "B": "Cleanroom emphasizes formal defect prevention, not Agile iteration.",
+          "D": "JAD is a collaborative requirements technique, not an Agile framework."
+        }
+      },
+      "exam_reasoning": "Identifies Scrum as an Agile methodology.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Other Agile Methodologies",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0021",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "SDLC",
+      "subtopic": "NIST SDLC guidance",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "NIST publications on the SDLC emphasize that across the lifecycle phases, organizations should:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Avoid documenting any phase outputs"
+        },
+        {
+          "label": "B",
+          "text": "Integrate security and privacy considerations consistently into each phase"
+        },
+        {
+          "label": "C",
+          "text": "Skip testing to accelerate delivery"
+        },
+        {
+          "label": "D",
+          "text": "Treat security as optional after deployment"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "NIST SDLC guidance stresses integrating security and privacy at every phase, with consistent processes and documented phase outputs.",
+        "why_others_are_wrong": {
+          "D": "Security is not optional; it must be continuous.",
+          "A": "Documenting phase outputs is part of sound SDLC practice.",
+          "C": "Skipping testing increases the risk of vulnerabilities."
+        }
+      },
+      "exam_reasoning": "Reinforces consistent security integration per NIST SDLC guidance.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > NIST Special Publications",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0022",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Agile",
+      "subtopic": "Welcoming change",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "Midway through development, a key customer requirement changes significantly. How does an Agile team ideally respond, per Agile principles?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Refuse the change because the plan is fixed"
+        },
+        {
+          "label": "B",
+          "text": "Ignore the customer and ship the original scope"
+        },
+        {
+          "label": "C",
+          "text": "Welcome the change and incorporate it in an upcoming iteration, even late in development"
+        },
+        {
+          "label": "D",
+          "text": "Cancel the project entirely"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Agile welcomes changing requirements—even late—harnessing change for the customer's competitive advantage by incorporating it in an upcoming iteration.",
+        "why_others_are_wrong": {
+          "A": "Refusing change contradicts Agile's responding-to-change value.",
+          "D": "Canceling overreacts; Agile adapts to change.",
+          "B": "Ignoring the customer contradicts customer collaboration."
+        }
+      },
+      "exam_reasoning": "Tests Agile's welcoming of late requirement changes.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Agile Manifesto - 12 Principles",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0023",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "DevSecOps",
+      "subtopic": "Concept",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "DevSecOps differs from DevOps in that DevSecOps:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Applies only to hardware manufacturing"
+        },
+        {
+          "label": "B",
+          "text": "Removes security entirely to speed delivery"
+        },
+        {
+          "label": "C",
+          "text": "Replaces developers with operations staff"
+        },
+        {
+          "label": "D",
+          "text": "Integrates security into the DevOps pipeline (\"security as code\"), shifting security left"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "DevSecOps embeds security throughout the DevOps pipeline (\"security as code\"), automating security testing and shifting security earlier (\"shift left\").",
+        "why_others_are_wrong": {
+          "B": "DevSecOps adds security; it does not remove it.",
+          "A": "It applies to software pipelines, not hardware manufacturing.",
+          "C": "DevSecOps integrates dev, sec, and ops collaboration—not staff replacement."
+        }
+      },
+      "exam_reasoning": "Tests the security-integrated nature of DevSecOps.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > DevSecOps Overview",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0024",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "DevOps",
+      "subtopic": "Access controls",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "In a DevOps environment, developers gradually accumulate pipeline permissions from past projects. Which controls BEST address this?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Share one privileged account across the team"
+        },
+        {
+          "label": "B",
+          "text": "Enforce least privilege and separation of duties with role-based access to avoid authorization creep"
+        },
+        {
+          "label": "C",
+          "text": "Disable all access controls in the pipeline"
+        },
+        {
+          "label": "D",
+          "text": "Grant everyone administrator access for convenience"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Least privilege, separation of duties, and clear role-based access controls prevent authorization (privilege) creep in DevOps pipelines.",
+        "why_others_are_wrong": {
+          "D": "Universal admin access violates least privilege and expands risk.",
+          "C": "Disabling access controls is dangerous.",
+          "A": "A shared privileged account destroys accountability."
+        }
+      },
+      "exam_reasoning": "Maps authorization-creep mitigation to least privilege/SoD/RBAC.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Security and Access Controls in DevOps",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0025",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "CI/CD",
+      "subtopic": "Continuous integration",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Continuous Integration (CI) primarily involves:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Frequently merging code changes into a shared repository with automated build/test"
+        },
+        {
+          "label": "B",
+          "text": "Manually deploying once per year"
+        },
+        {
+          "label": "C",
+          "text": "Writing code without version control"
+        },
+        {
+          "label": "D",
+          "text": "Avoiding any automated testing"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "CI frequently integrates code into a shared repo, triggering automated builds and tests to catch issues early.",
+        "why_others_are_wrong": {
+          "B": "Annual manual deployment is the opposite of continuous practices.",
+          "D": "CI relies on automated testing.",
+          "C": "CI depends on version control."
+        }
+      },
+      "exam_reasoning": "Tests the frequent-merge/automated-test nature of CI.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > CI/CD Pipeline and Security Integration",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0026",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "CI/CD",
+      "subtopic": "Continuous deployment",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "How does Continuous Deployment differ from Continuous Delivery?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Continuous Deployment automatically releases passing changes to production; Continuous Delivery stops at a deployable artifact awaiting approval"
+        },
+        {
+          "label": "B",
+          "text": "They are identical in every way"
+        },
+        {
+          "label": "C",
+          "text": "Continuous Deployment never tests code"
+        },
+        {
+          "label": "D",
+          "text": "Continuous Delivery automatically deploys to production with no gate"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Continuous Delivery produces a release-ready artifact that requires a manual approval to deploy; Continuous Deployment automatically pushes passing changes all the way to production.",
+        "why_others_are_wrong": {
+          "B": "They differ at the final release gate.",
+          "D": "Continuous Delivery typically includes an approval gate before production.",
+          "C": "Continuous Deployment relies on automated testing to gate releases."
+        }
+      },
+      "exam_reasoning": "Distinguishes Continuous Deployment (auto-to-prod) from Continuous Delivery (gated).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > CI/CD Pipeline and Security Integration",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0027",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "CI/CD",
+      "subtopic": "Pipeline security",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Embedding security into a CI/CD pipeline (DevSecOps) is BEST achieved by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Letting only one person see the pipeline"
+        },
+        {
+          "label": "B",
+          "text": "Removing automated tests to speed the pipeline"
+        },
+        {
+          "label": "C",
+          "text": "Involving security at each pipeline stage with automated security testing"
+        },
+        {
+          "label": "D",
+          "text": "Running a single manual security review only after release"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Security should be involved at every pipeline stage with automated security testing (e.g., SAST/DAST, dependency scanning) so issues are caught continuously.",
+        "why_others_are_wrong": {
+          "D": "A single post-release review misses issues introduced earlier.",
+          "B": "Removing tests increases the risk of shipping vulnerabilities.",
+          "A": "Restricting visibility to one person harms collaboration and review."
+        }
+      },
+      "exam_reasoning": "Tests integrating automated security throughout CI/CD.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Security in CI/CD Pipelines",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0028",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "DevOps",
+      "subtopic": "Infrastructure as Code",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Infrastructure as Code (IaC) improves security and consistency by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Defining infrastructure in version-controlled code so it is repeatable and auditable"
+        },
+        {
+          "label": "B",
+          "text": "Eliminating the need for access controls"
+        },
+        {
+          "label": "C",
+          "text": "Preventing any infrastructure changes"
+        },
+        {
+          "label": "D",
+          "text": "Configuring every server manually by hand"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "IaC declares infrastructure in code (version-controlled), enabling consistent, repeatable, auditable, and reviewable provisioning—reducing configuration drift and manual error.",
+        "why_others_are_wrong": {
+          "D": "Manual configuration is error-prone and inconsistent—the problem IaC solves.",
+          "C": "IaC manages changes; it does not prevent them.",
+          "B": "Access controls still apply to IaC pipelines and infrastructure."
+        }
+      },
+      "exam_reasoning": "Tests the repeatable/auditable benefit of IaC.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > DevOps and DevSecOps",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0029",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Maturity Models",
+      "subtopic": "CMMI levels",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The Capability Maturity Model Integration (CMMI) defines how many maturity levels?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Three"
+        },
+        {
+          "label": "B",
+          "text": "Seven"
+        },
+        {
+          "label": "C",
+          "text": "Ten"
+        },
+        {
+          "label": "D",
+          "text": "Five"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "CMMI defines five maturity levels (typically Initial, Managed, Defined, Quantitatively Managed, and Optimizing), used to assess and improve process maturity.",
+        "why_others_are_wrong": {
+          "A": "CMMI has five, not three, levels.",
+          "B": "CMMI has five, not seven, levels.",
+          "C": "CMMI has five, not ten, levels."
+        }
+      },
+      "exam_reasoning": "Recall of CMMI's five maturity levels.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Capability Maturity Model Integration (CMMI)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0030",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Maturity Models",
+      "subtopic": "IDEAL model",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The IDEAL model's five phases stand for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Identify, Detect, Eradicate, Analyze, Log"
+        },
+        {
+          "label": "B",
+          "text": "Initiating, Diagnosing, Establishing, Acting, Learning"
+        },
+        {
+          "label": "C",
+          "text": "Initiate, Develop, Encrypt, Audit, Launch"
+        },
+        {
+          "label": "D",
+          "text": "Inspect, Design, Execute, Approve, List"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "IDEAL stands for Initiating, Diagnosing, Establishing, Acting, and Learning—a model for guiding process improvement.",
+        "why_others_are_wrong": {
+          "A": "These are not the IDEAL phases.",
+          "C": "These are not the IDEAL phases.",
+          "D": "These are not the IDEAL phases."
+        }
+      },
+      "exam_reasoning": "Recall of the IDEAL phases.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Maturity Models",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0031",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Maturity Models",
+      "subtopic": "SAMM",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The OWASP Software Assurance Maturity Model (SAMM) is used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Analyze and improve an organization's software security posture across the SDLC"
+        },
+        {
+          "label": "B",
+          "text": "Encrypt data at rest on servers"
+        },
+        {
+          "label": "C",
+          "text": "Route packets between subnets"
+        },
+        {
+          "label": "D",
+          "text": "Provide backup power to build servers"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "OWASP SAMM helps organizations assess and improve their software security posture and integrate security strategy throughout the SDLC.",
+        "why_others_are_wrong": {
+          "B": "Data-at-rest encryption is a separate control.",
+          "D": "Backup power is a UPS/generator function.",
+          "C": "Packet routing is a network function."
+        }
+      },
+      "exam_reasoning": "Maps software-security maturity assessment to OWASP SAMM.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Assurance Maturity Model (SAM)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0032",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Maturity Models",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Software maturity models are used to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Provide physical security for data centers"
+        },
+        {
+          "label": "B",
+          "text": "Assess and improve the effectiveness/consistency of an organization's software development processes"
+        },
+        {
+          "label": "C",
+          "text": "Replace the need for any testing"
+        },
+        {
+          "label": "D",
+          "text": "Encrypt source code automatically"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Maturity models evaluate how effective and consistent development processes are and provide a path to improve them.",
+        "why_others_are_wrong": {
+          "D": "They assess processes; they do not encrypt code.",
+          "C": "Testing remains necessary regardless of maturity level.",
+          "A": "Physical security is unrelated to software maturity models."
+        }
+      },
+      "exam_reasoning": "Tests the process-improvement purpose of maturity models.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Maturity Models",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0033",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Operations and Maintenance",
+      "subtopic": "Patch process order",
+      "difficulty": "hard",
+      "question_type": "sequence_ordering",
+      "question": "Order the patch management process steps as described in the guide. (Provide the option labels in order.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Rollout"
+        },
+        {
+          "label": "B",
+          "text": "Evaluation"
+        },
+        {
+          "label": "C",
+          "text": "Testing"
+        },
+        {
+          "label": "D",
+          "text": "Verification"
+        },
+        {
+          "label": "E",
+          "text": "Approval"
+        }
+      ],
+      "correct_answer": "B,C,E,A,D",
+      "explanation": {
+        "why_correct": "Patch management proceeds: Evaluation, Testing, Approval, Rollout, and Verification.",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests the ordered patch management process.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Patch Management Process",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0034",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Operations and Maintenance",
+      "subtopic": "Regression testing",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Regression testing during O&M ensures that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The software has the most marketing appeal"
+        },
+        {
+          "label": "B",
+          "text": "New patches or changes have not broken previously working functionality"
+        },
+        {
+          "label": "C",
+          "text": "The build server has redundant power"
+        },
+        {
+          "label": "D",
+          "text": "No documentation is ever produced"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Regression testing verifies that applied changes/patches have not adversely affected existing functionality.",
+        "why_others_are_wrong": {
+          "A": "Marketing appeal is unrelated to regression testing.",
+          "D": "Documentation is still valuable; regression testing does not preclude it.",
+          "C": "Build-server power is unrelated to regression testing."
+        }
+      },
+      "exam_reasoning": "Tests the purpose of regression testing.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Regression and Regression Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0035",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Operations and Maintenance",
+      "subtopic": "Continuous monitoring",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "During O&M, continuous monitoring helps identify:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The cafeteria menu"
+        },
+        {
+          "label": "B",
+          "text": "The marketing conversion rate"
+        },
+        {
+          "label": "C",
+          "text": "The office holiday schedule"
+        },
+        {
+          "label": "D",
+          "text": "Unauthorized patches or backdoors and other emerging security issues"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Continuous monitoring during O&M can detect unauthorized changes (e.g., rogue patches or backdoors) and emerging vulnerabilities.",
+        "why_others_are_wrong": {
+          "C": "Holiday schedules are unrelated.",
+          "B": "Marketing metrics are unrelated to O&M monitoring.",
+          "A": "The cafeteria menu is irrelevant."
+        }
+      },
+      "exam_reasoning": "Tests the security value of continuous monitoring in O&M.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Continuous Monitoring in O&M",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0036",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Operations and Maintenance",
+      "subtopic": "Patch test before rollout",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A vendor releases an urgent security patch for a production application. Before broad rollout, the team should:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Deploy it to production immediately with no testing"
+        },
+        {
+          "label": "B",
+          "text": "Test the patch in a non-production environment and obtain approval via change control"
+        },
+        {
+          "label": "C",
+          "text": "Ignore it indefinitely"
+        },
+        {
+          "label": "D",
+          "text": "Apply it only to the developer's laptop and consider it done"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Patches should be evaluated, tested in non-production, and approved through change control before rollout and verification—balancing security with stability.",
+        "why_others_are_wrong": {
+          "A": "Untested production deployment risks outages from a faulty patch.",
+          "C": "Ignoring an urgent security patch leaves a known vulnerability exposed.",
+          "D": "Patching one laptop does not protect production systems."
+        }
+      },
+      "exam_reasoning": "Tests test-then-approve-then-rollout patch practice.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Patch Management Process",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0037",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Integrated Product Teams",
+      "subtopic": "Purpose",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "An Integrated Product Team (IPT) brings together which kind of membership to improve outcomes?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Only the most senior executive, working alone"
+        },
+        {
+          "label": "B",
+          "text": "Cross-functional stakeholders (e.g., development, security, operations, business) collaborating on the product"
+        },
+        {
+          "label": "C",
+          "text": "Only the marketing department"
+        },
+        {
+          "label": "D",
+          "text": "Exclusively external contractors with no internal staff"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "An IPT is a cross-functional team (development, security, operations, business, etc.) that collaborates throughout the product lifecycle to improve quality and alignment.",
+        "why_others_are_wrong": {
+          "A": "A lone executive is not a cross-functional team.",
+          "D": "IPTs integrate internal stakeholders, not only external contractors.",
+          "C": "IPTs span multiple functions, not marketing alone."
+        }
+      },
+      "exam_reasoning": "Tests the cross-functional nature of IPTs.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Integrated Product Teams",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0038",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Code Repositories",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A code repository (e.g., using Git) primarily provides:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Backup power for build servers"
+        },
+        {
+          "label": "B",
+          "text": "Version control, change tracking, and collaboration for source code"
+        },
+        {
+          "label": "C",
+          "text": "Wireless encryption"
+        },
+        {
+          "label": "D",
+          "text": "Physical access control to the office"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Code repositories manage code versions, track changes, and enable team collaboration (e.g., Git with GitHub/GitLab/Bitbucket).",
+        "why_others_are_wrong": {
+          "A": "Backup power is a UPS/generator function.",
+          "D": "Physical access control is a facility control.",
+          "C": "Wireless encryption is WPA2/WPA3."
+        }
+      },
+      "exam_reasoning": "Tests the version-control/collaboration purpose of code repos.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Code Repositories",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0039",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Code Repositories",
+      "subtopic": "Secrets in repos",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A developer is about to commit a file containing API keys and database passwords to a PUBLIC code repository. What is the security concern and best practice?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Secrets should always be committed for convenience"
+        },
+        {
+          "label": "B",
+          "text": "Public repos automatically encrypt secrets, so it is safe"
+        },
+        {
+          "label": "C",
+          "text": "Hardcoding secrets is fine if the repo is popular"
+        },
+        {
+          "label": "D",
+          "text": "Secrets must not be stored in (especially public) repos; use secret managers and remove/rotate exposed secrets"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Storing secrets in repositories—especially public ones—exposes them to anyone; secrets should be kept in secret managers, and any exposed secrets must be removed and rotated.",
+        "why_others_are_wrong": {
+          "B": "Public repos do not encrypt content; anyone can read committed secrets.",
+          "C": "Repo popularity increases, not decreases, exposure risk.",
+          "A": "Committing secrets is a serious security mistake."
+        }
+      },
+      "exam_reasoning": "Tests the no-secrets-in-repos best practice.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Security Considerations for Code Repositories",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0040",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Code Repositories",
+      "subtopic": "Git operations",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "In Git, which operation uploads local commits to a remote repository?",
+      "options": [
+        {
+          "label": "A",
+          "text": "git init"
+        },
+        {
+          "label": "B",
+          "text": "git push"
+        },
+        {
+          "label": "C",
+          "text": "git ignore"
+        },
+        {
+          "label": "D",
+          "text": "git clone"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "git push uploads local commits to the remote repository; git init creates a new repo and git clone copies a remote repo locally.",
+        "why_others_are_wrong": {
+          "A": "git init initializes a new local repository.",
+          "D": "git clone copies a remote repository to the local machine.",
+          "C": "\".gitignore\" excludes files; \"git ignore\" is not the push command."
+        }
+      },
+      "exam_reasoning": "Recall of git push (upload to remote).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Basic Git Operations (Example)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0041",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "DevSecOps",
+      "subtopic": "Shift left",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "\"Shifting security left\" in DevSecOps means:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Addressing security earlier in the development lifecycle rather than only at the end"
+        },
+        {
+          "label": "B",
+          "text": "Deferring security to post-release"
+        },
+        {
+          "label": "C",
+          "text": "Moving servers physically to the left side of the room"
+        },
+        {
+          "label": "D",
+          "text": "Removing security testing entirely"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Shifting left moves security activities earlier (design, coding, build) so issues are found and fixed sooner and more cheaply.",
+        "why_others_are_wrong": {
+          "C": "It is a metaphor about timing, not physical placement.",
+          "B": "Shifting left is the opposite of deferring security.",
+          "D": "It adds earlier security testing, not removes it."
+        }
+      },
+      "exam_reasoning": "Tests the meaning of shifting security left.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > DevSecOps Overview",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0042",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Maturity Models",
+      "subtopic": "CMM purpose",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The Capability Maturity Model (CMM/SW-CMM) helps an organization to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Assess the maturity of its software process and chart improvements toward higher levels"
+        },
+        {
+          "label": "B",
+          "text": "Provide fire suppression in server rooms"
+        },
+        {
+          "label": "C",
+          "text": "Encrypt all production traffic"
+        },
+        {
+          "label": "D",
+          "text": "Replace developers with automation entirely"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "CMM evaluates software-process maturity and provides a staged path to improve process capability over time.",
+        "why_others_are_wrong": {
+          "C": "Traffic encryption is a separate control.",
+          "D": "CMM improves processes; it does not replace developers.",
+          "B": "Fire suppression is a physical control."
+        }
+      },
+      "exam_reasoning": "Tests the maturity-assessment purpose of CMM.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Maturity Models",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0043",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "CI/CD",
+      "subtopic": "Pipeline benefits",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are benefits of a well-designed CI/CD pipeline with integrated security? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Elimination of the need for any version control"
+        },
+        {
+          "label": "B",
+          "text": "Earlier detection of vulnerabilities through automated security testing"
+        },
+        {
+          "label": "C",
+          "text": "Faster, more consistent and repeatable releases"
+        },
+        {
+          "label": "D",
+          "text": "Removal of all human oversight from releases"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "CI/CD with integrated security yields faster, repeatable releases and earlier vulnerability detection via automated testing.",
+        "why_others_are_wrong": {
+          "A": "CI/CD depends on version control, not its elimination.",
+          "D": "Human oversight/approval gates remain important, especially for production."
+        }
+      },
+      "exam_reasoning": "Identifies CI/CD-with-security benefits.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Security in CI/CD Pipelines",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0044",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "DevOps",
+      "subtopic": "DevOps definition",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "DevOps primarily aims to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Separate developers and operations into isolated silos"
+        },
+        {
+          "label": "B",
+          "text": "Eliminate the need for testing"
+        },
+        {
+          "label": "C",
+          "text": "Unify software development and IT operations to deliver software faster and more reliably"
+        },
+        {
+          "label": "D",
+          "text": "Replace all software with hardware"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "DevOps integrates development and operations (culture, practices, automation) to accelerate and stabilize software delivery.",
+        "why_others_are_wrong": {
+          "A": "DevOps breaks down silos rather than reinforcing them.",
+          "B": "DevOps emphasizes automated testing, not its removal.",
+          "D": "DevOps is about software delivery practices, not replacing software with hardware."
+        }
+      },
+      "exam_reasoning": "Tests the dev+ops unification goal of DevOps.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > DevOps and DevSecOps",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0045",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Operations and Maintenance",
+      "subtopic": "CM in patching",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Why is configuration management important to patch management during O&M?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It encrypts the office Wi-Fi"
+        },
+        {
+          "label": "B",
+          "text": "It eliminates the need to ever test patches"
+        },
+        {
+          "label": "C",
+          "text": "It allows untracked ad-hoc changes"
+        },
+        {
+          "label": "D",
+          "text": "It ensures patches are tracked and applied consistently against known baselines, preventing drift"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Configuration management tracks system baselines and changes, ensuring patches are applied consistently and that configuration drift/unauthorized changes are detected.",
+        "why_others_are_wrong": {
+          "B": "Patches still require testing.",
+          "C": "CM exists to control changes, not permit untracked ones.",
+          "A": "Wi-Fi encryption is unrelated to CM in patching."
+        }
+      },
+      "exam_reasoning": "Connects configuration management to consistent patching.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Software Development Security > Software Operations And Maintenance",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0046",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "Compiled vs interpreted",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A KEY difference between compiled and interpreted languages is that compiled languages:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Are always executed line-by-line from source at runtime"
+        },
+        {
+          "label": "B",
+          "text": "Require no translation to run"
+        },
+        {
+          "label": "C",
+          "text": "Cannot be used to build secure software"
+        },
+        {
+          "label": "D",
+          "text": "Are translated to machine code before execution, so the source is not distributed to run it"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Compiled languages are translated to machine code ahead of execution (the distributed artifact is the binary), while interpreted languages are translated/executed at runtime from source.",
+        "why_others_are_wrong": {
+          "A": "Line-by-line runtime execution describes interpreted languages.",
+          "C": "Both compiled and interpreted languages can build secure software.",
+          "B": "Compiled languages require compilation; interpreted require an interpreter."
+        }
+      },
+      "exam_reasoning": "Distinguishes compiled (pre-translated) from interpreted (runtime) languages.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Compiled vs. Interpreted Languages",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0047",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "Interpreted security note",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "An interpreted application is distributed as human-readable source. From a security standpoint, what is a notable consideration?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It is impossible to reverse engineer in any way"
+        },
+        {
+          "label": "B",
+          "text": "It cannot contain vulnerabilities"
+        },
+        {
+          "label": "C",
+          "text": "The source code (and any embedded secrets) is readable by anyone who obtains it"
+        },
+        {
+          "label": "D",
+          "text": "It automatically hides all logic from users"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Interpreted code is distributed as source, so its logic—and any embedded secrets or vulnerabilities—are directly visible to anyone with the files; secrets must not be hardcoded.",
+        "why_others_are_wrong": {
+          "A": "Even compiled binaries can be reverse engineered; interpreted source is trivially readable.",
+          "D": "Distributing source exposes, rather than hides, the logic.",
+          "B": "Any code can contain vulnerabilities."
+        }
+      },
+      "exam_reasoning": "Tests the exposure risk of distributing interpreted source.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Compiled vs. Interpreted Languages",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0048",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "Generations",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "In the programming language generations, which generation corresponds to machine language (binary)?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fourth generation (4GL)"
+        },
+        {
+          "label": "B",
+          "text": "First generation (1GL)"
+        },
+        {
+          "label": "C",
+          "text": "Third generation (3GL)"
+        },
+        {
+          "label": "D",
+          "text": "Fifth generation (5GL)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "First-generation languages (1GL) are machine language (binary) executed directly by hardware; higher generations are progressively more abstract/human-readable.",
+        "why_others_are_wrong": {
+          "C": "3GLs are high-level languages (e.g., C, Java), not binary.",
+          "A": "4GLs are higher-level, often domain-specific languages.",
+          "D": "5GLs are associated with AI/constraint-based programming."
+        }
+      },
+      "exam_reasoning": "Maps machine language to 1GL.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Programming Language Generations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0049",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "Code libraries",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Reusable code libraries enhance efficiency and consistency, but from a security perspective they must be:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Properly managed and kept updated, since vulnerable libraries introduce supply chain risk"
+        },
+        {
+          "label": "B",
+          "text": "Trusted blindly regardless of source"
+        },
+        {
+          "label": "C",
+          "text": "Avoided entirely in all software"
+        },
+        {
+          "label": "D",
+          "text": "Never updated once included"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Libraries speed development but can carry vulnerabilities; they must be vetted, kept updated, and tracked (supply chain risk management) to remain secure.",
+        "why_others_are_wrong": {
+          "D": "Outdated libraries accumulate known vulnerabilities.",
+          "B": "Blind trust ignores supply chain risk (e.g., malicious or vulnerable components).",
+          "C": "Libraries are valuable; the goal is secure management, not avoidance."
+        }
+      },
+      "exam_reasoning": "Tests secure management of code libraries.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Code Libraries",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0050",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "SDK/IDE",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A Software Development Kit (SDK) typically provides:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Backup power for build servers"
+        },
+        {
+          "label": "B",
+          "text": "A wireless encryption key"
+        },
+        {
+          "label": "C",
+          "text": "Tools, libraries, and resources to build applications for a platform (sometimes including third-party resources)"
+        },
+        {
+          "label": "D",
+          "text": "Physical access control to the office"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "An SDK bundles tools, libraries, documentation, and sometimes third-party resources to develop for a given platform; an IDE is the integrated coding environment.",
+        "why_others_are_wrong": {
+          "A": "Backup power is a UPS/generator function.",
+          "D": "Physical access control is a facility control.",
+          "B": "A wireless key is a network secret."
+        }
+      },
+      "exam_reasoning": "Recall of the SDK's purpose.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Software Development Kit (SDK)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0051",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "SDK supply chain",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "A security risk specific to SDKs that include third-party resources is that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "They make all code automatically secure"
+        },
+        {
+          "label": "B",
+          "text": "They cannot be scanned for vulnerabilities"
+        },
+        {
+          "label": "C",
+          "text": "They eliminate the need for testing"
+        },
+        {
+          "label": "D",
+          "text": "Bundled third-party components can introduce vulnerabilities or malicious code (supply chain risk)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "SDKs may include third-party libraries/components that carry their own vulnerabilities or malicious code, so they must be vetted and tracked (supply chain risk management).",
+        "why_others_are_wrong": {
+          "A": "Including an SDK does not guarantee security.",
+          "B": "SDK components can and should be scanned.",
+          "C": "Testing is still required when using SDKs."
+        }
+      },
+      "exam_reasoning": "Tests the third-party supply chain risk of SDKs.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Software Development Kit (SDK)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0052",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "SAST",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Static Application Security Testing (SAST) analyzes:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A running application by sending it inputs"
+        },
+        {
+          "label": "B",
+          "text": "Only the network perimeter"
+        },
+        {
+          "label": "C",
+          "text": "Only physical access logs"
+        },
+        {
+          "label": "D",
+          "text": "Source code or binaries WITHOUT executing the application"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "SAST (white-box) examines source code/binaries without running the application, finding issues early in development.",
+        "why_others_are_wrong": {
+          "A": "Analyzing a running app via inputs is DAST.",
+          "B": "Network-perimeter testing is not SAST.",
+          "C": "Physical access logs are unrelated to SAST."
+        }
+      },
+      "exam_reasoning": "Maps non-executing code analysis to SAST.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Testing Approaches",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0053",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "DAST",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Dynamic Application Security Testing (DAST) is BEST described as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Reading source code statically without running it"
+        },
+        {
+          "label": "B",
+          "text": "A disaster recovery drill"
+        },
+        {
+          "label": "C",
+          "text": "A formal code inspection meeting"
+        },
+        {
+          "label": "D",
+          "text": "Testing a running application from the outside (black-box) by sending inputs and observing behavior"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "DAST (black-box) tests a running application by sending inputs and observing responses, finding runtime/exploitable issues.",
+        "why_others_are_wrong": {
+          "A": "Static source reading is SAST.",
+          "C": "A formal inspection is a manual code review (e.g., Fagan).",
+          "B": "A DR drill is a continuity exercise."
+        }
+      },
+      "exam_reasoning": "Maps running-app external testing to DAST.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Testing Approaches",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0054",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "IAST",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Interactive Application Security Testing (IAST) combines aspects of SAST and DAST by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Only scanning the network perimeter"
+        },
+        {
+          "label": "B",
+          "text": "Instrumenting the running application to observe code behavior during execution/testing"
+        },
+        {
+          "label": "C",
+          "text": "Replacing the need for all other testing"
+        },
+        {
+          "label": "D",
+          "text": "Only reading static source code"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "IAST instruments the application (agents inside the running app) to observe code execution during testing, combining static insight with dynamic context.",
+        "why_others_are_wrong": {
+          "D": "Static-source-only analysis is SAST.",
+          "A": "Perimeter scanning is not IAST.",
+          "C": "IAST complements, not replaces, other testing."
+        }
+      },
+      "exam_reasoning": "Tests the instrumented-runtime nature of IAST.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Types of Fuzz Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0055",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "White box vs black box",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A tester is given full access to the application's source code and internal design to perform the assessment. This testing approach is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "White box testing"
+        },
+        {
+          "label": "B",
+          "text": "A tabletop exercise"
+        },
+        {
+          "label": "C",
+          "text": "A reciprocal agreement"
+        },
+        {
+          "label": "D",
+          "text": "Black box testing"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "White box testing gives the tester full knowledge of internals (source, design); black box provides no internal knowledge.",
+        "why_others_are_wrong": {
+          "D": "Black box testing provides no internal knowledge.",
+          "C": "A reciprocal agreement is a DR site arrangement.",
+          "B": "A tabletop exercise is a DR test."
+        }
+      },
+      "exam_reasoning": "Maps full-internal-knowledge testing to white box.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Testing Approaches",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0056",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "Fuzz testing",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Fuzz testing assesses software by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Encrypting the database"
+        },
+        {
+          "label": "B",
+          "text": "Reviewing the marketing plan"
+        },
+        {
+          "label": "C",
+          "text": "Only validating documented happy-path inputs"
+        },
+        {
+          "label": "D",
+          "text": "Sending invalid, unexpected, or random inputs to find flaws or crashes"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Fuzz testing injects invalid/unexpected/random inputs to discover vulnerabilities, crashes, or unexpected behavior.",
+        "why_others_are_wrong": {
+          "C": "Only happy-path validation misses edge cases fuzzing targets.",
+          "B": "Marketing plans are unrelated.",
+          "A": "Database encryption is a separate control."
+        }
+      },
+      "exam_reasoning": "Maps invalid-input testing to fuzzing.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Additional Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0057",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "Mutational fuzzing",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Mutational fuzzing generates test inputs by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Building inputs from a formal model of the expected format"
+        },
+        {
+          "label": "B",
+          "text": "Encrypting the inputs"
+        },
+        {
+          "label": "C",
+          "text": "Mutating existing valid data samples into malformed variants"
+        },
+        {
+          "label": "D",
+          "text": "Reading the source code only"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Mutational fuzzing alters existing valid inputs to create malformed test cases (vs. generational/smart fuzzing, which builds inputs from a model).",
+        "why_others_are_wrong": {
+          "A": "Building from a model describes generational (smart) fuzzing.",
+          "D": "Reading source only is static analysis (SAST).",
+          "B": "Fuzzing malforms inputs; it does not encrypt them."
+        }
+      },
+      "exam_reasoning": "Distinguishes mutational fuzzing (alter valid data).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Types of Fuzz Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0058",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "Testing-type mapping",
+      "difficulty": "hard",
+      "question_type": "matching",
+      "question": "Match each application security testing technique (1-4) to its description (A-D).",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tests a running application from the outside (black-box)"
+        },
+        {
+          "label": "B",
+          "text": "Sends invalid/random inputs to find flaws"
+        },
+        {
+          "label": "C",
+          "text": "Instruments the running app to observe code during execution"
+        },
+        {
+          "label": "D",
+          "text": "Analyzes code without executing it (white-box)"
+        }
+      ],
+      "correct_answer": "1-D,2-A,3-C,4-B",
+      "explanation": {
+        "why_correct": "SAST → static code analysis (B); DAST → running-app black-box testing (A); IAST → instrumented runtime (D); Fuzz testing → invalid/random inputs (C).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests mapping of application security testing techniques.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Testing Approaches",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "SAST",
+        "DAST",
+        "IAST",
+        "Fuzz testing"
+      ]
+    },
+    {
+      "id": "CISSP-D08-Q0059",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Software Assurance",
+      "subtopic": "ASVS Level 3",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A critical application must defend against advanced persistent threats (APTs) with the most extensive controls. Which OWASP ASVS level applies?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Level 2 (Moderate)"
+        },
+        {
+          "label": "B",
+          "text": "Level 3 (High)"
+        },
+        {
+          "label": "C",
+          "text": "There is no such standard"
+        },
+        {
+          "label": "D",
+          "text": "Level 1 (Low)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "ASVS Level 3 (High) is for applications critical to operations, protecting against advanced threats including APTs, with the most extensive controls.",
+        "why_others_are_wrong": {
+          "D": "Level 1 (Low) is the most basic assurance level.",
+          "A": "Level 2 (Moderate) defends against most risks but is below the APT-focused Level 3.",
+          "C": "OWASP ASVS is a recognized standard."
+        }
+      },
+      "exam_reasoning": "Maps APT-grade critical apps to ASVS Level 3.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > ASVS Assurance Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0060",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Software Assurance",
+      "subtopic": "ASVS Level 2",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "OWASP ASVS Level 2 (Moderate) is intended to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Eliminate the need for any testing"
+        },
+        {
+          "label": "B",
+          "text": "Defend only against advanced persistent threats"
+        },
+        {
+          "label": "C",
+          "text": "Defend against most application security risks, including skilled/motivated attackers"
+        },
+        {
+          "label": "D",
+          "text": "Provide only the most basic assurance"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "ASVS Level 2 is sufficient for most applications, defending against most risks and skilled, motivated attackers (e.g., standard pen-test resistance).",
+        "why_others_are_wrong": {
+          "D": "Basic assurance is Level 1.",
+          "B": "APT-grade defense is Level 3.",
+          "A": "ASVS guides testing requirements; it does not remove testing."
+        }
+      },
+      "exam_reasoning": "Tests the scope of ASVS Level 2.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > ASVS Assurance Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0061",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Software Assurance",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Software assurance aims to ensure that software:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Functions as intended while protecting against threats and vulnerabilities"
+        },
+        {
+          "label": "B",
+          "text": "Is the cheapest possible to produce"
+        },
+        {
+          "label": "C",
+          "text": "Never needs to be tested"
+        },
+        {
+          "label": "D",
+          "text": "Has the most marketing features"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Software assurance provides confidence that software functions as intended and is protected against threats/vulnerabilities.",
+        "why_others_are_wrong": {
+          "B": "Lowest cost is not the goal of assurance.",
+          "D": "Marketing features are not software assurance.",
+          "C": "Assurance relies on testing, not its absence."
+        }
+      },
+      "exam_reasoning": "Tests the function-as-intended-and-secure goal of software assurance.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Software Assurance",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0062",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Software Assurance",
+      "subtopic": "Determining ASVS level",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The appropriate ASVS assurance level for an application is determined primarily by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The color of the application's logo"
+        },
+        {
+          "label": "B",
+          "text": "The brand of the developers' laptops"
+        },
+        {
+          "label": "C",
+          "text": "The application's criticality and risk (informed by the SDLC)"
+        },
+        {
+          "label": "D",
+          "text": "The number of developers on the team"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "The required assurance level is chosen based on the application's criticality and risk profile, informed by the SDLC—higher risk warrants higher assurance.",
+        "why_others_are_wrong": {
+          "A": "Logo color is irrelevant to assurance level.",
+          "D": "Team size does not determine the assurance level.",
+          "B": "Laptop brand is irrelevant."
+        }
+      },
+      "exam_reasoning": "Connects ASVS level selection to criticality/risk.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Determining Assurance Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0063",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "Unit vs integration",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which test verifies that two or more components work correctly TOGETHER?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unit test"
+        },
+        {
+          "label": "B",
+          "text": "Smoke test"
+        },
+        {
+          "label": "C",
+          "text": "Sanity test"
+        },
+        {
+          "label": "D",
+          "text": "Integration test"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Integration testing verifies that combined components/modules interact correctly; unit testing checks a single component in isolation.",
+        "why_others_are_wrong": {
+          "A": "Unit testing checks one component in isolation.",
+          "B": "Smoke testing is a quick post-build basic-functionality check.",
+          "C": "A sanity test quickly validates a specific feature's viability."
+        }
+      },
+      "exam_reasoning": "Distinguishes integration testing from unit/smoke/sanity.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Additional Types of Software Tests",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0064",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "Runtime environment",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A runtime environment provides:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The platform/services in which a program executes (e.g., interpreters, libraries, memory management)"
+        },
+        {
+          "label": "B",
+          "text": "A backup generator"
+        },
+        {
+          "label": "C",
+          "text": "Physical security for the data center"
+        },
+        {
+          "label": "D",
+          "text": "A wireless access point"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "A runtime environment supplies the execution platform and services (interpreters/VMs, libraries, memory management) a program relies on at run time.",
+        "why_others_are_wrong": {
+          "C": "Physical security is a facility control.",
+          "B": "A generator is power equipment.",
+          "D": "A WAP is a wireless network device."
+        }
+      },
+      "exam_reasoning": "Recall of the runtime environment.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Runtime Environment",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0065",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "Testing approaches",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are recognized application security testing techniques? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "War driving"
+        },
+        {
+          "label": "B",
+          "text": "Degaussing"
+        },
+        {
+          "label": "C",
+          "text": "DAST (dynamic)"
+        },
+        {
+          "label": "D",
+          "text": "SAST (static)"
+        }
+      ],
+      "correct_answer": [
+        "C",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "SAST and DAST (along with IAST and fuzzing) are application security testing techniques.",
+        "why_others_are_wrong": {
+          "B": "Degaussing is a media-destruction method.",
+          "A": "War driving is a wireless reconnaissance technique."
+        }
+      },
+      "exam_reasoning": "Identifies application security testing techniques.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Testing Approaches",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0066",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Programming Languages",
+      "subtopic": "IDE",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "An Integrated Development Environment (IDE) primarily provides developers with:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A backup power supply"
+        },
+        {
+          "label": "B",
+          "text": "A physical door lock"
+        },
+        {
+          "label": "C",
+          "text": "A fire suppression system"
+        },
+        {
+          "label": "D",
+          "text": "A unified application combining editor, build tools, and debugger"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "An IDE bundles a code editor, build/compile tools, and a debugger into one application to streamline development.",
+        "why_others_are_wrong": {
+          "A": "A backup power supply is a UPS/generator.",
+          "B": "A door lock is a physical control.",
+          "C": "Fire suppression is a physical safety control."
+        }
+      },
+      "exam_reasoning": "Recall of the IDE.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Software Development Kit (SDK)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0067",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Software Assurance",
+      "subtopic": "ASVS Level 1",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "OWASP ASVS Level 1 represents:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The lowest/basic security assurance level"
+        },
+        {
+          "label": "B",
+          "text": "A moderate assurance level"
+        },
+        {
+          "label": "C",
+          "text": "The highest assurance level for APT defense"
+        },
+        {
+          "label": "D",
+          "text": "A networking protocol"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "ASVS Level 1 is the lowest, basic assurance level; Level 2 is moderate and Level 3 is high (APT-grade).",
+        "why_others_are_wrong": {
+          "C": "APT-grade high assurance is Level 3.",
+          "B": "Moderate assurance is Level 2.",
+          "D": "ASVS is an assurance standard, not a networking protocol."
+        }
+      },
+      "exam_reasoning": "Recall of ASVS Level 1 as basic assurance.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > ASVS Assurance Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0068",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Security Testing",
+      "subtopic": "Approach selection",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A team wants to catch insecure coding patterns as early as possible during development, before the app even runs. Which testing technique fits BEST?",
+      "options": [
+        {
+          "label": "A",
+          "text": "War driving"
+        },
+        {
+          "label": "B",
+          "text": "A full interruption DR test"
+        },
+        {
+          "label": "C",
+          "text": "SAST (static analysis of source code)"
+        },
+        {
+          "label": "D",
+          "text": "DAST (testing the running application)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "SAST examines source code without execution, enabling early detection of insecure patterns during development (shift-left).",
+        "why_others_are_wrong": {
+          "D": "DAST requires a running application, so it is later than SAST.",
+          "B": "A full interruption test is a DR exercise.",
+          "A": "War driving is wireless reconnaissance, unrelated to code testing."
+        }
+      },
+      "exam_reasoning": "Maps earliest pre-runtime code analysis to SAST.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Application Security Testing",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0069",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "SQL injection",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "SQL injection occurs when:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A backup tape is degaussed"
+        },
+        {
+          "label": "B",
+          "text": "A user changes the wireless encryption key"
+        },
+        {
+          "label": "C",
+          "text": "Untrusted input is included in a database query, allowing an attacker to run unauthorized SQL"
+        },
+        {
+          "label": "D",
+          "text": "A server loses power"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "SQL injection sends crafted untrusted input that a web application incorporates into a database query, letting an attacker execute unauthorized SQL commands.",
+        "why_others_are_wrong": {
+          "B": "Changing a wireless key is unrelated to SQL injection.",
+          "A": "Degaussing destroys magnetic media.",
+          "D": "Power loss is unrelated to injection attacks."
+        }
+      },
+      "exam_reasoning": "Recall of SQL injection.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Injection Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0070",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Injection mitigation",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A web app builds SQL queries by concatenating user input. Which control MOST directly prevents SQL injection?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Disabling logging on the database"
+        },
+        {
+          "label": "B",
+          "text": "Using a faster database server"
+        },
+        {
+          "label": "C",
+          "text": "Input validation plus parameterized queries/approved stored procedures"
+        },
+        {
+          "label": "D",
+          "text": "Increasing the office Wi-Fi range"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Validating input and using parameterized queries/whitelisted stored procedures (so input is treated as data, not executable SQL) directly prevent SQL injection.",
+        "why_others_are_wrong": {
+          "A": "Disabling logging hides activity and does not prevent injection.",
+          "B": "A faster server does not address the injection vulnerability.",
+          "D": "Wi-Fi range is unrelated to injection defense."
+        }
+      },
+      "exam_reasoning": "Maps injection prevention to input validation + parameterized queries.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Mitigations for Injection Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0071",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "LDAP/XML injection",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "LDAP injection differs from SQL injection in that LDAP injection targets:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A backup generator"
+        },
+        {
+          "label": "B",
+          "text": "A wireless access point"
+        },
+        {
+          "label": "C",
+          "text": "A directory server (e.g., LDAP/Active Directory) rather than a SQL database"
+        },
+        {
+          "label": "D",
+          "text": "A fire suppression system"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "LDAP injection submits unauthorized queries to a directory server (LDAP/Active Directory); SQL injection targets relational databases; both exploit unvalidated input.",
+        "why_others_are_wrong": {
+          "B": "A WAP is a wireless device, not a directory server.",
+          "A": "A generator is power equipment.",
+          "D": "Fire suppression is a physical control."
+        }
+      },
+      "exam_reasoning": "Distinguishes LDAP injection (directory) from SQL injection (database).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Injection Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0072",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Cross-site scripting",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Cross-Site Scripting (XSS) primarily allows an attacker to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Physically enter a secure facility"
+        },
+        {
+          "label": "B",
+          "text": "Drain a UPS battery"
+        },
+        {
+          "label": "C",
+          "text": "Reformat a hard drive remotely with no access"
+        },
+        {
+          "label": "D",
+          "text": "Inject malicious scripts that run in other users' browsers via a vulnerable web app"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "XSS injects attacker-controlled scripts that execute in victims' browsers (e.g., to steal sessions/data); output encoding and input validation mitigate it.",
+        "why_others_are_wrong": {
+          "A": "XSS is a web attack, not physical entry.",
+          "B": "XSS does not drain batteries.",
+          "C": "XSS does not reformat drives without access."
+        }
+      },
+      "exam_reasoning": "Recall of XSS (script injection into users' browsers).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > OWASP Top 10 Vulnerabilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0073",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Session hijacking",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Session hijacking takes over an active session by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stealing/replaying session tokens, cookies, or credentials"
+        },
+        {
+          "label": "B",
+          "text": "Physically removing the server"
+        },
+        {
+          "label": "C",
+          "text": "Disabling the air conditioning"
+        },
+        {
+          "label": "D",
+          "text": "Degaussing a backup tape"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Session hijacking uses stolen session tokens/cookies/credentials (sometimes via replay) to assume a legitimate user's active session.",
+        "why_others_are_wrong": {
+          "B": "Physically removing a server is theft, not session hijacking.",
+          "D": "Degaussing destroys media.",
+          "C": "Disabling AC is an environmental disruption, unrelated to sessions."
+        }
+      },
+      "exam_reasoning": "Maps stolen-token session takeover to session hijacking.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Hijacking Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0074",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "TOCTOU",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "An attacker alters a file AFTER an application checks its permissions but BEFORE the application uses it, exploiting the timing gap. This is a:",
+      "options": [
+        {
+          "label": "A",
+          "text": "War driving"
+        },
+        {
+          "label": "B",
+          "text": "SQL injection"
+        },
+        {
+          "label": "C",
+          "text": "Cross-site scripting"
+        },
+        {
+          "label": "D",
+          "text": "Time-of-Check to Time-of-Use (TOCTOU) race-condition attack"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "A TOCTOU attack exploits a race condition by changing a resource between the moment it is checked and the moment it is used, altering the outcome.",
+        "why_others_are_wrong": {
+          "B": "SQL injection manipulates database queries, not check/use timing.",
+          "C": "XSS injects scripts into browsers.",
+          "A": "War driving is wireless reconnaissance."
+        }
+      },
+      "exam_reasoning": "Maps a check-then-use race condition to TOCTOU.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Rootkit Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0075",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Privilege escalation",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Vertical privilege escalation occurs when an attacker:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Encrypts files for ransom"
+        },
+        {
+          "label": "B",
+          "text": "Moves laterally to another account at the same privilege level"
+        },
+        {
+          "label": "C",
+          "text": "Sends spam over instant messaging"
+        },
+        {
+          "label": "D",
+          "text": "Gains higher privileges (e.g., from a normal user to administrator)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Vertical privilege escalation raises the attacker's privilege level (e.g., user to admin); horizontal escalation moves laterally at the same level.",
+        "why_others_are_wrong": {
+          "B": "Same-level lateral movement is horizontal privilege escalation.",
+          "A": "Encrypting files for ransom is ransomware.",
+          "C": "Spam over IM is spim, unrelated to escalation."
+        }
+      },
+      "exam_reasoning": "Distinguishes vertical (gain higher) from horizontal escalation.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Rootkit Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0076",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Rootkit detection",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Rootkits, which provide stealthy root/admin-level access, are BEST detected by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Host-based intrusion detection systems (HIDS)"
+        },
+        {
+          "label": "B",
+          "text": "A wireless access point"
+        },
+        {
+          "label": "C",
+          "text": "A backup generator"
+        },
+        {
+          "label": "D",
+          "text": "A taller perimeter fence"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Because rootkits embed deep in the host (OS, boot sector, firmware), host-based IDS (HIDS) is best positioned to detect their presence/changes.",
+        "why_others_are_wrong": {
+          "D": "A fence is a physical control, irrelevant to rootkit detection.",
+          "C": "A generator provides power.",
+          "B": "A WAP is a wireless network device."
+        }
+      },
+      "exam_reasoning": "Maps rootkit detection to HIDS.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Rootkit Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0077",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Backdoor",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A backdoor in software is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A type of fire suppression"
+        },
+        {
+          "label": "B",
+          "text": "A backup power source"
+        },
+        {
+          "label": "C",
+          "text": "A means of bypassing normal authentication, sometimes left by developers for maintenance"
+        },
+        {
+          "label": "D",
+          "text": "A standard secure login mechanism"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A backdoor bypasses normal authentication to grant access; developers may leave them for maintenance, but they are a serious security risk if discovered/abused.",
+        "why_others_are_wrong": {
+          "D": "A backdoor circumvents, rather than provides, secure authentication.",
+          "A": "Fire suppression is a physical control.",
+          "B": "A backdoor is not a power source."
+        }
+      },
+      "exam_reasoning": "Recall of a backdoor (auth bypass).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Hijacking Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0078",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Attack-to-description mapping",
+      "difficulty": "hard",
+      "question_type": "matching",
+      "question": "Match each application attack (1-4) to its description (A-D).",
+      "options": [
+        {
+          "label": "A",
+          "text": "Runs unauthorized SQL via untrusted input"
+        },
+        {
+          "label": "B",
+          "text": "Exploits a race condition between check and use"
+        },
+        {
+          "label": "C",
+          "text": "Runs malicious scripts in other users' browsers"
+        },
+        {
+          "label": "D",
+          "text": "Takes over an active session using stolen tokens"
+        }
+      ],
+      "correct_answer": "1-A,2-C,3-B,4-D",
+      "explanation": {
+        "why_correct": "SQL injection → unauthorized SQL via input (B); XSS → scripts in users' browsers (A); TOCTOU → check/use race condition (D); Session hijacking → stolen-token session takeover (C).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests mapping of application attacks to descriptions.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Application Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "SQL injection",
+        "Cross-site scripting (XSS)",
+        "TOCTOU",
+        "Session hijacking"
+      ]
+    },
+    {
+      "id": "CISSP-D08-Q0079",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "OWASP Top 10",
+      "subtopic": "Purpose",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The OWASP Top 10 is BEST described as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A physical access control model"
+        },
+        {
+          "label": "B",
+          "text": "A wireless encryption standard"
+        },
+        {
+          "label": "C",
+          "text": "A backup rotation schedule"
+        },
+        {
+          "label": "D",
+          "text": "A list of the most critical web application security risks"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The OWASP Top 10 ranks the most critical web application security risks (e.g., injection, broken access control), guiding secure development.",
+        "why_others_are_wrong": {
+          "B": "Wireless encryption standards are WPA2/WPA3.",
+          "C": "Backup rotation is an operations schedule.",
+          "A": "Physical access models are unrelated to OWASP Top 10."
+        }
+      },
+      "exam_reasoning": "Recall of the OWASP Top 10's purpose.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > OWASP Top 10 Vulnerabilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0080",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "OWASP Top 10",
+      "subtopic": "Broken access control",
+      "difficulty": "medium",
+      "question_type": "scenario_based",
+      "question": "A user changes the account ID in a URL and gains access to another user's data. Which OWASP category does this represent?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A wireless jamming attack"
+        },
+        {
+          "label": "B",
+          "text": "A backup failure"
+        },
+        {
+          "label": "C",
+          "text": "A power surge"
+        },
+        {
+          "label": "D",
+          "text": "Broken access control"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Accessing another user's data by manipulating a parameter is broken access control (e.g., insecure direct object reference)—a top OWASP risk.",
+        "why_others_are_wrong": {
+          "B": "A backup failure is an availability/recovery issue.",
+          "C": "A power surge is an electrical anomaly.",
+          "A": "Wireless jamming is a network DoS."
+        }
+      },
+      "exam_reasoning": "Maps unauthorized data access via parameter tampering to broken access control.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > OWASP Top 10 Vulnerabilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0081",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "OWASP Top 10",
+      "subtopic": "SSRF",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Server-Side Request Forgery (SSRF), added in the OWASP 2021 list, allows an attacker to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Physically unlock a door"
+        },
+        {
+          "label": "B",
+          "text": "Encrypt all backups"
+        },
+        {
+          "label": "C",
+          "text": "Make the server send crafted requests to unintended internal/external resources"
+        },
+        {
+          "label": "D",
+          "text": "Drain a UPS battery"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "SSRF abuses a server's ability to make requests, tricking it into accessing unintended internal/external resources (e.g., internal metadata services).",
+        "why_others_are_wrong": {
+          "A": "SSRF is a web attack, not a physical door control.",
+          "B": "SSRF does not encrypt backups.",
+          "D": "SSRF does not drain batteries."
+        }
+      },
+      "exam_reasoning": "Recall of SSRF.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > OWASP Top 10 Vulnerabilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0082",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "OWASP Top 10",
+      "subtopic": "2021 additions",
+      "difficulty": "hard",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO risks were notably added/elevated in the OWASP Top 10 2021 list? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "UPS battery aging"
+        },
+        {
+          "label": "B",
+          "text": "Insecure design"
+        },
+        {
+          "label": "C",
+          "text": "Server-Side Request Forgery (SSRF)"
+        },
+        {
+          "label": "D",
+          "text": "Wet-pipe sprinkler failure"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "The 2021 OWASP Top 10 added insecure design and SSRF (among reorganizations); the others are physical/facility issues.",
+        "why_others_are_wrong": {
+          "D": "Sprinkler failure is a physical fire-safety issue.",
+          "A": "UPS battery aging is a power-equipment concern."
+        }
+      },
+      "exam_reasoning": "Identifies 2021 OWASP additions.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > OWASP Top 10 Vulnerabilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0083",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Secure Coding",
+      "subtopic": "Input validation",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Which is a fundamental secure coding practice that defends against many injection attacks?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Hardcoding admin passwords in the source"
+        },
+        {
+          "label": "B",
+          "text": "Trusting all user input by default"
+        },
+        {
+          "label": "C",
+          "text": "Validating and sanitizing all untrusted input"
+        },
+        {
+          "label": "D",
+          "text": "Disabling error handling entirely"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Input validation/sanitization (treating untrusted input as untrusted) is a core secure-coding practice that mitigates injection and related attacks.",
+        "why_others_are_wrong": {
+          "B": "Trusting all input invites injection and other attacks.",
+          "D": "Proper error handling is itself a secure-coding practice.",
+          "A": "Hardcoding credentials is a serious vulnerability."
+        }
+      },
+      "exam_reasoning": "Maps injection defense to input validation.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Secure Coding Practices",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0084",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Secure Coding",
+      "subtopic": "Error handling",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Proper secure error handling means an application should:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fail gracefully without revealing sensitive details (e.g., stack traces) to users"
+        },
+        {
+          "label": "B",
+          "text": "Crash without logging anything"
+        },
+        {
+          "label": "C",
+          "text": "Email passwords on every error"
+        },
+        {
+          "label": "D",
+          "text": "Display full database errors and stack traces to all users"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Secure error handling avoids leaking sensitive internal details (stack traces, queries) to users while logging enough internally for diagnosis.",
+        "why_others_are_wrong": {
+          "D": "Exposing detailed errors aids attackers (information disclosure).",
+          "B": "Crashing without logging removes diagnostic/audit capability.",
+          "C": "Emailing passwords is a severe security flaw."
+        }
+      },
+      "exam_reasoning": "Tests secure error-handling practice.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Secure Coding Practices",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0085",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "API Security",
+      "subtopic": "Risks",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A common API security risk highlighted in the guide is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Insufficient authentication and excessive data exposure"
+        },
+        {
+          "label": "B",
+          "text": "Overuse of backup generators"
+        },
+        {
+          "label": "C",
+          "text": "Excessive fire drills"
+        },
+        {
+          "label": "D",
+          "text": "Too much physical security"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "APIs commonly suffer from weak authentication and excessive data exposure; strong authentication, encryption, and input validation mitigate these.",
+        "why_others_are_wrong": {
+          "D": "Physical security is unrelated to API risk.",
+          "B": "Generator usage is unrelated to API security.",
+          "C": "Fire drills are a safety activity, not an API risk."
+        }
+      },
+      "exam_reasoning": "Tests common API security risks.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Software API Security",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0086",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "API Security",
+      "subtopic": "Controls",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO controls help secure an API? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Returning all internal data by default"
+        },
+        {
+          "label": "B",
+          "text": "Encryption of API traffic with TLS"
+        },
+        {
+          "label": "C",
+          "text": "Open access with no authentication"
+        },
+        {
+          "label": "D",
+          "text": "Strong authentication of API callers"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "APIs should enforce strong authentication and encrypt traffic (TLS), along with input validation, to limit exposure and abuse.",
+        "why_others_are_wrong": {
+          "C": "Open, unauthenticated access invites abuse.",
+          "A": "Returning all internal data is excessive data exposure."
+        }
+      },
+      "exam_reasoning": "Identifies sound API security controls.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Software API Security",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0087",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "COTS",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Commercial Off-The-Shelf (COTS) software is:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Government-licensed software"
+        },
+        {
+          "label": "B",
+          "text": "A custom in-house build"
+        },
+        {
+          "label": "C",
+          "text": "Free software maintained by a community"
+        },
+        {
+          "label": "D",
+          "text": "Commercial software purchased and managed by the organization"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "COTS is commercially available software the organization purchases and manages (e.g., a licensed productivity suite).",
+        "why_others_are_wrong": {
+          "C": "Community-maintained free software is OSS/FOSS.",
+          "A": "Government-licensed software is GOTS.",
+          "B": "A custom in-house build is bespoke development, not COTS."
+        }
+      },
+      "exam_reasoning": "Recall of COTS.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Types of Acquired Software",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0088",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "OSS/FOSS",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Open-Source/Free Software (OSS/FOSS) is characterized by:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Always being purchased from a single commercial vendor"
+        },
+        {
+          "label": "B",
+          "text": "Being community-maintained and often hosted on platforms like GitHub"
+        },
+        {
+          "label": "C",
+          "text": "Being government-only software"
+        },
+        {
+          "label": "D",
+          "text": "Having no source code available"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "OSS/FOSS is typically free, community-maintained software with available source, often hosted on platforms like GitHub.",
+        "why_others_are_wrong": {
+          "A": "Commercial single-vendor purchase describes COTS.",
+          "C": "Government-only software is GOTS.",
+          "D": "OSS makes source code available by definition."
+        }
+      },
+      "exam_reasoning": "Recall of OSS/FOSS.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Types of Acquired Software",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0089",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "NDI supply chain",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A COTS product bundles several third-party libraries (NDIs). What is the PRIMARY security concern, and the BEST response?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bundled libraries are always more secure than custom code"
+        },
+        {
+          "label": "B",
+          "text": "There is no risk because the vendor is commercial"
+        },
+        {
+          "label": "C",
+          "text": "Supply chain risk from the bundled components; vet them and apply supply chain risk management"
+        },
+        {
+          "label": "D",
+          "text": "Third-party components never need updates"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Non-Developmental Items (NDIs)—third-party libraries bundled with products—introduce supply chain risk; they must be vetted, tracked, and managed (SCRM).",
+        "why_others_are_wrong": {
+          "B": "Commercial vendors' bundled components can still contain vulnerabilities.",
+          "A": "Bundled libraries are not inherently more secure.",
+          "D": "Third-party components require updates as vulnerabilities emerge."
+        }
+      },
+      "exam_reasoning": "Maps bundled third-party (NDI) risk to supply chain management.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Types of Acquired Software",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0090",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "Software-type mapping",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Software acquired from the government, usually under a government license, is categorized as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "COTS"
+        },
+        {
+          "label": "B",
+          "text": "OSS/FOSS"
+        },
+        {
+          "label": "C",
+          "text": "NDI"
+        },
+        {
+          "label": "D",
+          "text": "GOTS"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "GOTS (Government Off-The-Shelf) is software acquired from the government, typically used under a government license.",
+        "why_others_are_wrong": {
+          "A": "COTS is commercial purchased software.",
+          "B": "OSS/FOSS is community-maintained free software.",
+          "C": "NDIs are third-party components bundled into other products."
+        }
+      },
+      "exam_reasoning": "Recall of GOTS.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Types of Acquired Software",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0091",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "Acquisition policy",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A security-focused software acquisition policy should ensure the organization:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusts all vendors without evaluation"
+        },
+        {
+          "label": "B",
+          "text": "Buys whichever software is cheapest with no security review"
+        },
+        {
+          "label": "C",
+          "text": "Communicates security/compliance requirements to vendors and applies supply chain risk management"
+        },
+        {
+          "label": "D",
+          "text": "Never tests acquired software before deployment"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A sound acquisition policy communicates security/compliance requirements (e.g., GDPR, HIPAA) to vendors, uses trusted vendors, and applies SCRM—especially for bundled NDIs.",
+        "why_others_are_wrong": {
+          "B": "Cheapest-with-no-review ignores security risk.",
+          "D": "Acquired software should be tested before production.",
+          "A": "Vendors should be evaluated, not blindly trusted."
+        }
+      },
+      "exam_reasoning": "Tests the elements of a secure acquisition policy.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Security Considerations for Acquired Software",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0092",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "NIST acquisition steps",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "Per NIST acquisition guidance, an organization confirms a provider meets its security needs BEFORE finalizing the purchase. Which step is this?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Acceptance"
+        },
+        {
+          "label": "B",
+          "text": "Selection"
+        },
+        {
+          "label": "C",
+          "text": "Monitoring"
+        },
+        {
+          "label": "D",
+          "text": "Preparation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "In the NIST acquisition approach (Preparation, Selection, Agreement Management, Monitoring, Acceptance), Acceptance confirms compliance with security needs before purchasing/licensing.",
+        "why_others_are_wrong": {
+          "D": "Preparation defines security needs and includes them in requests.",
+          "B": "Selection evaluates vendors for trustworthiness.",
+          "C": "Monitoring assesses ongoing performance/SLA adherence after acquisition."
+        }
+      },
+      "exam_reasoning": "Maps pre-purchase compliance confirmation to the Acceptance step.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > NIST Acquisition Controls",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0093",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "Cloud lease models",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In the SaaS model for acquired software, the customer is primarily responsible for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Its own data and access controls (the provider manages the OS and supporting applications)"
+        },
+        {
+          "label": "B",
+          "text": "Maintaining the provider's physical data center"
+        },
+        {
+          "label": "C",
+          "text": "Writing the SaaS application's source code"
+        },
+        {
+          "label": "D",
+          "text": "Patching the provider's operating system"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "In SaaS, the provider manages the OS and supporting applications, while the customer manages its data and access controls.",
+        "why_others_are_wrong": {
+          "D": "OS patching is the provider's responsibility in SaaS.",
+          "B": "Physical data-center maintenance is the provider's responsibility.",
+          "C": "The provider develops/maintains the SaaS application."
+        }
+      },
+      "exam_reasoning": "Tests SaaS customer responsibilities (data + access).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Cloud-Based Lease Software Models",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0094",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "Acquired software testing",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Before deploying acquired software to production, a best practice is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Assume it is secure because it was purchased"
+        },
+        {
+          "label": "B",
+          "text": "Deploy it immediately with no evaluation"
+        },
+        {
+          "label": "C",
+          "text": "Disable all monitoring of it"
+        },
+        {
+          "label": "D",
+          "text": "Conduct security testing (e.g., vulnerability and privacy impact assessments)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Acquired software should undergo security testing (vulnerability assessments, privacy impact assessments) before production and be monitored continuously afterward.",
+        "why_others_are_wrong": {
+          "B": "Immediate deployment without evaluation risks importing vulnerabilities.",
+          "A": "Purchased software is not automatically secure.",
+          "C": "Monitoring is needed to catch emerging issues."
+        }
+      },
+      "exam_reasoning": "Tests pre-deployment security testing of acquired software.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Best Practices for Acquired Software",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0095",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "Acquired software types",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are categories of acquired software described in the guide? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "OSS/FOSS (open-source/free)"
+        },
+        {
+          "label": "B",
+          "text": "COTS (commercial off-the-shelf)"
+        },
+        {
+          "label": "C",
+          "text": "XSS"
+        },
+        {
+          "label": "D",
+          "text": "TOCTOU"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "B"
+      ],
+      "explanation": {
+        "why_correct": "COTS and OSS/FOSS are acquired-software categories (along with GOTS and NDIs); TOCTOU and XSS are attack types.",
+        "why_others_are_wrong": {
+          "D": "TOCTOU is a race-condition attack.",
+          "C": "XSS is a web application attack."
+        }
+      },
+      "exam_reasoning": "Separates acquired-software categories from attack types.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Types of Acquired Software",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0096",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "OWASP Top 10",
+      "subtopic": "Top 10 risks",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are risks included in the OWASP Top 10? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Broken access control"
+        },
+        {
+          "label": "B",
+          "text": "Backup tape aging"
+        },
+        {
+          "label": "C",
+          "text": "Air-conditioning failure"
+        },
+        {
+          "label": "D",
+          "text": "Injection"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Injection and broken access control are OWASP Top 10 web application security risks; the others are physical/facility issues.",
+        "why_others_are_wrong": {
+          "B": "Backup tape aging is a media/operations concern, not an OWASP risk.",
+          "C": "Air-conditioning failure is an environmental issue, not an OWASP risk."
+        }
+      },
+      "exam_reasoning": "Identifies OWASP Top 10 risks.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > OWASP Top 10 Vulnerabilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0097",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Application Attacks",
+      "subtopic": "Domain hijacking",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Domain hijacking involves:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Draining a UPS battery"
+        },
+        {
+          "label": "B",
+          "text": "Stealing a single session cookie"
+        },
+        {
+          "label": "C",
+          "text": "Unauthorized changes to a domain's registration/DNS records to redirect traffic"
+        },
+        {
+          "label": "D",
+          "text": "Injecting SQL into a database"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Domain hijacking makes unauthorized changes to registered domain records (e.g., DNS) to redirect traffic to attacker-controlled destinations.",
+        "why_others_are_wrong": {
+          "B": "Stealing a session cookie is session hijacking.",
+          "D": "SQL injection targets databases, not domain records.",
+          "A": "Draining a UPS is unrelated to domain hijacking."
+        }
+      },
+      "exam_reasoning": "Distinguishes domain hijacking from session hijacking.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Hijacking Attacks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0098",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Secure Coding",
+      "subtopic": "Defense in depth in code",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "To mitigate the OWASP Top 10 across an application, the MOST effective approach is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Add a single firewall rule and consider the app secure"
+        },
+        {
+          "label": "B",
+          "text": "Hardcode credentials to simplify access"
+        },
+        {
+          "label": "C",
+          "text": "Apply secure coding practices (input validation, output encoding, parameterization, error handling) throughout development"
+        },
+        {
+          "label": "D",
+          "text": "Rely solely on a post-release penetration test"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Building secure coding practices into development (validation, encoding, parameterized queries, proper error handling) addresses the root causes behind the OWASP Top 10.",
+        "why_others_are_wrong": {
+          "A": "A single firewall rule does not address application-layer code flaws.",
+          "D": "A post-release pen test alone is too late and not comprehensive.",
+          "B": "Hardcoding credentials introduces a serious vulnerability."
+        }
+      },
+      "exam_reasoning": "Maps broad OWASP mitigation to integrated secure coding.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Secure Coding Practices",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0099",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "OWASP Top 10",
+      "subtopic": "Broken authentication",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Broken authentication (an OWASP Top 10 risk) typically results from:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Poorly managed credentials, sessions, or authentication logic"
+        },
+        {
+          "label": "B",
+          "text": "Overly strict input validation"
+        },
+        {
+          "label": "C",
+          "text": "Too many fire drills"
+        },
+        {
+          "label": "D",
+          "text": "Excessive backup power"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Broken authentication stems from weaknesses in credential, session, or authentication management (e.g., weak passwords, exposed session IDs), enabling account compromise.",
+        "why_others_are_wrong": {
+          "D": "Backup power is unrelated to authentication.",
+          "C": "Fire drills are a safety activity.",
+          "B": "Strict input validation strengthens, not breaks, security."
+        }
+      },
+      "exam_reasoning": "Tests the causes of broken authentication.",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > OWASP Top 10 Vulnerabilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D08-Q0100",
+      "domain": "Software Development Security",
+      "domain_number": 8,
+      "topic": "Acquired Software",
+      "subtopic": "PaaS responsibility",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "In a PaaS model, the customer typically:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Has no responsibility for the application"
+        },
+        {
+          "label": "B",
+          "text": "Manages the provider's physical facilities"
+        },
+        {
+          "label": "C",
+          "text": "Patches the underlying operating system"
+        },
+        {
+          "label": "D",
+          "text": "Owns the application (with some limited control over its security) while the provider manages the OS"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "In PaaS, the provider manages the OS/platform while the customer owns the application (with limited control over underlying security).",
+        "why_others_are_wrong": {
+          "B": "Physical facilities are the provider's responsibility.",
+          "A": "The customer owns/operates the application in PaaS.",
+          "C": "OS patching is the provider's responsibility in PaaS."
+        }
+      },
+      "exam_reasoning": "Tests PaaS customer responsibilities (the application).",
+      "source_reference": {
+        "syllabus_section": "Domain 8 > Application Security > Cloud-Based Lease Software Models",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    }
+  ]
+}

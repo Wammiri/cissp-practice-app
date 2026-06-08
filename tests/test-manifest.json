@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "title": "CISSP Practice Test Manifest",
+    "generated_by": "scripts/build-aggregate.cjs",
+    "question_bank": "questions/cissp-question-bank.json",
+    "total_tests": 10,
+    "questions_per_test": 100,
+    "weighting": "Each test mirrors the CISSP exam domain weights; the 10 tests partition the full bank with no question repeated.",
+    "domain_weights": {
+      "Security and Risk Management": 16,
+      "Asset Security": 10,
+      "Security Architecture and Engineering": 13,
+      "Communication and Network Security": 13,
+      "Identity and Access Management (IAM)": 13,
+      "Security Assessment and Testing": 12,
+      "Security Operations": 13,
+      "Software Development Security": 10
+    }
+  },
+  "tests": [
+    {
+      "test_id": "test-01",
+      "title": "CISSP Practice Test 01",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-01.json"
+    },
+    {
+      "test_id": "test-02",
+      "title": "CISSP Practice Test 02",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-02.json"
+    },
+    {
+      "test_id": "test-03",
+      "title": "CISSP Practice Test 03",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-03.json"
+    },
+    {
+      "test_id": "test-04",
+      "title": "CISSP Practice Test 04",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-04.json"
+    },
+    {
+      "test_id": "test-05",
+      "title": "CISSP Practice Test 05",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-05.json"
+    },
+    {
+      "test_id": "test-06",
+      "title": "CISSP Practice Test 06",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-06.json"
+    },
+    {
+      "test_id": "test-07",
+      "title": "CISSP Practice Test 07",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-07.json"
+    },
+    {
+      "test_id": "test-08",
+      "title": "CISSP Practice Test 08",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-08.json"
+    },
+    {
+      "test_id": "test-09",
+      "title": "CISSP Practice Test 09",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-09.json"
+    },
+    {
+      "test_id": "test-10",
+      "title": "CISSP Practice Test 10",
+      "total_questions": 100,
+      "domain_distribution": {
+        "Security and Risk Management": 16,
+        "Asset Security": 10,
+        "Security Architecture and Engineering": 13,
+        "Communication and Network Security": 13,
+        "Identity and Access Management (IAM)": 13,
+        "Security Assessment and Testing": 12,
+        "Security Operations": 13,
+        "Software Development Security": 10
+      },
+      "file": "tests/test-10.json"
+    }
+  ]
+}

@@ -1,0 +1,4253 @@
+{
+  "meta": {
+    "domain_number": 2,
+    "domain": "Asset Security",
+    "weight_percent": 10,
+    "total_questions": 100,
+    "generated_by": "scripts/d2/build.cjs",
+    "schema": "04_schemas/question_schema.md",
+    "sources": [
+      "/content/cissp-syllabus.md",
+      "/content/cissp-syllabus-structured.json",
+      "/questions/domain-weighting.json"
+    ],
+    "id_range": "CISSP-D02-Q0001..CISSP-D02-Q0100",
+    "difficulty_distribution": {
+      "easy": 25,
+      "medium": 50,
+      "hard": 25
+    },
+    "question_type_distribution": {
+      "single_best_answer": 74,
+      "matching": 3,
+      "scenario_based": 14,
+      "multiple_correct_answers": 8,
+      "sequence_ordering": 1
+    },
+    "note": "Original CISSP-style practice questions. matching questions carry a prompts[] (left items numbered 1..n) and options[] (right items A..n); correct_answer encodes the pairing. sequence_ordering correct_answer lists option labels in correct order."
+  },
+  "questions": [
+    {
+      "id": "CISSP-D02-Q0001",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Purpose of classification",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "What is the PRIMARY purpose of classifying information and assets?",
+      "options": [
+        {
+          "label": "A",
+          "text": "To make all data publicly accessible by default"
+        },
+        {
+          "label": "B",
+          "text": "To increase the total number of assets an organization owns"
+        },
+        {
+          "label": "C",
+          "text": "To determine how data should be handled and secured based on its criticality, sensitivity, and value"
+        },
+        {
+          "label": "D",
+          "text": "To eliminate the need for any security controls"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Classification identifies and ranks information/assets by criticality, sensitivity, and value so the right handling and protection are applied.",
+        "why_others_are_wrong": {
+          "B": "Classification organizes and protects existing assets; it does not increase asset count.",
+          "D": "Classification drives appropriate controls; it does not remove the need for them.",
+          "A": "Classification restricts sensitive data; it does not make everything public."
+        }
+      },
+      "exam_reasoning": "Tests the core reason for classification: aligning protection to data value/sensitivity.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classifying Data and Assets",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0002",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Classification criteria",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "When assigning a classification level, an organization should evaluate data primarily on the basis of its:",
+      "options": [
+        {
+          "label": "A",
+          "text": "File size and storage format"
+        },
+        {
+          "label": "B",
+          "text": "Number of employees who created it"
+        },
+        {
+          "label": "C",
+          "text": "Criticality, sensitivity, and value to the organization"
+        },
+        {
+          "label": "D",
+          "text": "Age of the storage hardware"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Data is classified based on its criticality, sensitivity, and value to the organization, which determine the required protection.",
+        "why_others_are_wrong": {
+          "A": "File size/format does not determine sensitivity or required protection.",
+          "D": "Hardware age is an asset-lifecycle concern, not a classification criterion.",
+          "B": "The number of creators is irrelevant to data sensitivity."
+        }
+      },
+      "exam_reasoning": "Reinforces the criteria that drive classification decisions.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classifying Data and Assets",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0003",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Government classification levels",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In the government classification scheme described in the guide, which level applies to information whose disclosure would cause EXTREMELY high impact and the most significant damage?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Secret"
+        },
+        {
+          "label": "B",
+          "text": "Unclassified"
+        },
+        {
+          "label": "C",
+          "text": "Top Secret"
+        },
+        {
+          "label": "D",
+          "text": "Confidential"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Top Secret denotes extremely high impact on disclosure with significant damage potential—the highest level.",
+        "why_others_are_wrong": {
+          "A": "Secret causes serious (high) damage, but less than Top Secret.",
+          "D": "Confidential causes moderate/noticeable damage.",
+          "B": "Unclassified has low or no impact."
+        }
+      },
+      "exam_reasoning": "Tests ordering of government classification levels by impact.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classification Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0004",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Government classification levels",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which government classification level corresponds to information that would cause MODERATE impact (noticeable damage) if disclosed?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Top Secret"
+        },
+        {
+          "label": "B",
+          "text": "Secret"
+        },
+        {
+          "label": "C",
+          "text": "Confidential"
+        },
+        {
+          "label": "D",
+          "text": "Unclassified"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Confidential corresponds to moderate impact—noticeable damage if disclosed.",
+        "why_others_are_wrong": {
+          "A": "Top Secret is extremely high impact.",
+          "B": "Secret is high impact with serious damage.",
+          "D": "Unclassified is low or no impact."
+        }
+      },
+      "exam_reasoning": "Distinguishes Confidential (moderate) from higher and lower levels.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classification Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0005",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Classification levels mapping",
+      "difficulty": "hard",
+      "question_type": "matching",
+      "question": "Match each government classification level (1-4) to the impact of its disclosure (A-D).",
+      "options": [
+        {
+          "label": "A",
+          "text": "Extremely high impact; significant damage potential"
+        },
+        {
+          "label": "B",
+          "text": "Low or no impact; minimal value information"
+        },
+        {
+          "label": "C",
+          "text": "Moderate impact; noticeable damage"
+        },
+        {
+          "label": "D",
+          "text": "High impact; serious damage if disclosed"
+        }
+      ],
+      "correct_answer": "1-A,2-D,3-C,4-B",
+      "explanation": {
+        "why_correct": "Top Secret → extremely high impact (B); Secret → high/serious damage (C); Confidential → moderate/noticeable (D); Unclassified → low/no impact (A).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests precise mapping of classification levels to disclosure impact.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classification Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "Top Secret",
+        "Secret",
+        "Confidential",
+        "Unclassified"
+      ]
+    },
+    {
+      "id": "CISSP-D02-Q0006",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Commercial vs government labels",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A private retail company wants a classification scheme that fits its business rather than military labels. Which set of levels is MOST appropriate for a commercial organization?",
+      "options": [
+        {
+          "label": "A",
+          "text": "No classification, since commercial data is never sensitive"
+        },
+        {
+          "label": "B",
+          "text": "Top Secret, Secret, Confidential (military-only labels)"
+        },
+        {
+          "label": "C",
+          "text": "Public, Internal, Sensitive (commercial tiers aligned to business needs)"
+        },
+        {
+          "label": "D",
+          "text": "Tier 0, Tier 1, Tier 2 hardware tiers used for data sensitivity"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Commercial organizations typically use business-aligned levels such as public, internal, and sensitive; classification should align with business needs.",
+        "why_others_are_wrong": {
+          "B": "Top Secret/Secret/Confidential are government/military labels, not the natural commercial fit.",
+          "D": "Tier 0/1/2 are asset (system) tiers, not data sensitivity labels.",
+          "A": "Commercial data (e.g., PII, proprietary data) is frequently sensitive and must be classified."
+        }
+      },
+      "exam_reasoning": "Tests choosing business-aligned commercial classification over military labels.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classifying Data and Assets",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0007",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Asset classification tiers",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Using the asset classification tiers in the guide, critical servers, databases, and network devices belong to which tier?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tier 2 (Non-Essential)"
+        },
+        {
+          "label": "B",
+          "text": "Tier 1 (Important)"
+        },
+        {
+          "label": "C",
+          "text": "Tier 3 (Disposable)"
+        },
+        {
+          "label": "D",
+          "text": "Tier 0 (Essential)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Tier 0 (Essential) covers critical servers, databases, and network devices.",
+        "why_others_are_wrong": {
+          "B": "Tier 1 (Important) covers development environments and backup systems.",
+          "A": "Tier 2 (Non-Essential) covers workstations, mobile devices, and printers.",
+          "C": "\"Tier 3 (Disposable)\" is not a tier defined in the guide."
+        }
+      },
+      "exam_reasoning": "Tests recall of the most critical asset tier.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Asset Classification Tiers",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0008",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Asset classification tiers",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Workstations, mobile devices, and printers are categorized in which asset tier?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tier 1 (Important)"
+        },
+        {
+          "label": "B",
+          "text": "Tier 0 (Critical-Plus)"
+        },
+        {
+          "label": "C",
+          "text": "Tier 0 (Essential)"
+        },
+        {
+          "label": "D",
+          "text": "Tier 2 (Non-Essential)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Tier 2 (Non-Essential) includes workstations, mobile devices, and printers.",
+        "why_others_are_wrong": {
+          "C": "Tier 0 is essential infrastructure such as critical servers and databases.",
+          "A": "Tier 1 is important systems like development environments and backups.",
+          "B": "\"Tier 0 (Critical-Plus)\" is not a defined tier."
+        }
+      },
+      "exam_reasoning": "Distinguishes non-essential assets from essential and important tiers.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Asset Classification Tiers",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0009",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Asset classification tiers",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Development environments and backup systems are classified under which asset tier?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tier 0 (Essential)"
+        },
+        {
+          "label": "B",
+          "text": "Unclassified"
+        },
+        {
+          "label": "C",
+          "text": "Tier 2 (Non-Essential)"
+        },
+        {
+          "label": "D",
+          "text": "Tier 1 (Important)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Tier 1 (Important) includes development environments and backup systems.",
+        "why_others_are_wrong": {
+          "A": "Tier 0 is essential infrastructure (critical servers, databases, network devices).",
+          "C": "Tier 2 is non-essential (workstations, mobile devices, printers).",
+          "B": "Unclassified is a data classification level, not an asset tier."
+        }
+      },
+      "exam_reasoning": "Recall of the middle asset tier.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Asset Classification Tiers",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0010",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Sensitive Data Types",
+      "subtopic": "PII",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Data that can uniquely identify an individual and is subject to strict regulatory standards is known as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Personally Identifiable Information (PII)"
+        },
+        {
+          "label": "B",
+          "text": "Protected Health Information (PHI)"
+        },
+        {
+          "label": "C",
+          "text": "Public data"
+        },
+        {
+          "label": "D",
+          "text": "Proprietary data"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "PII is data that can uniquely identify an individual and is subject to strict regulatory standards.",
+        "why_others_are_wrong": {
+          "B": "PHI is specifically health-related information protected under laws like HIPAA.",
+          "D": "Proprietary data gives a business competitive advantage.",
+          "C": "Public data has minimal sensitivity."
+        }
+      },
+      "exam_reasoning": "Recall of the PII definition.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Types of Sensitive Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0011",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Sensitive Data Types",
+      "subtopic": "PHI",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Health-related information that requires protection under laws such as HIPAA is categorized as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Protected Health Information (PHI)"
+        },
+        {
+          "label": "B",
+          "text": "Tier 0 asset"
+        },
+        {
+          "label": "C",
+          "text": "Personally Identifiable Information (PII)"
+        },
+        {
+          "label": "D",
+          "text": "Proprietary data"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "PHI is health-related information requiring protection under laws like HIPAA.",
+        "why_others_are_wrong": {
+          "C": "PII identifies individuals generally but is not specifically health data.",
+          "D": "Proprietary data provides competitive advantage, unrelated to health.",
+          "B": "Tier 0 is an asset tier, not a data type."
+        }
+      },
+      "exam_reasoning": "Distinguishes PHI from PII and proprietary data.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Types of Sensitive Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0012",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Sensitive Data Types",
+      "subtopic": "Proprietary data",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Information that gives a business a competitive advantage and therefore requires high-level security is BEST described as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unclassified data"
+        },
+        {
+          "label": "B",
+          "text": "Personally Identifiable Information (PII)"
+        },
+        {
+          "label": "C",
+          "text": "Proprietary data"
+        },
+        {
+          "label": "D",
+          "text": "Public data"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Proprietary data gives a business competitive advantage and requires high-level security.",
+        "why_others_are_wrong": {
+          "D": "Public data carries minimal sensitivity.",
+          "A": "Unclassified data has low or no impact.",
+          "B": "PII identifies individuals; it is not defined by competitive advantage."
+        }
+      },
+      "exam_reasoning": "Maps competitive-advantage information to proprietary data.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Types of Sensitive Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0013",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Sensitive Data Types",
+      "subtopic": "Identifying sensitive data",
+      "difficulty": "hard",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO of the following are categories of sensitive data that warrant heightened protection? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Press releases already distributed to the media"
+        },
+        {
+          "label": "B",
+          "text": "Personally Identifiable Information (PII)"
+        },
+        {
+          "label": "C",
+          "text": "Protected Health Information (PHI)"
+        },
+        {
+          "label": "D",
+          "text": "Public marketing brochures posted on the company website"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "PII and PHI are sensitive data types subject to regulatory protection; public materials are not sensitive.",
+        "why_others_are_wrong": {
+          "D": "Public marketing brochures are intentionally public and not sensitive.",
+          "A": "Distributed press releases are public information, not sensitive data."
+        }
+      },
+      "exam_reasoning": "Separates regulated sensitive data from intentionally public information.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Types of Sensitive Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0014",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Classification",
+      "subtopic": "NIST SP 800-60",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which NIST Special Publication is referenced as essential for understanding data types and classification standards?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NIST SP 800-60"
+        },
+        {
+          "label": "B",
+          "text": "NIST SP 800-37"
+        },
+        {
+          "label": "C",
+          "text": "NIST SP 1800-5"
+        },
+        {
+          "label": "D",
+          "text": "NIST SP 800-88"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "NIST SP 800-60 provides guidance on mapping information and information system types to security categories (data types and classification).",
+        "why_others_are_wrong": {
+          "D": "NIST SP 800-88 covers media sanitization.",
+          "B": "NIST SP 800-37 is the Risk Management Framework.",
+          "C": "NIST SP 1800-5 relates to IT asset management."
+        }
+      },
+      "exam_reasoning": "Maps data-type/classification guidance to NIST SP 800-60.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Important Reference",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0015",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Classification",
+      "subtopic": "Sensitivity assessment",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A sensitivity assessment evaluates a data set's need for protection based primarily on its:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Number of backup copies that exist"
+        },
+        {
+          "label": "B",
+          "text": "The vendor that supplied the storage device"
+        },
+        {
+          "label": "C",
+          "text": "Color and font formatting"
+        },
+        {
+          "label": "D",
+          "text": "Confidentiality, integrity, and availability requirements"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Sensitivity assessment evaluates the data's need for protection based on its confidentiality, integrity, and availability.",
+        "why_others_are_wrong": {
+          "C": "Formatting does not determine protection requirements.",
+          "A": "Backup count is a resilience detail, not a sensitivity measure.",
+          "B": "Storage vendor is unrelated to data sensitivity."
+        }
+      },
+      "exam_reasoning": "Ties sensitivity assessment to CIA-based protection needs.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Classification",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0016",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Classification",
+      "subtopic": "Data inventory",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Why is maintaining a comprehensive inventory of all data and assets important to classification?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It automatically encrypts all data"
+        },
+        {
+          "label": "B",
+          "text": "It guarantees data can never be breached"
+        },
+        {
+          "label": "C",
+          "text": "It helps assess each item's criticality and impact on business operations"
+        },
+        {
+          "label": "D",
+          "text": "It removes the need to classify data at all"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A comprehensive inventory helps assess the criticality and business impact of data and assets, which underpins classification and protection.",
+        "why_others_are_wrong": {
+          "B": "An inventory supports protection but does not guarantee breach immunity.",
+          "D": "Inventory enables classification; it does not replace it.",
+          "A": "Inventory is a listing activity; it does not perform encryption."
+        }
+      },
+      "exam_reasoning": "Connects asset inventory to criticality/impact assessment.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Classification",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0017",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Classification",
+      "subtopic": "Classification scope",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "When identifying data types for classification, an organization should account for data in:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Neither format, because classification applies only to hardware"
+        },
+        {
+          "label": "B",
+          "text": "Digital formats only, since paper is never sensitive"
+        },
+        {
+          "label": "C",
+          "text": "Both physical and digital formats"
+        },
+        {
+          "label": "D",
+          "text": "Physical formats only, since digital data is automatically secure"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Data classification must consider both physical and digital formats of information.",
+        "why_others_are_wrong": {
+          "B": "Paper records can be highly sensitive and must be classified.",
+          "D": "Digital data is not automatically secure and must be classified.",
+          "A": "Classification applies to data/information, including but not limited to hardware."
+        }
+      },
+      "exam_reasoning": "Reinforces that classification covers physical and digital data.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Classification",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0018",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Benefits of classification",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO are stated benefits of properly classifying assets? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Improved security awareness"
+        },
+        {
+          "label": "B",
+          "text": "Guaranteed elimination of all cyber risk"
+        },
+        {
+          "label": "C",
+          "text": "Permanent exemption from all audits"
+        },
+        {
+          "label": "D",
+          "text": "Compliance assurance"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Benefits of proper classification include improved security awareness, compliance assurance, and enhanced planning.",
+        "why_others_are_wrong": {
+          "B": "Classification reduces and manages risk but cannot eliminate it entirely.",
+          "C": "Classification supports compliance; it does not exempt an organization from audits."
+        }
+      },
+      "exam_reasoning": "Recall of classification benefits.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Asset Classification Tiers",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0019",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Flow of data",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "During asset classification, a team maps exactly how sensitive data moves into, within, and out of the organization. The PRIMARY security value of tracking this data flow is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Increase the volume of data the organization stores"
+        },
+        {
+          "label": "B",
+          "text": "Replace the need to classify the data itself"
+        },
+        {
+          "label": "C",
+          "text": "Guarantee the data never needs encryption"
+        },
+        {
+          "label": "D",
+          "text": "Ensure appropriate security measures are applied wherever the data travels, including in transit"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Tracking the flow of data ensures appropriate controls are applied as data moves within and outside the organization, protecting it in all states including transit.",
+        "why_others_are_wrong": {
+          "A": "Mapping flow does not increase stored volume.",
+          "B": "Flow analysis complements—not replaces—classification.",
+          "C": "Data in transit often specifically requires encryption."
+        }
+      },
+      "exam_reasoning": "Connects data-flow mapping to applying controls across data states.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Asset Classification",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0020",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Classification",
+      "subtopic": "Governance and compliance",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Policies governing data creation, collection, management, and disposal primarily help ensure:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Data quality, authenticity, and reliability, and regulatory compliance"
+        },
+        {
+          "label": "B",
+          "text": "That all data is deleted immediately upon creation"
+        },
+        {
+          "label": "C",
+          "text": "That data is never classified"
+        },
+        {
+          "label": "D",
+          "text": "That security controls are unnecessary"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Governance, regulation, and compliance policies over the data lifecycle help ensure data quality, authenticity, and reliability while meeting regulations.",
+        "why_others_are_wrong": {
+          "C": "Such governance supports classification rather than preventing it.",
+          "B": "Immediate deletion would destroy needed data and ignore retention requirements.",
+          "D": "Governance reinforces—not removes—the need for controls."
+        }
+      },
+      "exam_reasoning": "Links data governance policies to quality and compliance outcomes.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Classification",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0021",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "High watermark",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A single system stores both public data and highly sensitive PII together (co-mingled). According to the high-watermark principle, the system should be protected at the level of:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The average sensitivity of all data on the system"
+        },
+        {
+          "label": "B",
+          "text": "The most sensitive data it contains (the PII)"
+        },
+        {
+          "label": "C",
+          "text": "Whatever level is cheapest to implement"
+        },
+        {
+          "label": "D",
+          "text": "The least sensitive data it contains (the public data)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "The high-watermark principle applies the highest level of protection required by the most sensitive data type present on a system.",
+        "why_others_are_wrong": {
+          "D": "Protecting to the lowest level would leave the sensitive PII exposed.",
+          "A": "Averaging sensitivity under-protects the most sensitive data.",
+          "C": "Cost cannot override the protection needs of the most sensitive data."
+        }
+      },
+      "exam_reasoning": "Tests the high-watermark concept for co-mingled data.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Baseline and Tailoring",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0022",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Sensitive Data Types",
+      "subtopic": "Regulated data",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which of the following is an example of \"regulated information\" that must be handled according to legal requirements?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A blank spreadsheet template"
+        },
+        {
+          "label": "B",
+          "text": "A public blog post"
+        },
+        {
+          "label": "C",
+          "text": "Cardholder data subject to PCI DSS"
+        },
+        {
+          "label": "D",
+          "text": "The company lunch menu"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Regulated information includes data governed by laws/standards such as cardholder data under PCI DSS, which mandates specific handling.",
+        "why_others_are_wrong": {
+          "A": "A blank template contains no sensitive or regulated content.",
+          "D": "A lunch menu is non-sensitive public information.",
+          "B": "A public blog post is intentionally public, not regulated sensitive data."
+        }
+      },
+      "exam_reasoning": "Identifies regulated data via a concrete PCI DSS example.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Types of Sensitive Data",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0023",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Aligning classification to business",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Aligning a classification scheme with business needs primarily helps to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Avoid documenting any data at all"
+        },
+        {
+          "label": "B",
+          "text": "Force every asset into the Top Secret level"
+        },
+        {
+          "label": "C",
+          "text": "Guarantee the organization never needs encryption"
+        },
+        {
+          "label": "D",
+          "text": "Minimize risk while strengthening security in a way that supports operations"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Aligning classification with business needs minimizes risks and strengthens security while supporting business operations.",
+        "why_others_are_wrong": {
+          "B": "Over-classifying all assets as Top Secret wastes resources and is not business-aligned.",
+          "A": "Classification requires documenting/inventorying data, not avoiding it.",
+          "C": "Alignment does not eliminate the need for controls such as encryption."
+        }
+      },
+      "exam_reasoning": "Connects business-aligned classification to balanced risk reduction.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classifying Data and Assets",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0024",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Classification",
+      "subtopic": "Government classification levels",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO of the following are government data classification levels described in the guide? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Proprietary"
+        },
+        {
+          "label": "B",
+          "text": "Top Secret"
+        },
+        {
+          "label": "C",
+          "text": "Tier 0 (Essential)"
+        },
+        {
+          "label": "D",
+          "text": "Confidential"
+        }
+      ],
+      "correct_answer": [
+        "B",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "Top Secret and Confidential are government classification levels (along with Secret and Unclassified).",
+        "why_others_are_wrong": {
+          "C": "Tier 0 (Essential) is an asset tier, not a data classification level.",
+          "A": "Proprietary describes a sensitive data type, not a government classification level."
+        }
+      },
+      "exam_reasoning": "Separates government classification levels from asset tiers and data types.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Classification Levels",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0025",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Data Owner",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Which data role holds ultimate responsibility for a data set and typically delegates protection tasks to a custodian?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Data Owner"
+        },
+        {
+          "label": "B",
+          "text": "Data Custodian"
+        },
+        {
+          "label": "C",
+          "text": "Data Subject"
+        },
+        {
+          "label": "D",
+          "text": "Data Steward"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "The data owner is responsible for the data (often specialized by type, e.g., financial or medical) and delegates implementation to data custodians.",
+        "why_others_are_wrong": {
+          "B": "The custodian implements controls on the owner's behalf.",
+          "D": "The steward is a subject-matter expert who assists with classification.",
+          "C": "The data subject is the individual the data is about / who uses it."
+        }
+      },
+      "exam_reasoning": "Recall of the owner's accountability and delegation to the custodian.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Roles and Responsibilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0026",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Data Custodian",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Who implements the physical, administrative, and logical controls that protect data, working on behalf of the data owner?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Data Custodian"
+        },
+        {
+          "label": "B",
+          "text": "Data Owner"
+        },
+        {
+          "label": "C",
+          "text": "Data Processor"
+        },
+        {
+          "label": "D",
+          "text": "Data Steward"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "The data custodian implements physical, administrative, and logical controls on behalf of the owner and manages the technical protection of data.",
+        "why_others_are_wrong": {
+          "B": "The owner sets requirements and delegates; it does not necessarily implement controls.",
+          "D": "The steward provides subject-matter expertise and assists with classification.",
+          "C": "The processor (GDPR) acts on the controller's behalf to process data, a distinct role."
+        }
+      },
+      "exam_reasoning": "Distinguishes the custodian's implementation role from the owner and steward.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Roles and Responsibilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0027",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Data Steward",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Which role acts as a subject-matter expert for specific data types and assists in classifying and categorizing the data?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Senior Management"
+        },
+        {
+          "label": "B",
+          "text": "Data Subject"
+        },
+        {
+          "label": "C",
+          "text": "Data Steward"
+        },
+        {
+          "label": "D",
+          "text": "Data Custodian"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "The data steward is a subject-matter expert for specific data types who assists with classification and works with both owner and custodian.",
+        "why_others_are_wrong": {
+          "D": "The custodian implements technical protection, not SME classification guidance.",
+          "B": "The data subject is the individual whose data is processed or a system user.",
+          "A": "Senior management is accountable for overall asset management, not data SME work."
+        }
+      },
+      "exam_reasoning": "Maps SME classification assistance to the steward.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Roles and Responsibilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0028",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Data Subject",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In the guide's role model, \"data subjects\" include which of the following?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Human users and non-human entities (applications, scripts) that consume or interact with data"
+        },
+        {
+          "label": "B",
+          "text": "Only the physical storage hardware"
+        },
+        {
+          "label": "C",
+          "text": "Only external regulators auditing the system"
+        },
+        {
+          "label": "D",
+          "text": "Only senior executives who approve budgets"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Data subjects are individuals who consume/interact with data (often \"users\") and can also include non-human entities such as applications, scripts, or automated processes.",
+        "why_others_are_wrong": {
+          "D": "Executives are not the definition of data subjects.",
+          "C": "Regulators are external oversight, not data subjects in this model.",
+          "B": "Hardware is an asset, not a data subject."
+        }
+      },
+      "exam_reasoning": "Tests that data subjects/users include automated non-human processes.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Roles and Responsibilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0029",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Controller vs Processor",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Under the GDPR-focused roles, who determines the purpose and means of processing personal data and bears ultimate responsibility?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Data Processor"
+        },
+        {
+          "label": "B",
+          "text": "Data Custodian"
+        },
+        {
+          "label": "C",
+          "text": "Data Steward"
+        },
+        {
+          "label": "D",
+          "text": "Data Controller"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The data controller determines the purpose and means of processing personal data and holds ultimate responsibility.",
+        "why_others_are_wrong": {
+          "A": "The processor acts on the controller's behalf to collect, process, and store data.",
+          "B": "The custodian is an internal protection-implementation role, not the GDPR controller.",
+          "C": "The steward provides data expertise, not processing-purpose decisions."
+        }
+      },
+      "exam_reasoning": "Distinguishes controller (decides) from processor (acts).",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Controllers and Processors (GDPR Focused)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0030",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Controller vs Processor",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A cloud analytics vendor collects and processes customer data strictly according to its client's instructions. Under GDPR roles, the vendor is the:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Data Controller"
+        },
+        {
+          "label": "B",
+          "text": "Data Processor"
+        },
+        {
+          "label": "C",
+          "text": "Data Owner"
+        },
+        {
+          "label": "D",
+          "text": "Data Steward"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A party that processes personal data on behalf of, and per the instructions of, the controller is the data processor and is liable for breaches during processing.",
+        "why_others_are_wrong": {
+          "A": "The controller decides purpose/means; here the vendor follows the client's instructions.",
+          "C": "Data owner is an internal accountability role, not the GDPR term for this vendor.",
+          "D": "A steward provides data expertise, not bulk processing on instruction."
+        }
+      },
+      "exam_reasoning": "Applies the processor definition to a vendor acting on instructions.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Controllers and Processors (GDPR Focused)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0031",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Roles in a network",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "On a storage server, an analyst decides which encryption and access requirements apply to a financial dataset, while an administrator actually configures the encryption and monitors access. Which roles do they hold, respectively?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Data Owner and Data Custodian"
+        },
+        {
+          "label": "B",
+          "text": "Data Custodian and Data Owner"
+        },
+        {
+          "label": "C",
+          "text": "Data Processor and Data Controller"
+        },
+        {
+          "label": "D",
+          "text": "Data Steward and Data Subject"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Setting the security/access requirements is the data owner's responsibility; configuring encryption and monitoring access is the custodian's implementation role.",
+        "why_others_are_wrong": {
+          "B": "This reverses the roles—the decision-maker is the owner, the implementer is the custodian.",
+          "D": "A steward is an SME and a subject is a user; neither matches setting requirements vs implementing them.",
+          "C": "Controller/processor are GDPR processing roles, not the owner/custodian split described."
+        }
+      },
+      "exam_reasoning": "Tests applying owner vs custodian in an operational scenario.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Practical Example of Roles in a Network",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0032",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Role mapping",
+      "difficulty": "hard",
+      "question_type": "matching",
+      "question": "Match each data role (1-4) to its primary responsibility (A-D).",
+      "options": [
+        {
+          "label": "A",
+          "text": "Serves as subject-matter expert and assists with classification"
+        },
+        {
+          "label": "B",
+          "text": "Implements physical, administrative, and logical controls on the owner's behalf"
+        },
+        {
+          "label": "C",
+          "text": "Processes personal data on behalf of the controller"
+        },
+        {
+          "label": "D",
+          "text": "Holds ultimate responsibility for the data and sets protection requirements"
+        }
+      ],
+      "correct_answer": "1-D,2-B,3-A,4-C",
+      "explanation": {
+        "why_correct": "Data Owner → ultimate responsibility/sets requirements (B); Data Custodian → implements controls (A); Data Steward → SME/classification help (D); Data Processor → processes data for the controller (C).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests precise mapping of data roles to responsibilities.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Roles and Responsibilities",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "Data Owner",
+        "Data Custodian",
+        "Data Steward",
+        "Data Processor"
+      ]
+    },
+    {
+      "id": "CISSP-D02-Q0033",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Roles and Responsibilities",
+      "subtopic": "Distinguishing roles",
+      "difficulty": "hard",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO statements about data roles are correct? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "The data owner can delegate implementation tasks to a data custodian"
+        },
+        {
+          "label": "B",
+          "text": "The data steward assists with classifying and categorizing data"
+        },
+        {
+          "label": "C",
+          "text": "The data custodian decides the business purpose for collecting personal data"
+        },
+        {
+          "label": "D",
+          "text": "The data subject sets the organization's data classification policy"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "B"
+      ],
+      "explanation": {
+        "why_correct": "Owners delegate to custodians, and stewards assist with classification/categorization—both correct.",
+        "why_others_are_wrong": {
+          "D": "Data subjects are users/individuals; they do not set classification policy.",
+          "C": "Deciding the purpose of processing is the controller/owner role, not the custodian."
+        }
+      },
+      "exam_reasoning": "Reinforces correct responsibilities across the role model.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Data Roles and Responsibilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0034",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Handling Requirements",
+      "subtopic": "Marking",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Physically identifying an asset with its sensitivity or classification level (for example, a stamped \"CONFIDENTIAL\" label on a folder) is referred to as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Labeling"
+        },
+        {
+          "label": "B",
+          "text": "Marking"
+        },
+        {
+          "label": "C",
+          "text": "Tailoring"
+        },
+        {
+          "label": "D",
+          "text": "Scoping"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Marking is the physical identification of an asset with its appropriate sensitivity or classification level.",
+        "why_others_are_wrong": {
+          "A": "Labeling is the digital/logical identification (e.g., metadata or watermarks).",
+          "D": "Scoping selects which controls apply to a system.",
+          "C": "Tailoring modifies baseline controls."
+        }
+      },
+      "exam_reasoning": "Distinguishes physical marking from logical labeling.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Information and Asset Handling Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0035",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Handling Requirements",
+      "subtopic": "Labeling",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Embedding a classification level in a file's metadata or as a digital watermark is an example of:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tokenization"
+        },
+        {
+          "label": "B",
+          "text": "Degaussing"
+        },
+        {
+          "label": "C",
+          "text": "Marking"
+        },
+        {
+          "label": "D",
+          "text": "Labeling"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Labeling is the digital or logical identification of an asset with its sensitivity/classification, implemented through metadata or digital watermarks.",
+        "why_others_are_wrong": {
+          "C": "Marking is the physical identification of an asset.",
+          "B": "Degaussing is a magnetic data-destruction method.",
+          "A": "Tokenization substitutes sensitive data with non-sensitive tokens."
+        }
+      },
+      "exam_reasoning": "Maps metadata/watermark identification to logical labeling.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Information and Asset Handling Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0036",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Handling Requirements",
+      "subtopic": "Marking vs labeling",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "An organization stamps \"SECRET\" on printed reports and embeds a \"SECRET\" tag in the metadata of the corresponding electronic files. The printed stamp and the metadata tag represent, respectively:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Labeling (physical) and marking (logical)"
+        },
+        {
+          "label": "B",
+          "text": "Marking (physical) and labeling (logical)"
+        },
+        {
+          "label": "C",
+          "text": "Scoping and tailoring"
+        },
+        {
+          "label": "D",
+          "text": "Clearing and purging"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "The physical stamp is marking; the electronic metadata tag is labeling (logical identification).",
+        "why_others_are_wrong": {
+          "A": "This reverses the definitions—physical is marking, logical is labeling.",
+          "C": "Scoping/tailoring are control-selection activities, not handling identification.",
+          "D": "Clearing/purging are data-destruction techniques."
+        }
+      },
+      "exam_reasoning": "Tests the physical-vs-logical distinction in a concrete handling example.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Information and Asset Handling Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0037",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Handling Requirements",
+      "subtopic": "Consistent processes",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Why should an organization define a consistent process for marking and labeling assets?",
+      "options": [
+        {
+          "label": "A",
+          "text": "To make every asset Top Secret regardless of sensitivity"
+        },
+        {
+          "label": "B",
+          "text": "To ensure all personnel handle data correctly and support compliance, reducing breach and misuse risk"
+        },
+        {
+          "label": "C",
+          "text": "To guarantee assets never need to be inventoried"
+        },
+        {
+          "label": "D",
+          "text": "To avoid having to classify data at all"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "A consistent marking/labeling process ensures correct, repeatable handling, supports compliance, and minimizes the risk of breaches or asset misuse.",
+        "why_others_are_wrong": {
+          "A": "Consistency is about correct handling, not over-classifying everything.",
+          "D": "Consistent handling depends on classification, not its absence.",
+          "C": "Inventory remains essential to asset management."
+        }
+      },
+      "exam_reasoning": "Connects consistent handling processes to compliance and risk reduction.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Organizational Policies",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0038",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Handling Requirements",
+      "subtopic": "Backups and copies",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "When sensitive data is copied or backed up, those copies should be:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Treated as public since they are duplicates"
+        },
+        {
+          "label": "B",
+          "text": "Handled and stored according to the same sensitivity/classification as the original"
+        },
+        {
+          "label": "C",
+          "text": "Exempt from the data retention policy"
+        },
+        {
+          "label": "D",
+          "text": "Stored without any access controls to ease recovery"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Copies and backups must be handled and stored according to the data's sensitivity, just like the original.",
+        "why_others_are_wrong": {
+          "A": "Copies retain the original's sensitivity and are not public.",
+          "D": "Backups of sensitive data still require access controls.",
+          "C": "Retention policy applies to copies/backups as well."
+        }
+      },
+      "exam_reasoning": "Reinforces that backups inherit the original data's classification and handling.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Handling Sensitive Data and Assets",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0039",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "Provisioning",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "In secure asset management, \"provisioning\" refers to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Auditing financial statements for SOX"
+        },
+        {
+          "label": "B",
+          "text": "Permanently deleting all backups"
+        },
+        {
+          "label": "C",
+          "text": "Marking assets as public"
+        },
+        {
+          "label": "D",
+          "text": "Creating, managing, and destroying assets throughout their lifecycle"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Provisioning involves creating, managing, and destroying assets throughout their lifecycle.",
+        "why_others_are_wrong": {
+          "B": "Provisioning covers the full lifecycle, not only deletion of backups.",
+          "C": "Marking is a handling activity, not provisioning.",
+          "A": "SOX auditing is a compliance activity unrelated to provisioning definition."
+        }
+      },
+      "exam_reasoning": "Recall of provisioning across the asset lifecycle.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Managing System Assets",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0040",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "Asset inventory",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "An accurate asset inventory is described as crucial primarily because it:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Eliminates the need for any security controls"
+        },
+        {
+          "label": "B",
+          "text": "Enables effective change control and configuration management by accounting for all assets"
+        },
+        {
+          "label": "C",
+          "text": "Replaces the need for data classification"
+        },
+        {
+          "label": "D",
+          "text": "Automatically patches all systems"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "An accurate inventory is crucial for implementing change control and configuration management and ensures all assets are accounted for throughout their lifecycle.",
+        "why_others_are_wrong": {
+          "A": "Inventory supports, but does not replace, security controls.",
+          "D": "Inventory tracks assets; it does not perform patching itself.",
+          "C": "Inventory and classification are complementary activities."
+        }
+      },
+      "exam_reasoning": "Links inventory to change/configuration management.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Asset Management Components",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0041",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "Responsibilities",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Who is described as accountable for overall asset management, including IT assets, hardware procurement, and asset disposal?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Senior Management"
+        },
+        {
+          "label": "B",
+          "text": "External auditors"
+        },
+        {
+          "label": "C",
+          "text": "Data Subjects"
+        },
+        {
+          "label": "D",
+          "text": "End users"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Senior management is accountable for overall asset management, including IT assets, hardware, procurement, and disposal.",
+        "why_others_are_wrong": {
+          "C": "Data subjects are users/individuals interacting with data.",
+          "B": "External auditors verify compliance; they are not accountable for asset management.",
+          "D": "End users operate systems but are not accountable for overall asset management."
+        }
+      },
+      "exam_reasoning": "Assigns overall asset-management accountability to senior management.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Responsibilities",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0042",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "What to track",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO of the following are HARDWARE assets that should be tracked in an inventory? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "A firewall appliance"
+        },
+        {
+          "label": "B",
+          "text": "A security awareness policy"
+        },
+        {
+          "label": "C",
+          "text": "A network switch"
+        },
+        {
+          "label": "D",
+          "text": "An operating system license key"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "Hardware to track includes servers, switches, firewalls, gateways, proxies, and IDS/IPS systems—both a firewall appliance and a network switch qualify.",
+        "why_others_are_wrong": {
+          "D": "A license key relates to software, not a hardware asset.",
+          "B": "A policy is an administrative document, not a hardware asset."
+        }
+      },
+      "exam_reasoning": "Distinguishes hardware assets from software and administrative items.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > What to Track",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0043",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "Automated discovery",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which approach uses tools such as Nmap or OpenVAS to discover hosts and identify operating systems for an asset inventory?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Degaussing"
+        },
+        {
+          "label": "B",
+          "text": "Manual spreadsheet tracking"
+        },
+        {
+          "label": "C",
+          "text": "Automated discovery"
+        },
+        {
+          "label": "D",
+          "text": "Tokenization"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Automated discovery uses tools like Nessus, Nmap, and OpenVAS for host discovery and OS identification.",
+        "why_others_are_wrong": {
+          "B": "Manual tracking uses spreadsheets/databases, not automated scanning tools.",
+          "A": "Degaussing is a data-destruction method.",
+          "D": "Tokenization is a data-protection/declassification technique."
+        }
+      },
+      "exam_reasoning": "Maps host-discovery tooling to automated asset discovery.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Tools and Techniques for Asset Tracking",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0044",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "Inventory integrity",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "To protect the asset inventory itself, an organization should ensure that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The inventory is publicly editable to encourage updates"
+        },
+        {
+          "label": "B",
+          "text": "The inventory is never updated once created"
+        },
+        {
+          "label": "C",
+          "text": "Access to view and modify the inventory is restricted to authorized personnel and changes follow change control"
+        },
+        {
+          "label": "D",
+          "text": "Anyone may delete entries to keep the list short"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Inventory security and integrity require restricting access/modifications to authorized personnel and managing updates through configuration management and change control.",
+        "why_others_are_wrong": {
+          "A": "Public editability destroys integrity and enables tampering.",
+          "B": "The inventory must be updated as assets change, via change control.",
+          "D": "Uncontrolled deletion undermines accuracy and integrity."
+        }
+      },
+      "exam_reasoning": "Tests protecting the integrity of the asset inventory.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Organizational Policy and Management",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0045",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "Asset lifecycle",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The asset lifecycle (per NIST SP 1800-5) includes strategy, planning, design, procurement, operation, maintenance, modification, and:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Phishing"
+        },
+        {
+          "label": "B",
+          "text": "Marketing"
+        },
+        {
+          "label": "C",
+          "text": "Tokenization"
+        },
+        {
+          "label": "D",
+          "text": "Disposal"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "The asset lifecycle culminates in disposal, completing the cradle-to-grave management of assets.",
+        "why_others_are_wrong": {
+          "B": "Marketing is not part of the asset lifecycle.",
+          "C": "Tokenization is a data-protection technique, not an asset-lifecycle phase.",
+          "A": "Phishing is an attack technique, not a lifecycle phase."
+        }
+      },
+      "exam_reasoning": "Recall of disposal as the final asset-lifecycle phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Key Concepts",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0046",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Handling Requirements",
+      "subtopic": "Regulatory influence",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Regulations such as GDPR and HIPAA most directly influence which aspect of asset security?",
+      "options": [
+        {
+          "label": "A",
+          "text": "The brand of laptop employees may purchase"
+        },
+        {
+          "label": "B",
+          "text": "The color of classification labels"
+        },
+        {
+          "label": "C",
+          "text": "The office floor plan layout"
+        },
+        {
+          "label": "D",
+          "text": "How data is stored, accessed, transmitted, and destroyed (data handling)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Regulations like GDPR and HIPAA shape data-handling practices—storage, access control, transmission, and destruction.",
+        "why_others_are_wrong": {
+          "A": "Laptop brand selection is procurement, not regulatory data handling.",
+          "C": "Floor plans are facilities matters, not data-handling regulation.",
+          "B": "Label color is a cosmetic detail, not the substance of handling rules."
+        }
+      },
+      "exam_reasoning": "Connects regulations to data-handling requirements.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Information and Asset Handling Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0047",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Asset Management",
+      "subtopic": "Asset details tracked",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Which of the following operational details is appropriate to record for a tracked asset?",
+      "options": [
+        {
+          "label": "A",
+          "text": "The personal hobbies of the employee who uses it"
+        },
+        {
+          "label": "B",
+          "text": "Unrelated marketing slogans"
+        },
+        {
+          "label": "C",
+          "text": "Purchase/installation date, licensing, location, and baseline configuration"
+        },
+        {
+          "label": "D",
+          "text": "The asset's favorite color"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Operational details to track include purchase/installation dates, licensing, dependencies, location, IP addresses, and baseline configurations.",
+        "why_others_are_wrong": {
+          "A": "Personal hobbies are irrelevant to asset tracking.",
+          "D": "Assets do not have a \"favorite color\"; this is not a tracked detail.",
+          "B": "Marketing slogans are unrelated to asset records."
+        }
+      },
+      "exam_reasoning": "Identifies legitimate operational tracking details.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > What to Track",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0048",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data States",
+      "subtopic": "Three states",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "The guide describes data as existing in three states. Which set correctly lists them?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Public, internal, and secret"
+        },
+        {
+          "label": "B",
+          "text": "In use, in transit, and at rest"
+        },
+        {
+          "label": "C",
+          "text": "Hot, warm, and cold"
+        },
+        {
+          "label": "D",
+          "text": "Create, read, and delete"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Data exists in three states—in use, in transit, and at rest—each requiring appropriate protection.",
+        "why_others_are_wrong": {
+          "C": "Hot/warm/cold describe site recovery strategies, not data states.",
+          "A": "Public/internal/secret are classification levels, not data states.",
+          "D": "Create/read/delete are operations, not data states."
+        }
+      },
+      "exam_reasoning": "Recall of the three data states.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Understanding Data States",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0049",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data States",
+      "subtopic": "Data at rest",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Which protection mechanisms are MOST associated with securing data at rest?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Full-disk encryption, Trusted Platform Modules (TPM), and secure storage"
+        },
+        {
+          "label": "B",
+          "text": "Memory-only authentication during active processing"
+        },
+        {
+          "label": "C",
+          "text": "Network egress monitoring on the perimeter"
+        },
+        {
+          "label": "D",
+          "text": "TLS certificates and secure routing"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Data at rest is protected with full-disk encryption, TPMs, and secure storage environments because it is a static target.",
+        "why_others_are_wrong": {
+          "D": "TLS and secure routing protect data in transit.",
+          "B": "In-memory protections apply to data in use.",
+          "C": "Egress monitoring targets data leaving the network (in transit/exfiltration), not data at rest."
+        }
+      },
+      "exam_reasoning": "Maps at-rest protections to encryption/TPM/secure storage.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data at Rest",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0050",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data States",
+      "subtopic": "Data in transit",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Data is considered MOST at risk in which state, because it is exposed to the network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "At rest"
+        },
+        {
+          "label": "B",
+          "text": "Archived"
+        },
+        {
+          "label": "C",
+          "text": "In transit"
+        },
+        {
+          "label": "D",
+          "text": "In use"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Data in transit is most at risk because it is exposed to the network (wired or wireless); it is protected with encryption, secure routing, and certificates (SSL/TLS).",
+        "why_others_are_wrong": {
+          "A": "Data at rest is a static target but is not described as the most-at-risk state.",
+          "D": "Data in use is the most volatile but is being processed locally, not exposed across the network.",
+          "B": "Archived data is a form of data at rest."
+        }
+      },
+      "exam_reasoning": "Identifies in-transit as the most network-exposed state.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Understanding Data States",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0051",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data States",
+      "subtopic": "Data in use",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which statement best characterizes data in use?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It is always encrypted and never at risk"
+        },
+        {
+          "label": "B",
+          "text": "It only exists on backup tapes"
+        },
+        {
+          "label": "C",
+          "text": "It is data that has been permanently destroyed"
+        },
+        {
+          "label": "D",
+          "text": "It is the most volatile state, residing in memory or being processed, and needs authentication, authorization, and monitoring"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Data in use is actively processed (often in memory), is the most volatile state, and requires authentication, authorization, and monitoring to protect integrity.",
+        "why_others_are_wrong": {
+          "A": "Data in use can be at risk during processing and is not inherently always encrypted.",
+          "B": "Backup tapes hold data at rest, not data in use.",
+          "C": "Destroyed data is not a live state."
+        }
+      },
+      "exam_reasoning": "Tests the volatility and controls for data in use.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Understanding Data States",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0052",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data States",
+      "subtopic": "Protection by state",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A company sends application logs from a web server to a remote analysis platform over the internet. Which protection is MOST appropriate for this data while it travels?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Full-disk encryption on the destination server only"
+        },
+        {
+          "label": "B",
+          "text": "A Trusted Platform Module on the source server"
+        },
+        {
+          "label": "C",
+          "text": "Degaussing the source storage media"
+        },
+        {
+          "label": "D",
+          "text": "Encryption with mutual authentication (e.g., TLS) to protect data in motion"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Data in transit is best protected with encryption and mutual authentication (e.g., TLS) to defend confidentiality and integrity while it moves.",
+        "why_others_are_wrong": {
+          "A": "Disk encryption at the destination protects data at rest, not while it traverses the network.",
+          "B": "A TPM protects keys/data at rest on a device, not data crossing the network.",
+          "C": "Degaussing destroys data on magnetic media; it does not protect data in transit."
+        }
+      },
+      "exam_reasoning": "Tests selecting in-transit protection for a network transfer scenario.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Security Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0053",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Lifecycle",
+      "subtopic": "Lifecycle phases",
+      "difficulty": "medium",
+      "question_type": "sequence_ordering",
+      "question": "Place the data lifecycle phases in their typical order from cradle to grave. (Provide the option labels in order.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Use"
+        },
+        {
+          "label": "B",
+          "text": "Storage"
+        },
+        {
+          "label": "C",
+          "text": "Destruction"
+        },
+        {
+          "label": "D",
+          "text": "Archiving"
+        },
+        {
+          "label": "E",
+          "text": "Creation"
+        }
+      ],
+      "correct_answer": "E,B,A,D,C",
+      "explanation": {
+        "why_correct": "The data lifecycle runs creation → storage → use → archiving → destruction (cradle to grave).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests the order of the data lifecycle phases.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Managing the Data Lifecycle",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0054",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Lifecycle",
+      "subtopic": "Creation/classification",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Immediately after data is created, what should occur to ensure it receives the right level of protection?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It should be made public by default"
+        },
+        {
+          "label": "B",
+          "text": "It should be classified or categorized according to its sensitivity"
+        },
+        {
+          "label": "C",
+          "text": "It should be moved straight to archive storage"
+        },
+        {
+          "label": "D",
+          "text": "It should be permanently destroyed"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "After creation, data must be classified/categorized by sensitivity so that appropriate protection is applied throughout its life.",
+        "why_others_are_wrong": {
+          "D": "Destruction is the final phase, not the step right after creation.",
+          "A": "Defaulting to public would expose sensitive data.",
+          "C": "Archiving applies to data no longer needed regularly, not freshly created data."
+        }
+      },
+      "exam_reasoning": "Ties classification to the create phase of the lifecycle.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Managing the Data Lifecycle",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0055",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Lifecycle",
+      "subtopic": "Archiving",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "When data that is no longer needed regularly is moved to archive storage, the guide states that archives must still have:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Access controls and encryption applied"
+        },
+        {
+          "label": "B",
+          "text": "No retention limits whatsoever"
+        },
+        {
+          "label": "C",
+          "text": "Public read access for convenience"
+        },
+        {
+          "label": "D",
+          "text": "All security controls removed to save space"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Archived data must have access controls and encryption applied; archiving can be driven by regulatory or organizational requirements.",
+        "why_others_are_wrong": {
+          "D": "Removing controls would expose archived sensitive data.",
+          "C": "Public access to archives risks unauthorized disclosure.",
+          "B": "Retention limits and policies still apply to archived data."
+        }
+      },
+      "exam_reasoning": "Reinforces that archives remain protected.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Managing the Data Lifecycle",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0056",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Lifecycle",
+      "subtopic": "Data value over time",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A dataset that was highly sensitive at launch becomes far less sensitive years later as the information becomes obsolete. According to the guide's \"data value over time\" consideration, the organization should:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Delete the classification policy entirely"
+        },
+        {
+          "label": "B",
+          "text": "Immediately make the data public without review"
+        },
+        {
+          "label": "C",
+          "text": "Keep the original classification permanently regardless of changes"
+        },
+        {
+          "label": "D",
+          "text": "Re-evaluate the data's classification and adjust protection needs as its value changes"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Data value can change over time, affecting classification and protection needs; classification should be re-evaluated accordingly.",
+        "why_others_are_wrong": {
+          "C": "Static classification ignores legitimate changes in data value.",
+          "B": "Reclassification requires review, not automatic public release.",
+          "A": "The policy remains necessary to govern reclassification decisions."
+        }
+      },
+      "exam_reasoning": "Tests reclassification as data value changes over time.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Key Considerations",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0057",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Lifecycle",
+      "subtopic": "Secure destruction",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In the destruction phase of the data lifecycle, secure destruction methods are required primarily to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Increase the amount of stored data"
+        },
+        {
+          "label": "B",
+          "text": "Avoid the need to follow any regulations"
+        },
+        {
+          "label": "C",
+          "text": "Ensure no sensitive data can be recovered by unauthorized parties"
+        },
+        {
+          "label": "D",
+          "text": "Make data publicly searchable"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Secure destruction follows policy and legal/regulatory requirements and ensures that no sensitive data can be recovered by unauthorized parties.",
+        "why_others_are_wrong": {
+          "A": "Destruction removes data; it does not increase storage.",
+          "D": "Destruction prevents access, not public searchability.",
+          "B": "Destruction must comply with—not bypass—regulations."
+        }
+      },
+      "exam_reasoning": "Connects secure destruction to preventing recovery of sensitive data.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Managing the Data Lifecycle",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0058",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Information System Lifecycle",
+      "subtopic": "Initiation phase",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "During the initiation phase of the information system lifecycle, the PRIMARY focus is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Identify and engage stakeholders and understand requirements and the system's purpose"
+        },
+        {
+          "label": "B",
+          "text": "Run the system in full production"
+        },
+        {
+          "label": "C",
+          "text": "Conduct the final retirement of the system"
+        },
+        {
+          "label": "D",
+          "text": "Securely erase all data and dispose of hardware"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Initiation focuses on identifying/engaging stakeholders (users, managers, customers, auditors, leadership) and understanding requirements and the system's purpose.",
+        "why_others_are_wrong": {
+          "D": "Erasure/disposal occurs at the disposal/retirement phase.",
+          "B": "Full production occurs in operations and maintenance.",
+          "C": "Retirement is the final phase, not initiation."
+        }
+      },
+      "exam_reasoning": "Maps stakeholder/requirement understanding to the initiation phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > The Information System Lifecycle - Part 1",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0059",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Information System Lifecycle",
+      "subtopic": "Development vs acquisition",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The \"development and acquisition\" phase centers on which key decision?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Which classification color to use on labels"
+        },
+        {
+          "label": "B",
+          "text": "Whether to build the system in-house or buy/acquire a third-party solution, based on capability and security needs"
+        },
+        {
+          "label": "C",
+          "text": "How many press releases to issue"
+        },
+        {
+          "label": "D",
+          "text": "How to degauss backup tapes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Development and acquisition addresses the build-vs-buy decision, applying secure development practices internally or vetting third-party solutions for security.",
+        "why_others_are_wrong": {
+          "D": "Degaussing is a destruction method, not a build/buy decision.",
+          "A": "Label color is a handling cosmetic, not a lifecycle decision.",
+          "C": "Press releases are unrelated to the system lifecycle."
+        }
+      },
+      "exam_reasoning": "Tests the build-vs-buy focus of the development/acquisition phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > The Information System Lifecycle - Part 1",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0060",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Information System Lifecycle",
+      "subtopic": "Disposal phase",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "The disposal (retirement) phase of the information system lifecycle requires that:",
+      "options": [
+        {
+          "label": "A",
+          "text": "The build-vs-buy decision is made"
+        },
+        {
+          "label": "B",
+          "text": "Stakeholder requirements are first gathered"
+        },
+        {
+          "label": "C",
+          "text": "All data is securely erased and hardware is disposed of so data cannot be recovered"
+        },
+        {
+          "label": "D",
+          "text": "The system is moved into full production use"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Disposal involves secure decommissioning—ensuring all data is securely erased and hardware is disposed of to prevent data recovery.",
+        "why_others_are_wrong": {
+          "D": "Production use is operations/maintenance, not disposal.",
+          "B": "Requirement gathering is part of initiation.",
+          "A": "Build-vs-buy is the development/acquisition phase."
+        }
+      },
+      "exam_reasoning": "Maps secure data erasure/hardware disposal to the disposal phase.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Disposal",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0061",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Information System Lifecycle",
+      "subtopic": "NIST SP 800-64",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Which (now retired but still referenced) NIST publication provides a structured approach to embedding security into the information system lifecycle?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NIST SP 800-64"
+        },
+        {
+          "label": "B",
+          "text": "NIST SP 800-60"
+        },
+        {
+          "label": "C",
+          "text": "NIST SP 800-137"
+        },
+        {
+          "label": "D",
+          "text": "NIST SP 800-88"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "NIST SP 800-64 Rev. 2, though retired, is still referenced for embedding security into the system development lifecycle.",
+        "why_others_are_wrong": {
+          "B": "NIST SP 800-60 covers data types and classification.",
+          "D": "NIST SP 800-88 covers media sanitization.",
+          "C": "NIST SP 800-137 covers information security continuous monitoring."
+        }
+      },
+      "exam_reasoning": "Distinguishes lifecycle-security guidance (800-64) from related publications.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > Disposal",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0062",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Information System Lifecycle",
+      "subtopic": "Security integration",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A core principle emphasized across the information system lifecycle is that security should be:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Added only after a breach occurs"
+        },
+        {
+          "label": "B",
+          "text": "Left entirely to the end users"
+        },
+        {
+          "label": "C",
+          "text": "Integrated from the initial phases through disposal, at every step"
+        },
+        {
+          "label": "D",
+          "text": "Considered only during the disposal phase"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Security must be integrated from the initial phases through disposal—built in at every step rather than bolted on.",
+        "why_others_are_wrong": {
+          "A": "Waiting for a breach is reactive and leaves the system exposed.",
+          "D": "Security must apply throughout, not only at disposal.",
+          "B": "Security is a shared responsibility led by management, not solely end users."
+        }
+      },
+      "exam_reasoning": "Reinforces security integration throughout the lifecycle.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Asset Security > The Information System Lifecycle - Part 2",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0063",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "Retention principle",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "A sound data retention policy holds that data should be retained:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Forever, regardless of need or regulation"
+        },
+        {
+          "label": "B",
+          "text": "For exactly 24 hours in all cases"
+        },
+        {
+          "label": "C",
+          "text": "Only if it is public data"
+        },
+        {
+          "label": "D",
+          "text": "Only as long as necessary or legally required, then securely destroyed"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Data should be retained securely and only for as long as necessary per organizational policy and legal/regulatory requirements, then destroyed.",
+        "why_others_are_wrong": {
+          "A": "Indefinite retention increases liability and breach exposure.",
+          "B": "There is no universal 24-hour rule; retention depends on policy/regulation.",
+          "C": "Retention applies to many data types, not only public data."
+        }
+      },
+      "exam_reasoning": "Tests the retain-only-as-long-as-needed principle.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data Retention Requirements",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0064",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "EOL vs EOS",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A vendor announces it will no longer release patches or provide support for a server operating system, although the OS still technically runs. This status is called:",
+      "options": [
+        {
+          "label": "A",
+          "text": "End-of-Support (EOS)"
+        },
+        {
+          "label": "B",
+          "text": "Data remanence"
+        },
+        {
+          "label": "C",
+          "text": "End-of-Life (EOL)"
+        },
+        {
+          "label": "D",
+          "text": "Tailoring out"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "End-of-Support (EOS) is when the vendor no longer maintains or supports the hardware/software, even if it still runs.",
+        "why_others_are_wrong": {
+          "C": "End-of-Life (EOL) is when the asset can no longer be used or the license expires.",
+          "B": "Data remanence is leftover data after deletion attempts.",
+          "D": "Tailoring out is removing controls from a baseline."
+        }
+      },
+      "exam_reasoning": "Distinguishes EOS (no support) from EOL (no longer usable).",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Retention Best Practices",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0065",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "EOL vs EOS",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A critical application server has reached end-of-support, so it no longer receives security patches. From an asset-retention standpoint, the BEST action is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Remove all monitoring to reduce noise"
+        },
+        {
+          "label": "B",
+          "text": "Expose it directly to the internet to extend its usefulness"
+        },
+        {
+          "label": "C",
+          "text": "Keep running it indefinitely since it still functions"
+        },
+        {
+          "label": "D",
+          "text": "Replace or remove the unsupported asset to avoid security vulnerabilities"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "When assets are no longer supported, they should be replaced or removed because unpatched systems introduce security vulnerabilities.",
+        "why_others_are_wrong": {
+          "C": "Running unsupported systems indefinitely leaves unpatched vulnerabilities exposed.",
+          "B": "Internet exposure of an unpatched server dramatically increases risk.",
+          "A": "Removing monitoring reduces visibility into an already-risky asset."
+        }
+      },
+      "exam_reasoning": "Tests responding to end-of-support assets.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Asset Retention",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0066",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "Retention regulations",
+      "difficulty": "medium",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO regulations/standards are cited as governing data retention requirements? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "PCI DSS"
+        },
+        {
+          "label": "B",
+          "text": "Wassenaar Arrangement"
+        },
+        {
+          "label": "C",
+          "text": "STRIDE"
+        },
+        {
+          "label": "D",
+          "text": "HIPAA"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "HIPAA (healthcare) and PCI DSS (payment data) are among the regulations/standards governing data retention.",
+        "why_others_are_wrong": {
+          "B": "The Wassenaar Arrangement governs export controls, not data retention.",
+          "C": "STRIDE is a threat-modeling methodology, not a retention regulation."
+        }
+      },
+      "exam_reasoning": "Identifies retention-governing regulations among distractors.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Regulations Governing Data Retention",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0067",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "Retention guidance",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which standard focuses specifically on records management, including the concepts and principles of data retention?",
+      "options": [
+        {
+          "label": "A",
+          "text": "ISO 15489"
+        },
+        {
+          "label": "B",
+          "text": "NIST SP 800-88"
+        },
+        {
+          "label": "C",
+          "text": "ISO 27040"
+        },
+        {
+          "label": "D",
+          "text": "PCI DSS"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "ISO 15489 focuses on records management, including data-retention concepts and principles.",
+        "why_others_are_wrong": {
+          "C": "ISO 27040 addresses storage security.",
+          "B": "NIST SP 800-88 covers media sanitization.",
+          "D": "PCI DSS is a payment-card security standard."
+        }
+      },
+      "exam_reasoning": "Maps records-management retention guidance to ISO 15489.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Guidance on Data Retention",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0068",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "Chain of custody",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "When data is involved in a legal or security investigation, what must be maintained to ensure its integrity is defensible?",
+      "options": [
+        {
+          "label": "A",
+          "text": "An end-user license agreement"
+        },
+        {
+          "label": "B",
+          "text": "A public changelog"
+        },
+        {
+          "label": "C",
+          "text": "Chain of custody"
+        },
+        {
+          "label": "D",
+          "text": "A marketing plan"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Chain of custody is a documented process tracking who accessed data, ensuring its integrity in legal proceedings; such data must be retained until the case concludes.",
+        "why_others_are_wrong": {
+          "D": "A marketing plan is irrelevant to evidentiary integrity.",
+          "B": "A public changelog does not establish evidentiary control.",
+          "A": "A EULA is a licensing agreement, not an evidence-integrity process."
+        }
+      },
+      "exam_reasoning": "Connects evidentiary integrity to chain of custody.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Retention and Legal Proceedings",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0069",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "Legal hold",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "An organization's policy says to destroy a category of records after 18 months, but those exact records are now the subject of active litigation. The organization should:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Make the records public to resolve the dispute faster"
+        },
+        {
+          "label": "B",
+          "text": "Destroy them on schedule because policy takes precedence over litigation"
+        },
+        {
+          "label": "C",
+          "text": "Retain the records until the legal matter concludes, overriding the routine destruction schedule"
+        },
+        {
+          "label": "D",
+          "text": "Move the records off-site and stop tracking who accesses them"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Data involved in legal proceedings must be retained until the case concludes, and chain of custody maintained—this overrides routine destruction.",
+        "why_others_are_wrong": {
+          "B": "Destroying records under litigation can constitute spoliation and legal liability.",
+          "A": "Public disclosure could violate confidentiality and harm the case.",
+          "D": "Ceasing access tracking breaks chain of custody and undermines integrity."
+        }
+      },
+      "exam_reasoning": "Tests legal hold overriding scheduled destruction.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Retention and Legal Proceedings",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0070",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Retention",
+      "subtopic": "Retention policy contents",
+      "difficulty": "easy",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO elements should a well-formed data retention policy define? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "End-of-life and end-of-support requirements for assets"
+        },
+        {
+          "label": "B",
+          "text": "The personal opinions of individual employees"
+        },
+        {
+          "label": "C",
+          "text": "Retention periods or timelines for the data"
+        },
+        {
+          "label": "D",
+          "text": "A list of competitor product prices"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "C"
+      ],
+      "explanation": {
+        "why_correct": "A retention policy should define retention periods/timelines and EOL/EOS requirements (along with purpose/scope and data covered), aligned with legal/regulatory needs.",
+        "why_others_are_wrong": {
+          "B": "Personal opinions are not policy elements.",
+          "D": "Competitor pricing is irrelevant to a retention policy."
+        }
+      },
+      "exam_reasoning": "Identifies required contents of a retention policy.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Organizational Data Retention Policy",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0071",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Determining Security Controls",
+      "subtopic": "Baseline",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "In control selection, a \"baseline\" is BEST described as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A control that is never modified"
+        },
+        {
+          "label": "B",
+          "text": "The maximum number of controls a system can hold"
+        },
+        {
+          "label": "C",
+          "text": "The minimum set of controls that serves as a starting point for protection"
+        },
+        {
+          "label": "D",
+          "text": "A method for destroying magnetic media"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A baseline is the minimum set of controls for safeguarding security/privacy (often from NIST SP 800-53 or ISO/IEC 27002) and acts as an adaptable starting point.",
+        "why_others_are_wrong": {
+          "B": "A baseline is a minimum starting point, not a maximum.",
+          "A": "Baselines are adaptable through scoping and tailoring.",
+          "D": "Destroying magnetic media is degaussing, unrelated to a control baseline."
+        }
+      },
+      "exam_reasoning": "Recall of the baseline as a minimum control starting point.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Baseline and Tailoring",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0072",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Determining Security Controls",
+      "subtopic": "Scoping",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Selecting which controls from a baseline actually apply to a specific system or environment is called:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tailoring in"
+        },
+        {
+          "label": "B",
+          "text": "Degaussing"
+        },
+        {
+          "label": "C",
+          "text": "Provisioning"
+        },
+        {
+          "label": "D",
+          "text": "Scoping"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Scoping determines which baseline controls are applicable to an organization's system or environment.",
+        "why_others_are_wrong": {
+          "A": "Tailoring in is adding controls beyond the baseline for new risks.",
+          "B": "Degaussing is a data-destruction method.",
+          "C": "Provisioning is creating/managing/destroying assets over their lifecycle."
+        }
+      },
+      "exam_reasoning": "Distinguishes scoping (applicability) from tailoring.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Baseline and Tailoring",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0073",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Determining Security Controls",
+      "subtopic": "Tailoring",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Modifying a baseline by ADDING controls to address new risks or heightened data sensitivity is referred to as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tailoring in"
+        },
+        {
+          "label": "B",
+          "text": "Tailoring out"
+        },
+        {
+          "label": "C",
+          "text": "Sanitization"
+        },
+        {
+          "label": "D",
+          "text": "Scoping"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Tailoring in is adding additional controls based on new risks or data sensitivity; tailoring out is removing controls that are not relevant.",
+        "why_others_are_wrong": {
+          "B": "Tailoring out removes controls that do not apply.",
+          "D": "Scoping selects which baseline controls apply at all.",
+          "C": "Sanitization is a data-destruction concept."
+        }
+      },
+      "exam_reasoning": "Distinguishes tailoring in (add) from tailoring out (remove).",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Baseline and Tailoring",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0074",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Determining Security Controls",
+      "subtopic": "Tailoring out",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A baseline includes a control requiring secure handling of wireless transmissions, but the target system is fully air-gapped with no wireless capability. The MOST appropriate action is to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Leave the control and force the system to add wireless hardware"
+        },
+        {
+          "label": "B",
+          "text": "Tailor in additional wireless controls to be safe"
+        },
+        {
+          "label": "C",
+          "text": "Apply the high-watermark principle to add more controls"
+        },
+        {
+          "label": "D",
+          "text": "Tailor out the wireless control because it does not apply to this system"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Tailoring out removes baseline controls that are not relevant or applicable—an air-gapped system with no wireless does not need the wireless control.",
+        "why_others_are_wrong": {
+          "B": "Adding wireless controls to a system with no wireless wastes effort and is irrelevant.",
+          "C": "High watermark addresses co-mingled sensitivity, not inapplicable controls.",
+          "A": "Forcing wireless hardware to justify a control is backwards and increases risk."
+        }
+      },
+      "exam_reasoning": "Tests tailoring out an inapplicable control.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Baseline and Tailoring",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0075",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Selecting Security Controls",
+      "subtopic": "Risk-based selection",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "According to the control selection process, controls should be selected based primarily on:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whichever controls are cheapest, regardless of risk"
+        },
+        {
+          "label": "B",
+          "text": "The personal preference of the newest administrator"
+        },
+        {
+          "label": "C",
+          "text": "The alphabetical order of control names"
+        },
+        {
+          "label": "D",
+          "text": "The level of risk and the protection needs of the information"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Controls are selected based on the level of risk and protection needs; over-securing public systems is avoided while sensitive systems receive appropriate controls.",
+        "why_others_are_wrong": {
+          "B": "Personal preference is not a valid selection basis.",
+          "A": "Cost alone, ignoring risk, leads to under- or over-protection.",
+          "C": "Alphabetical order is irrelevant to control selection."
+        }
+      },
+      "exam_reasoning": "Ties control selection to risk and protection needs.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Selection Process",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0076",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Selecting Security Controls",
+      "subtopic": "Avoiding over-securing",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A public-facing website serves only non-sensitive marketing content. Applying the control selection principles, the team should:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apply controls proportionate to the low sensitivity and avoid over-securing the public system"
+        },
+        {
+          "label": "B",
+          "text": "Classify the marketing content as Top Secret to be safe"
+        },
+        {
+          "label": "C",
+          "text": "Remove all controls because the data is public"
+        },
+        {
+          "label": "D",
+          "text": "Apply the same controls used for the most sensitive internal database"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Control selection avoids over-securing public systems; controls should be proportionate to the data's low sensitivity and risk.",
+        "why_others_are_wrong": {
+          "D": "Applying maximum internal controls to a public site wastes resources.",
+          "C": "Even public systems need baseline protections (e.g., integrity, availability).",
+          "B": "Over-classifying non-sensitive content misallocates protection effort."
+        }
+      },
+      "exam_reasoning": "Tests proportionate control selection to avoid over-securing.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Selection Process",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0077",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Security Control Frameworks",
+      "subtopic": "COBIT",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Which framework, managed by ISACA, is designed for IT governance and aligning IT with business objectives?",
+      "options": [
+        {
+          "label": "A",
+          "text": "ISO 15489"
+        },
+        {
+          "label": "B",
+          "text": "Deming Cycle"
+        },
+        {
+          "label": "C",
+          "text": "COBIT"
+        },
+        {
+          "label": "D",
+          "text": "NIST SP 800-88"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "COBIT (Control Objectives for Information and Related Technologies), managed by ISACA, focuses on IT governance and aligning IT with business needs.",
+        "why_others_are_wrong": {
+          "D": "NIST SP 800-88 covers media sanitization.",
+          "A": "ISO 15489 covers records management.",
+          "B": "The Deming Cycle (PDCA) is a continuous-improvement model, not a governance framework."
+        }
+      },
+      "exam_reasoning": "Maps IT-governance framework to COBIT/ISACA.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Security Control Frameworks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0078",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Security Control Frameworks",
+      "subtopic": "COSO and SOX",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "COBIT is derived from which framework, which is used to comply with Sarbanes-Oxley (SOX) 404 and focuses on preventing fraudulent financial reporting?",
+      "options": [
+        {
+          "label": "A",
+          "text": "ISO/IEC 27002"
+        },
+        {
+          "label": "B",
+          "text": "NIST SP 800-53"
+        },
+        {
+          "label": "C",
+          "text": "COSO"
+        },
+        {
+          "label": "D",
+          "text": "HITRUST"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "COBIT is derived from COSO; COSO is used for SOX 404 compliance and focuses on preventing fraudulent financial reporting.",
+        "why_others_are_wrong": {
+          "A": "ISO/IEC 27002 is an international code of practice for security controls.",
+          "D": "HITRUST is a common security framework for health information.",
+          "B": "NIST SP 800-53 is the U.S. federal control catalog required by FISMA."
+        }
+      },
+      "exam_reasoning": "Connects COSO to SOX 404 and its relationship to COBIT.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Security Control Frameworks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0079",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Security Control Frameworks",
+      "subtopic": "NIST SP 800-53",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which control framework is widely used by U.S. government organizations, is required by FISMA, and is organized into control families?",
+      "options": [
+        {
+          "label": "A",
+          "text": "AACS"
+        },
+        {
+          "label": "B",
+          "text": "ISO 15489"
+        },
+        {
+          "label": "C",
+          "text": "COBIT"
+        },
+        {
+          "label": "D",
+          "text": "NIST SP 800-53"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "NIST SP 800-53 provides security and privacy controls, is required by FISMA, and is organized into control families (e.g., access control, audit and accountability).",
+        "why_others_are_wrong": {
+          "B": "ISO 15489 is a records-management standard.",
+          "C": "COBIT is an IT-governance framework, not the FISMA control catalog.",
+          "A": "AACS is a DRM scheme for optical media."
+        }
+      },
+      "exam_reasoning": "Maps FISMA-required control families to NIST SP 800-53.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Common Security Control Standards",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0080",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Security Control Frameworks",
+      "subtopic": "ISO/IEC 27002",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which international standard, originating from British Standard 7799, provides a widely adopted code of practice broken into control objectives (policies, HR security, cryptography, etc.)?",
+      "options": [
+        {
+          "label": "A",
+          "text": "PCI DSS"
+        },
+        {
+          "label": "B",
+          "text": "NIST SP 800-37"
+        },
+        {
+          "label": "C",
+          "text": "COSO"
+        },
+        {
+          "label": "D",
+          "text": "ISO/IEC 27002"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "ISO/IEC 27002 originated from BS 7799 (via 17799) and is an international standard of control objectives, widely adopted across industries.",
+        "why_others_are_wrong": {
+          "B": "NIST SP 800-37 is the Risk Management Framework process.",
+          "C": "COSO is a financial-reporting/governance framework used for SOX.",
+          "A": "PCI DSS is a payment-card security standard."
+        }
+      },
+      "exam_reasoning": "Identifies ISO/IEC 27002 by its BS 7799 lineage and control-objective structure.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Security Control Frameworks",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0081",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Security Control Frameworks",
+      "subtopic": "HITRUST",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which common security framework is specifically associated with protecting health information?",
+      "options": [
+        {
+          "label": "A",
+          "text": "COBIT"
+        },
+        {
+          "label": "B",
+          "text": "ISO 15489"
+        },
+        {
+          "label": "C",
+          "text": "HITRUST"
+        },
+        {
+          "label": "D",
+          "text": "AACS"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "HITRUST (Health Information Trust Alliance) is a common security framework for health information.",
+        "why_others_are_wrong": {
+          "A": "COBIT is a general IT-governance framework.",
+          "B": "ISO 15489 is a records-management standard.",
+          "D": "AACS is a DRM scheme."
+        }
+      },
+      "exam_reasoning": "Maps health-information framework to HITRUST.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Selecting Security Controls",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0082",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Security Control Frameworks",
+      "subtopic": "Framework-to-purpose mapping",
+      "difficulty": "hard",
+      "question_type": "matching",
+      "question": "Match each framework (1-4) to its primary description (A-D).",
+      "options": [
+        {
+          "label": "A",
+          "text": "International code of practice with security control objectives"
+        },
+        {
+          "label": "B",
+          "text": "Financial-reporting framework that drives SOX 404 compliance"
+        },
+        {
+          "label": "C",
+          "text": "IT governance framework managed by ISACA"
+        },
+        {
+          "label": "D",
+          "text": "U.S. federal security control catalog with control families (required by FISMA)"
+        }
+      ],
+      "correct_answer": "1-C,2-B,3-A,4-D",
+      "explanation": {
+        "why_correct": "COBIT → IT governance/ISACA (B); COSO → financial reporting/SOX 404 (A); ISO/IEC 27002 → international control objectives (D); NIST SP 800-53 → U.S. federal control families/FISMA (C).",
+        "why_others_are_wrong": {}
+      },
+      "exam_reasoning": "Tests precise mapping of control frameworks to their purposes.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Important Terms",
+        "source_file": "/content/cissp-syllabus.md"
+      },
+      "prompts": [
+        "COBIT",
+        "COSO",
+        "ISO/IEC 27002",
+        "NIST SP 800-53"
+      ]
+    },
+    {
+      "id": "CISSP-D02-Q0083",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Control Types",
+      "subtopic": "Detective control",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Log monitoring and an intrusion detection system are examples of which control type?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Deterrent"
+        },
+        {
+          "label": "B",
+          "text": "Preventative"
+        },
+        {
+          "label": "C",
+          "text": "Detective"
+        },
+        {
+          "label": "D",
+          "text": "Recovery"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Detective controls identify incidents after they happen, e.g., log monitoring and intrusion detection systems.",
+        "why_others_are_wrong": {
+          "B": "Preventative controls stop incidents from happening (e.g., firewalls, authentication).",
+          "D": "Recovery controls return systems to normal after an incident (e.g., DR plans).",
+          "A": "Deterrent controls discourage incidents (e.g., warning banners)."
+        }
+      },
+      "exam_reasoning": "Maps log monitoring/IDS to detective controls.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Types within Defense in Depth Strategy",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0084",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Control Types",
+      "subtopic": "Corrective control",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Backup recovery and patch management, used to remedy an incident after detection, are examples of which control type?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Corrective"
+        },
+        {
+          "label": "B",
+          "text": "Directive"
+        },
+        {
+          "label": "C",
+          "text": "Preventative"
+        },
+        {
+          "label": "D",
+          "text": "Deterrent"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Corrective controls remedy an incident after detection, e.g., backup recovery and patch management.",
+        "why_others_are_wrong": {
+          "D": "Deterrent controls discourage incidents before they occur.",
+          "B": "Directive controls mandate behaviors (e.g., policies).",
+          "C": "Preventative controls stop incidents from happening in the first place."
+        }
+      },
+      "exam_reasoning": "Maps remediation-after-detection to corrective controls.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Control Types within Defense in Depth Strategy",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0085",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Deming Cycle",
+      "subtopic": "PDCA",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "In the Deming Cycle (PDCA) applied to security controls, which step assesses whether implemented controls are effective and meet security goals?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Check"
+        },
+        {
+          "label": "B",
+          "text": "Do"
+        },
+        {
+          "label": "C",
+          "text": "Act"
+        },
+        {
+          "label": "D",
+          "text": "Plan"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "In PDCA, \"Check\" assesses the effectiveness of controls and whether they meet security goals.",
+        "why_others_are_wrong": {
+          "D": "\"Plan\" identifies objectives and determines appropriate controls.",
+          "B": "\"Do\" implements the selected controls.",
+          "C": "\"Act\" addresses gaps in effectiveness, especially after incidents or changes."
+        }
+      },
+      "exam_reasoning": "Tests the assessment step of PDCA.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > The Deming Cycle (PDCA)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0086",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Protection Methods",
+      "subtopic": "DLP",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which technology blocks unauthorized data exfiltration by performing egress monitoring and pattern matching against classifications like PII and PHI?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Degaussing"
+        },
+        {
+          "label": "B",
+          "text": "Digital Rights Management (DRM)"
+        },
+        {
+          "label": "C",
+          "text": "Trusted Platform Module (TPM)"
+        },
+        {
+          "label": "D",
+          "text": "Data Loss Prevention (DLP)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "DLP blocks unauthorized data exfiltration (egress monitoring) and uses pattern matching to act on classified data such as PII or PHI.",
+        "why_others_are_wrong": {
+          "B": "DRM enforces copyright protection on digital media via encryption.",
+          "C": "A TPM secures cryptographic keys/data at rest on a device.",
+          "A": "Degaussing is a magnetic data-destruction method."
+        }
+      },
+      "exam_reasoning": "Maps exfiltration prevention/egress monitoring to DLP.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data Loss Prevention (DLP)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0087",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Protection Methods",
+      "subtopic": "DLP types",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A DLP deployment that scans local file systems and monitors data leaving individual laptops is which type of DLP?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cloud DLP gateway"
+        },
+        {
+          "label": "B",
+          "text": "Perimeter firewall"
+        },
+        {
+          "label": "C",
+          "text": "Network DLP"
+        },
+        {
+          "label": "D",
+          "text": "Endpoint DLP"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Endpoint DLP scans local file systems and monitors data leaving individual endpoints to detect and block exfiltration.",
+        "why_others_are_wrong": {
+          "C": "Network DLP scans outgoing data on the network rather than on the endpoint.",
+          "A": "\"Cloud DLP gateway\" is not the term used; CASB provides cloud DLP functions.",
+          "B": "A firewall filters traffic but is not specifically endpoint DLP."
+        }
+      },
+      "exam_reasoning": "Distinguishes endpoint DLP from network DLP.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Types of DLP",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0088",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Protection Methods",
+      "subtopic": "DLP prerequisite",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "For DLP software to reliably detect and act on sensitive data, that data must FIRST be:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Encrypted with a key the DLP cannot access"
+        },
+        {
+          "label": "B",
+          "text": "Labeled or classified so the DLP policies can recognize it"
+        },
+        {
+          "label": "C",
+          "text": "Deleted from all endpoints"
+        },
+        {
+          "label": "D",
+          "text": "Made publicly available"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "DLP relies on data being labeled or classified so its policies can detect and act on it; regular updates are also needed for performance.",
+        "why_others_are_wrong": {
+          "A": "If DLP cannot inspect the data, it cannot enforce policy on it; this defeats detection.",
+          "C": "Deleting data removes the very thing DLP is meant to protect.",
+          "D": "Making data public is the opposite of protecting it from exfiltration."
+        }
+      },
+      "exam_reasoning": "Tests the classification prerequisite for effective DLP.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Types of DLP",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0089",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Protection Methods",
+      "subtopic": "CASB",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "A Cloud Access Security Broker (CASB) primarily functions as:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A records-management retention standard"
+        },
+        {
+          "label": "B",
+          "text": "A magnetic device for destroying backup tapes"
+        },
+        {
+          "label": "C",
+          "text": "A security policy enforcement point (proxy) between users and cloud services"
+        },
+        {
+          "label": "D",
+          "text": "A hardware root of trust embedded in a CPU"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "A CASB is a policy enforcement point that acts as a proxy between users and cloud services, applying data security, DLP, threat protection, and URL filtering.",
+        "why_others_are_wrong": {
+          "B": "That describes a degausser.",
+          "A": "That describes a standard like ISO 15489.",
+          "D": "That describes a TPM."
+        }
+      },
+      "exam_reasoning": "Maps cloud policy enforcement to CASB.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Cloud Access Security Broker (CASB)",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0090",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Protection Methods",
+      "subtopic": "DRM",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Digital Rights Management (DRM) primarily uses encryption to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Monitor outbound network traffic for PII"
+        },
+        {
+          "label": "B",
+          "text": "Sanitize magnetic media before reuse"
+        },
+        {
+          "label": "C",
+          "text": "Track which employees badge into a facility"
+        },
+        {
+          "label": "D",
+          "text": "Enforce copyright protection and prevent unauthorized copying/sharing of digital media"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "DRM uses encryption to enforce copyright protection for digital media and prevent copying, piracy, and unauthorized sharing.",
+        "why_others_are_wrong": {
+          "A": "Monitoring outbound traffic for PII is DLP's role.",
+          "B": "Media sanitization is a destruction activity, not DRM.",
+          "C": "Badge tracking is a physical access control, not DRM."
+        }
+      },
+      "exam_reasoning": "Maps copyright/anti-piracy enforcement to DRM.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data Protection Methods",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0091",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Protection Methods",
+      "subtopic": "Protection method selection",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A company is most worried that employees might email spreadsheets full of customer PII to personal accounts. Which protection method MOST directly addresses this exfiltration risk?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A Trusted Platform Module on each laptop"
+        },
+        {
+          "label": "B",
+          "text": "Digital Rights Management (DRM) for media files"
+        },
+        {
+          "label": "C",
+          "text": "Data Loss Prevention (DLP) with egress monitoring"
+        },
+        {
+          "label": "D",
+          "text": "Degaussing of backup tapes"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "DLP with egress monitoring detects and blocks unauthorized transfer of classified data such as PII leaving the organization.",
+        "why_others_are_wrong": {
+          "B": "DRM protects copyrighted media from copying, not general PII exfiltration via email.",
+          "D": "Degaussing destroys data on tapes; it does not stop email exfiltration.",
+          "A": "A TPM protects keys/data at rest on a device, not data being emailed out."
+        }
+      },
+      "exam_reasoning": "Tests selecting DLP for an exfiltration scenario.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data Protection Methods",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0092",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Protection Methods",
+      "subtopic": "Protection methods",
+      "difficulty": "hard",
+      "question_type": "multiple_correct_answers",
+      "question": "Which TWO of the following are data protection methods described in the guide? (Select TWO.)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Data Loss Prevention (DLP)"
+        },
+        {
+          "label": "B",
+          "text": "Tier 0 (Essential)"
+        },
+        {
+          "label": "C",
+          "text": "Unclassified"
+        },
+        {
+          "label": "D",
+          "text": "Cloud Access Security Broker (CASB)"
+        }
+      ],
+      "correct_answer": [
+        "A",
+        "D"
+      ],
+      "explanation": {
+        "why_correct": "DLP and CASB are data protection methods; the others are an asset tier and a classification level.",
+        "why_others_are_wrong": {
+          "B": "Tier 0 (Essential) is an asset classification tier, not a protection method.",
+          "C": "Unclassified is a data classification level, not a protection method."
+        }
+      },
+      "exam_reasoning": "Separates protection methods from classification constructs.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Important Terms",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0093",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Remanence",
+      "subtopic": "Definition",
+      "difficulty": "easy",
+      "question_type": "single_best_answer",
+      "question": "Data remanence refers to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Leftover data that remains after an attempt to delete or remove it"
+        },
+        {
+          "label": "B",
+          "text": "Data currently being processed in memory"
+        },
+        {
+          "label": "C",
+          "text": "A type of cloud access broker"
+        },
+        {
+          "label": "D",
+          "text": "Data that has been classified as Top Secret"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "Data remanence is leftover data that remains after deletion attempts; simple deletion often just moves data (e.g., to a recycle bin) rather than destroying it.",
+        "why_others_are_wrong": {
+          "D": "Classification level is unrelated to remanence.",
+          "B": "Data in memory is data in use, not remanence.",
+          "C": "A CASB is a cloud security proxy, not remanence."
+        }
+      },
+      "exam_reasoning": "Recall of the data-remanence definition.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Managing Data Remanence",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0094",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Destruction",
+      "subtopic": "Destruction techniques",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which destruction technique involves REPEATED clearing (overwriting) to ensure data is completely unrecoverable, often used in highly sensitive government or medical environments?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Clearing"
+        },
+        {
+          "label": "B",
+          "text": "Erasing"
+        },
+        {
+          "label": "C",
+          "text": "Labeling"
+        },
+        {
+          "label": "D",
+          "text": "Purging"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Purging is repeated clearing to ensure data is completely unrecoverable, common in highly sensitive environments.",
+        "why_others_are_wrong": {
+          "B": "Erasing only deletes from the file system and is not effective against remnants.",
+          "A": "Clearing overwrites once; purging repeats clearing for stronger assurance.",
+          "C": "Labeling is a handling identification activity, not destruction."
+        }
+      },
+      "exam_reasoning": "Distinguishes purging (repeated clearing) from erasing and clearing.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data Destruction Techniques",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0095",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Destruction",
+      "subtopic": "Erasing limitation",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "An administrator \"deletes\" sensitive files and empties the recycle bin before donating the hard drive. Why is this insufficient to prevent data disclosure?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Erasing physically shreds the platters, which is unnecessary"
+        },
+        {
+          "label": "B",
+          "text": "Erasing removes file-system references but leaves recoverable data remnants on the disk"
+        },
+        {
+          "label": "C",
+          "text": "Erasing automatically degausses the drive"
+        },
+        {
+          "label": "D",
+          "text": "Erasing encrypts the data so strongly it cannot be read"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "why_correct": "Erasing deletes the file-system reference but does not remove the data from the disk, leaving recoverable remnants; clearing/purging/sanitization is required.",
+        "why_others_are_wrong": {
+          "A": "Erasing does not physically destroy platters; that would be a separate method.",
+          "D": "Erasing does not encrypt data.",
+          "C": "Erasing does not perform degaussing."
+        }
+      },
+      "exam_reasoning": "Tests why simple deletion fails to prevent data remanence.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data Destruction Techniques",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0096",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Destruction",
+      "subtopic": "Sanitization methods",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which sanitization method uses strong magnetic fields to scramble data and is effective for magnetic media such as backup tapes?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zeroing"
+        },
+        {
+          "label": "B",
+          "text": "Tokenization"
+        },
+        {
+          "label": "C",
+          "text": "Pseudonymization"
+        },
+        {
+          "label": "D",
+          "text": "Degaussing"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "Degaussing uses strong magnetic fields to scramble data on magnetic media (e.g., backup tapes), making it unrecoverable.",
+        "why_others_are_wrong": {
+          "A": "Zeroing overwrites the medium with zeros and is not magnetic destruction.",
+          "B": "Tokenization substitutes data with non-sensitive tokens (a protection method).",
+          "C": "Pseudonymization replaces data with aliases (a declassification technique)."
+        }
+      },
+      "exam_reasoning": "Maps magnetic-media destruction to degaussing.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Data Sanitization Methods",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0097",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Destruction",
+      "subtopic": "Method by media",
+      "difficulty": "hard",
+      "question_type": "scenario_based",
+      "question": "A best practice is to choose the sanitization method based on the storage medium. Which pairing follows this guidance?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zeroing for paper documents; marking for SSDs"
+        },
+        {
+          "label": "B",
+          "text": "Degaussing for solid-state drives; tokenizing for tapes"
+        },
+        {
+          "label": "C",
+          "text": "Degaussing for magnetic tapes; overwriting for hard drives"
+        },
+        {
+          "label": "D",
+          "text": "Pseudonymization for hard drives; labeling for tapes"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "The guide recommends matching method to medium—e.g., degaussing for tapes and overwriting for hard drives.",
+        "why_others_are_wrong": {
+          "B": "Degaussing is for magnetic media (not SSDs), and tokenization is a protection method, not sanitization for tapes.",
+          "D": "Pseudonymization and labeling are not media-sanitization methods.",
+          "A": "Zeroing applies to digital media, not paper; marking is handling, not SSD sanitization."
+        }
+      },
+      "exam_reasoning": "Tests matching sanitization methods to the appropriate media.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Best Practices for Data Remnant Management",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0098",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Declassification",
+      "subtopic": "Tokenization vs pseudonymization",
+      "difficulty": "hard",
+      "question_type": "single_best_answer",
+      "question": "Which declassification technique substitutes sensitive data with non-sensitive tokens that have no intrinsic value, requiring a separate mapping to recover the original data?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pseudonymization"
+        },
+        {
+          "label": "B",
+          "text": "De-identification"
+        },
+        {
+          "label": "C",
+          "text": "Tokenization"
+        },
+        {
+          "label": "D",
+          "text": "Obfuscation"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "why_correct": "Tokenization substitutes sensitive data with meaningless tokens; the tokens must be mapped back to the original for internal use but appear valueless to unauthorized users.",
+        "why_others_are_wrong": {
+          "A": "Pseudonymization replaces data with aliases that can still be linked back through separate records, but is not specifically the non-intrinsic-value token mechanism described.",
+          "D": "Obfuscation conceals/masks data (e.g., a black box over text).",
+          "B": "De-identification removes personal identifiers to anonymize data."
+        }
+      },
+      "exam_reasoning": "Distinguishes tokenization from other declassification techniques.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Declassification Techniques",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0099",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Declassification",
+      "subtopic": "De-identification",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Removing personal identifiers (such as account numbers) from medical records so the data can no longer be linked to a specific person is called:",
+      "options": [
+        {
+          "label": "A",
+          "text": "De-identification"
+        },
+        {
+          "label": "B",
+          "text": "Scoping"
+        },
+        {
+          "label": "C",
+          "text": "Degaussing"
+        },
+        {
+          "label": "D",
+          "text": "Tokenization"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "why_correct": "De-identification removes personal identifiers to prevent linking data to a specific subject, anonymizing it.",
+        "why_others_are_wrong": {
+          "D": "Tokenization substitutes data with mapped tokens, not identifier removal for anonymization.",
+          "C": "Degaussing is magnetic media destruction.",
+          "B": "Scoping selects which controls apply to a system."
+        }
+      },
+      "exam_reasoning": "Maps identifier removal/anonymization to de-identification.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Declassification Techniques",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    },
+    {
+      "id": "CISSP-D02-Q0100",
+      "domain": "Asset Security",
+      "domain_number": 2,
+      "topic": "Data Destruction",
+      "subtopic": "NIST SP 800-88",
+      "difficulty": "medium",
+      "question_type": "single_best_answer",
+      "question": "Which NIST Special Publication provides guidelines for media sanitization?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NIST SP 800-37"
+        },
+        {
+          "label": "B",
+          "text": "NIST SP 800-60"
+        },
+        {
+          "label": "C",
+          "text": "NIST SP 800-53"
+        },
+        {
+          "label": "D",
+          "text": "NIST SP 800-88"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": {
+        "why_correct": "NIST SP 800-88 provides guidelines for media sanitization.",
+        "why_others_are_wrong": {
+          "B": "NIST SP 800-60 covers data types and classification.",
+          "A": "NIST SP 800-37 is the Risk Management Framework.",
+          "C": "NIST SP 800-53 is the security/privacy control catalog."
+        }
+      },
+      "exam_reasoning": "Maps media-sanitization guidance to NIST SP 800-88.",
+      "source_reference": {
+        "syllabus_section": "Domain 2 > Data Security Controls > Regulations and Guidelines",
+        "source_file": "/content/cissp-syllabus.md"
+      }
+    }
+  ]
+}

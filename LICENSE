@@ -19,13 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
--------------------------------------------------------------------------------
-SCOPE NOTE
-
-The MIT license above applies to the application SOURCE CODE only (e.g. the
-`src/`, `scripts/`, and configuration files).
-
-It does NOT apply to the practice-question CONTENT (the files under
-`questions/` and `tests/`, including the question bank). That content is
-covered separately — see CONTENT-LICENSE.md.

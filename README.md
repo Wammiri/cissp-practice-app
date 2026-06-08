@@ -72,6 +72,15 @@ node scripts/build-aggregate.cjs   # rebuild cissp-question-bank.json/.md + test
 node scripts/prepare-app-data.cjs  # copy data into public/data (also runs automatically on dev/build)
 ```
 
+## License
+
+This project uses a **split license**:
+
+- **Application source code** (`src/`, `scripts/`, config) — **MIT** (see [`LICENSE`](LICENSE)).
+- **Practice-question content** (`questions/`, `tests/`, the question bank) — **all rights reserved,
+  personal study use only** (see [`CONTENT-LICENSE.md`](CONTENT-LICENSE.md)). Please don't
+  redistribute, sell, or train models on the questions.
+
 ---
 
 CISSP is a registered mark of ISC2. This project is an independent study aid and is not affiliated

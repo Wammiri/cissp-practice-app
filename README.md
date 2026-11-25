@@ -1,87 +1,82 @@
 # CISSP Practice Exam App
 
-A self-contained study app with **1,000 original CISSP-style questions** across all **8 domains**,
-organized into **10 full-length, exam-weighted practice tests** (100 questions each).
+A study app with **1,000 original CISSP-style questions** across all **8 domains**, arranged as **10 exam-weighted practice tests** of 100 questions each.
 
-Built with **Next.js (App Router) + TypeScript**, exported as a static site. No backend, no account —
-progress and results are saved in your browser's `localStorage`.
+**Use it:** <https://cissp-practice-app.vercel.app>
 
-> Built from the CISSP Claude Code Build Pack. For study use only — these are original,
-> CISSP-style questions and do not copy or reproduce real exam content. Not affiliated with ISC2.
+It is a static site with no accounts and no backend. Progress and results are saved in your browser.
+
+> For study only. The questions are original and do not reproduce real exam content. This project is not affiliated with ISC2.
 
 ## Features
 
-- **Exam-weighted tests** — every test mirrors the official domain weights (16/10/13/13/13/12/13/10).
-- **All CISSP question types** — single best answer, scenario, multiple-correct, matching, and
-  sequence-ordering, each with full explanations of why every option is right or wrong.
-- **Timer, question navigator, flagging**, and auto-saved progress (resume any test).
-- **Scoring with per-domain breakdown** and a filterable answer review (incorrect / unanswered / all).
-- The 10 tests **partition the full bank** — every question appears in exactly one test, no repeats.
+- **Exam-weighted tests.** Every test follows the same domain split (16/10/13/13/13/12/13/10).
+- **Several question types.** Single best answer, scenario, multiple correct, matching and sequence ordering.
+- **Full explanations** of why each option is right or wrong.
+- **Timer, question navigator, flagging and auto-saved progress.** Resume any test.
+- **Scoring by domain** and an answer review you can filter (incorrect, unanswered, all).
+- **No repeats.** The 10 tests split the bank, so each question appears in exactly one test.
 
-## Project layout
+## Stack
 
-```
-content/                         # Phase A: extracted syllabus (md + structured json)
-questions/
-  domain-weighting.json          # Phase B: 1,000-question allocation + generation plan
-  domain-01..08-*.json           # Phase C: per-domain question files (1,000 total)
-  cissp-question-bank.json/.md   # Aggregation: merged bank (single source of truth)
-tests/
-  test-01..10.json               # 10 weighted tests (reference questions by ID)
-  test-manifest.json
-public/data/                     # app data (copied from questions/ + tests/ at build)
-src/
-  app/                           # Next.js App Router pages (home, /tests, /tests/[id], /results/[id])
-  components/                    # QuestionCard, OptionSelector, TestTimer, QuestionNavigator,
-                                 #   ScoreSummary, DomainBreakdown, ReviewPanel, TestRunner, ResultsView, TestsList
-  lib/                           # loadQuestions, scoreTest, domainWeighting, localProgress, validation
-  types/                         # question + test TypeScript types
-scripts/                         # data prep, aggregation, and validation scripts
-```
+Next.js 14 (App Router), React 18 and TypeScript, exported as a static site and hosted on Vercel.
 
-## Getting started
+## Run it locally
+
+Needs Node.js 18.17 or later.
 
 ```bash
-npm install
-npm run dev          # http://localhost:3000  (auto-copies data into public/data first)
+git clone https://github.com/Wammiri/cissp-practice-app.git
+cd cissp-practice-app
+npm ci
+npm run dev          # http://localhost:3000
 ```
 
-### Production build (static export)
+No environment variables are needed. If you host the site under a sub-path, set `NEXT_PUBLIC_BASE_PATH`.
+
+## Scripts
+
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Copies the question data, then starts the dev server |
+| `npm run build` | Copies the data, then exports the static site to `out/` |
+| `npm run validate` | Checks the question bank and the tests |
+| `npm run prepare:data` | Copies `questions/` and `tests/` into `public/data/` |
+
+To preview the export, run `npx serve out`. The app reads `/data/*.json` from the site root.
+
+`npm run validate` checks that there are 1,000 questions with unique IDs and valid answers, explanations and topics, and that the 10 tests are exam-weighted and never repeat a question.
+
+## Changing the questions
+
+Edit the domain files in `questions/`, then rebuild the bank and the tests:
 
 ```bash
-npm run build        # outputs a static site to ./out
-npx serve out        # or any static server, served from the site root
+node scripts/build-aggregate.cjs
+npm run validate
 ```
 
-> The app fetches its data from `/data/*.json` at the site root, so serve the exported `out/`
-> directory from the domain root. If hosting under a sub-path, set `NEXT_PUBLIC_BASE_PATH`.
+## Project structure
 
-## Validate the content
-
-```bash
-npm run validate     # node scripts/validate-question-bank.cjs && node scripts/validate-tests.cjs
+```text
+questions/     one file per domain, plus the merged bank and the domain weighting
+tests/         the 10 tests, which point to questions by ID
+src/app/       pages: home, tests, a single test, results
+src/components/ question cards, timer, navigator, score and review
+src/lib/       loading, scoring and saved progress
+scripts/       data preparation, aggregation and validation
+01_start_here/ to 09_notes/   the build pack: prompts, schemas and requirements used to make the app
 ```
 
-Checks: 1,000 questions, unique IDs, valid answers/explanations/topics, and that the 10 tests are
-exam-weighted and partition the bank with no repeats.
+## Licence
 
-## Regenerating data
+A split licence:
 
-```bash
-node scripts/build-aggregate.cjs   # rebuild cissp-question-bank.json/.md + tests/ from per-domain files
-node scripts/prepare-app-data.cjs  # copy data into public/data (also runs automatically on dev/build)
-```
+- **Application code** (`src/`, `scripts/`, config): MIT. See [LICENSE](LICENSE).
+- **Questions and tests** (`questions/`, `tests/`): all rights reserved, personal study use only. See [CONTENT-LICENSE.md](CONTENT-LICENSE.md). Please do not redistribute them, sell them or train models on them.
 
-## License
+CISSP is a registered mark of ISC2. This is an independent study aid, not endorsed by ISC2.
 
-This project uses a **split license**:
+## Author
 
-- **Application source code** (`src/`, `scripts/`, config) — **MIT** (see [`LICENSE`](LICENSE)).
-- **Practice-question content** (`questions/`, `tests/`, the question bank) — **all rights reserved,
-  personal study use only** (see [`CONTENT-LICENSE.md`](CONTENT-LICENSE.md)). Please don't
-  redistribute, sell, or train models on the questions.
-
----
-
-CISSP is a registered mark of ISC2. This project is an independent study aid and is not affiliated
-with or endorsed by ISC2.
+[Isaac Olorode](https://isaac.aperio.finance)
